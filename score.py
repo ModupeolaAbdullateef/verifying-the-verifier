@@ -8,7 +8,9 @@ Each trace is scored at three stages:
 
 Every field is classified as correct or as one of five error types:
     omission       null although the document contains the value
-    substitution   wrong, but the value appears in the document (a misread or distractor)
+    substitution   wrong, but the value appears in the document (a distractor), or differs
+                   from the true value only by visually confusable characters (a misread,
+                   such as the letter O read as the digit 0)
     calculation    a derived or arithmetic field with a wrong value not found in the document
     hallucination  wrong, not in the document and not derivable from it (fabricated)
     format         correct in substance but not in the required format
@@ -121,6 +123,17 @@ def appears_in(value, field: str, document: str) -> bool:
     return squash(value) in source
 
 
+# Characters that optical reading commonly confuses, mapped to one representative.
+CONFUSABLE = str.maketrans({"0": "o", "1": "l", "i": "l", "|": "l", "5": "s", "8": "b"})
+
+
+def is_misread(pred, truth) -> bool:
+    """Whether a text value equals the truth once confusable characters are identified."""
+    if not isinstance(pred, str) or not isinstance(truth, str):
+        return False
+    return squash(pred).translate(CONFUSABLE) == squash(truth).translate(CONFUSABLE)
+
+
 # --------------------------------------------------------------------------
 # Field comparison
 # --------------------------------------------------------------------------
@@ -151,7 +164,8 @@ def compare(field: str, truth, pred, document: str) -> str:
     elif squash(pred) == squash(truth):
         return "correct"
 
-    if appears_in(pred, field, document):
+    if appears_in(pred, field, document) or (field not in NUMBER_FIELDS | DATE_FIELDS
+                                             and is_misread(pred, truth)):
         return "substitution"
     return "calculation" if field in CALCULATED_FIELDS else "hallucination"
 
