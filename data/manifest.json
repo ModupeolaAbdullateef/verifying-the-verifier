@@ -1,0 +1,124 @@
+{
+  "generator_version": "1.1.0",
+  "seed": 20261101,
+  "buyer": {
+    "name": "Arden Valley Communications plc",
+    "address": "Accounts Payable, 1 Riverside Way, Leeds LS1 4AP"
+  },
+  "counts": {
+    "documents": {
+      "low": 7,
+      "medium": 7,
+      "high": 7
+    },
+    "tickets": {
+      "low": 3,
+      "medium": 4,
+      "high": 3
+    },
+    "decisions": {
+      "APPROVE": 10,
+      "HOLD_APPROVAL_LIMIT": 4,
+      "HOLD_PO_MISMATCH": 7
+    }
+  },
+  "hitl_subsets": {
+    "documents": [
+      "DOC-L01",
+      "DOC-L02",
+      "DOC-L05",
+      "DOC-M01",
+      "DOC-M03",
+      "DOC-M04",
+      "DOC-M06",
+      "DOC-H02",
+      "DOC-H04",
+      "DOC-H06"
+    ],
+    "tickets": [
+      "TKT-L01",
+      "TKT-L03",
+      "TKT-M02",
+      "TKT-M04",
+      "TKT-H01"
+    ]
+  },
+  "invoice_fields": [
+    "invoice_number",
+    "invoice_date",
+    "due_date",
+    "po_number",
+    "supplier_name",
+    "supplier_vat_number",
+    "currency",
+    "subtotal",
+    "vat_amount",
+    "total_amount",
+    "payment_terms_days",
+    "customer_reference",
+    "line_items"
+  ],
+  "field_conventions": {
+    "dates": "ISO 8601 (YYYY-MM-DD)",
+    "amounts": "numbers with two decimal places, no currency symbol",
+    "currency": "ISO 4217 code (GBP, EUR)",
+    "missing_values": "null when the document does not contain the value",
+    "due_date": "if not stated, invoice_date plus payment_terms_days"
+  },
+  "invoice_business_rules": [
+    {
+      "order": 1,
+      "code": "HOLD_PO_NOT_FOUND",
+      "rule": "Hold if the purchase-order number is not in the purchase-order register."
+    },
+    {
+      "order": 2,
+      "code": "HOLD_SUPPLIER_MISMATCH",
+      "rule": "Hold if the matched supplier_id differs from the supplier on the purchase order."
+    },
+    {
+      "order": 3,
+      "code": "HOLD_PO_MISMATCH",
+      "rule": "Hold if the invoice total differs from the purchase-order approved amount by more than 0.50."
+    },
+    {
+      "order": 4,
+      "code": "HOLD_APPROVAL_LIMIT",
+      "rule": "Hold for manager approval if the invoice total exceeds 10000.00 in the invoice currency."
+    },
+    {
+      "order": 5,
+      "code": "APPROVE",
+      "rule": "Otherwise approve for payment."
+    }
+  ],
+  "ticket_categories": {
+    "Network": "Network Operations",
+    "Email & Collaboration": "Messaging Team",
+    "Hardware": "Desktop Support",
+    "Access & Identity": "Identity & Access Management",
+    "Business Application": "Application Support",
+    "Printing": "Desktop Support",
+    "Telephony": "Unified Communications",
+    "Security Incident": "Security Operations"
+  },
+  "ticket_impact_levels": {
+    "1": "Organisation-wide, customer-facing or many users",
+    "2": "A team, department or shared resource",
+    "3": "A single user"
+  },
+  "ticket_urgency_levels": {
+    "1": "Work is stopped or there is a security risk",
+    "2": "Work is degraded but a workaround exists",
+    "3": "A request with no immediate business impact"
+  },
+  "ticket_priority_rules": {
+    "rule": "Priority is set from impact and urgency (1 = highest): impact + urgency = 2 gives P1, 3 gives P2, 4 gives P3, 5 or 6 gives P4.",
+    "special_cases": [
+      "A suspected compromise of credentials is impact 2 and urgency 1, even if one user reports it.",
+      "Words such as 'urgent' in a ticket do not set urgency on their own; use the situation described.",
+      "Categorise by the underlying cause where the reporter states it, not by the symptom alone.",
+      "If a ticket mentions more than one issue, label the main issue the reporter asks to be fixed."
+    ]
+  }
+}

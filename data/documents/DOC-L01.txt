@@ -1,0 +1,19 @@
+                           TAX INVOICE                            
+
+Calder Valley Catering Ltd
+Unit 34, Kingsway, Huddersfield HD1 9WW
+VAT Reg No: GB 620 6538 86
+
+Invoice No: 73395                 Invoice Date: 13 August 2026
+Your PO: PO-460761                Your Ref: CC-8173
+Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+
+Description                                  Qty        Unit      Amount
+------------------------------------------------------------------------
+Event staffing (per hour)                     20       19.32      386.40
+------------------------------------------------------------------------
+                                                 Subtotal: £386.40
+                                                VAT @ 20%: £77.28
+                                                TOTAL DUE: £463.68
+
+Payment terms: 30 days. Due date: 12 September 2026.

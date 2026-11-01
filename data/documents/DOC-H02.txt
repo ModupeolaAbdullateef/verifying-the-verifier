@@ -1,0 +1,28 @@
+INVOICE
+========================================
+Supplier ................ Pennine Facilities Management
+Address ................. Unit 119, Victoria Terrace, Bradford BD1 1TT
+VAT number .............. GB 450 2364 53
+Invoice reference ....... INV-89700
+Date of issue ........... 19/02/2026
+Purchase order .......... PO-451275
+Your reference .......... 
+Customer ................ Arden Valley Communications plc
+
+Order date: 15 February 2026
+Goods delivered: 18/02/2026
+Note: the original invoice total of £8,538.95 has been superseded following credit note CN-9203. The amended amount below is now payable.
+
+Items
+  1. Lift service contract (monthly) | 3 x £801.45 = £2,404.35
+  2. Water hygiene testing | 3 x £190.54 = £571.62
+  3. Car park line marking | 1 x £452.24 = £452.24
+  4. Boiler annual service | 10 x £219.05 = £2,190.50
+  5. Planned maintenance visit | 1 x £312.74 = £312.74
+  6. Emergency call-out (out of hours) | 3 x £322.92 = £968.76
+
+Net ..................... £6,900.21
+VAT ..................... £1,380.04
+Gross amount payable .... £8,280.25
+
+Terms: 60 days. Payment due by 2026-04-20.

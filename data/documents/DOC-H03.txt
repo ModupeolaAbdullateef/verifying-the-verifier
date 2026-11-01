@@ -1,0 +1,30 @@
+From: accounts@brightwater-it.example
+To: ap@ardenvalley.example
+Subject: Invoice 83420 - PO PO-416910
+
+Hi team,
+
+Please find below our invoice 83420, dated 06/01/2026, for the goods and services supplied against your purchase order PO-416910.
+
+Order date: 29 December 2025
+Goods delivered: 06/01/2026
+Note: the original invoice total of £19,779.74 has been superseded following credit note CN-1190. The amended amount below is now payable.
+
+Items supplied:
+- 1 x On-site engineer (per day) at £496.34 each = £496.34
+- 3 x Firewall configuration review at £1,179.25 each = £3,537.75
+- 1 x Laptop imaging and deployment (per device) at £55.93 each = £55.93
+- 6 x Laptop battery replacement at £106.35 each = £638.10
+- 2 x Backup monitoring (monthly) at £612.71 each = £1,225.42
+- 3 x Managed service desk (monthly) at £2,844.02 each = £8,532.06
+- 1 x Microsoft 365 migration workshop at £1,463.55 each = £1,463.55
+
+That comes to £15,949.15 net, plus VAT of £3,189.83, making £19,138.98 payable.
+Terms: 30 days. Payment due by 2026-02-05.
+Our VAT registration number is GB 128 2973 77.
+
+Kind regards,
+Fatima Iqbal
+Accounts Team
+Brightwater IT Services Limited
+Unit 47, Park View, Bradford BD1 3NR

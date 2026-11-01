@@ -1,0 +1,29 @@
+INVOICE
+========================================
+Supplier ................ LINDQVIST SOFTWARE AB
+Address ................. Sveavägen 155, 111 34 Stockholm, Sweden
+VAT number .............. SE99891778001
+Invoice reference ....... SI/2026/83706
+Date of issue ........... 28/01/2026
+Purchase order .......... PO-482585
+Your reference .......... 
+Customer ................ Arden Valley Communications plc
+
+Order date: 22 January 2026
+Goods delivered: 28/01/2026
+Note: the original invoice total of 28 536,33 EUR has been superseded following credit note CN-1482. The amended amount below is now payable.
+
+Items
+  1. Premium support add-on (annual) | 3 x 2 036,54 EUR = 6 109,62 EUR
+  2. Single sign-on connector (annual) | 1 x 756,09 EUR = 756,09 EUR
+  3. Additional user licences (pack of 10) | 2 x 799,05 EUR = 1 598,10 EUR
+  4. Workflow platform subscription (annual) | 2 x 6 478,72 EUR = 12 957,44 EUR
+  5. Training session (half day) | 2 x 595,43 EUR = 1 190,86 EUR
+  6. API integration module (annual) | 3 x 1 144,24 EUR = 3 432,72 EUR
+  7. Data migration service | 1 x 1 651,00 EUR = 1 651,00 EUR
+
+Net ..................... 27 695,83 EUR
+VAT (reverse charge) .... 0,00 EUR
+Gross amount payable .... 27 695,83 EUR
+
+Terms: 60 days. Payment due by 2026-03-29.

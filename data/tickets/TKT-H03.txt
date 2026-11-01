@@ -1,0 +1,11 @@
+Ticket ID: TKT-H03
+Received: 2026-06-06 via Self-service portal
+Reported by: Priya Adeyemi (Engineering)
+Subject: Wi-Fi dropping on my laptop
+
+Hello,
+
+The Wi-Fi keeps disconnecting on my laptop every 10 minutes or so. Colleagues sitting next to me are fine, and it happens at home too, so I think it is the laptop's wireless card rather than the network. I can use a network cable at my desk until it is fixed.
+
+Thanks,
+Priya

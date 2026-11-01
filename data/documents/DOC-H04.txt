@@ -1,0 +1,31 @@
+                           TAX INVOICE                            
+
+Orbis Telecom Hardware
+Unit 15, Kingsway, Manchester M1 6GB
+VAT Reg No: GB 349 7023 02
+
+Invoice No: S012-96601            Invoice Date: 08/04/2026
+Your PO: PO-496143                Your Ref: 
+Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+
+Order date: 6 April 2026
+Goods delivered: 08/04/2026
+Note: the original invoice total of GBP 9,006.52 has been superseded following credit note CN-8851. The amended amount below is now payable.
+
+Description                                  Qty        Unit      Amount
+------------------------------------------------------------------------
+SFP+ transceiver                               6       88.79      532.74
+Rack-mount UPS                                 1     1160.66     1160.66
+24-port PoE switch                             1      745.63      745.63
+Wireless access point                          1      213.14      213.14
+Headset, noise-cancelling                     25       70.48     1762.00
+IP desk phone                                  5      109.44      547.20
+Fibre patch leads (pack of 10)                12       61.97      743.64
+Cat6 cable (305 m box)                         1      133.14      133.14
+Conference speakerphone                        4      333.38     1333.52
+------------------------------------------------------------------------
+                                                 Subtotal: GBP 7,171.67
+                                                VAT @ 20%: GBP 1,434.33
+                                                TOTAL DUE: GBP 8,606.00
+
+Terms: 60 days. Payment due by 2026-06-07.

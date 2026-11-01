@@ -1,0 +1,21 @@
+From: accounts@severn-electrical.example
+To: ap@ardenvalley.example
+Subject: Invoice S010-20882 - PO PO-416864
+
+Hi team,
+
+Please find below our invoice S010-20882, dated 23 August 2026, for the goods and services supplied against your purchase order PO-416864.
+Your internal reference for this order was CC-8364.
+
+Items supplied:
+- 7 x EV charger installation at £1,435.15 each = £10,046.05
+
+That comes to £10,046.05 net, plus VAT of £2,009.21, making £12,055.26 payable.
+Payment terms: 30 days. Due date: 22 September 2026.
+Our VAT registration number is GB 777 8221 00.
+
+Kind regards,
+George Shah
+Accounts Team
+Severn Electrical Contractors Ltd
+Unit 98, Park View, Bradford BD1 7BA

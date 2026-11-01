@@ -1,12 +1,16 @@
 """
-Smoke test for the dissertation environment.
+smoke_test.py - Environment check for the experiment platform.
 
-Confirms that this laptop can call Gemini models on Google Cloud
-(Gemini Enterprise Agent Platform, formerly Vertex AI), and reports for each
-candidate model whether it is available, how long one call takes, and how
-many tokens it used. Total cost of running this script is a fraction of a penny.
+Verifies that the local environment can call Gemini models hosted on Google
+Cloud (Gemini Enterprise Agent Platform, formerly Vertex AI) using
+Application Default Credentials. For each candidate model, one short
+extraction request is sent and the script reports availability, end-to-end
+latency and token usage (input, output and thinking tokens).
 
-Usage (with the virtual environment active):
+Configuration is read from a .env file:
+    GOOGLE_CLOUD_PROJECT, GOOGLE_CLOUD_LOCATION
+
+Usage:
     python smoke_test.py
 """
 
@@ -22,8 +26,8 @@ load_dotenv()
 PROJECT = os.environ["GOOGLE_CLOUD_PROJECT"]
 LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "global")
 
-# Small, low-cost models, newest first. The script reports which ones your
-# project can use; we pick the experiment model from the ones marked OK.
+# Low-cost candidate models, newest first. Models unavailable to the
+# project are reported and skipped.
 CANDIDATES = [
     "gemini-3.1-flash-lite",
     "gemini-3.1-flash-lite-preview",
@@ -73,4 +77,4 @@ for model in CANDIDATES:
     )
     print(f"     response: {text[:200]}\n")
 
-print("Done. Copy everything above and paste it back into the chat.")
+print("Done.")

@@ -1,0 +1,28 @@
+                           TAX INVOICE                            
+
+NORTHGATE OFFICE SUPPLIES LTD
+Unit 34, Canal Street, Harrogate HG1 9UD
+VAT Reg No: GB 116 0003 45
+
+Invoice No: INV-70349             Invoice Date: 08/08/2026
+Your PO: PO-421351                Your Ref: 
+Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+
+Order date: 1 August 2026
+Goods delivered: 08/08/2026
+Note: the original invoice total of GBP 6,042.45 has been superseded following credit note CN-8034. The amended amount below is now payable.
+
+Description                                  Qty        Unit      Amount
+------------------------------------------------------------------------
+Desk organiser set                             1       18.69       18.69
+A4 copier paper, 80gsm (box of 5 reams)        4       24.48       97.92
+Black toner cartridge, high yield              1       62.10       62.10
+Shredder, cross-cut                           10      174.11     1741.10
+Lever-arch files (pack of 10)                  6       13.58       81.48
+Ergonomic office chair                        10      234.48     2344.80
+------------------------------------------------------------------------
+                                                 Subtotal: GBP 4,346.09
+                                                VAT @ 20%: GBP 869.22
+                                                TOTAL DUE: GBP 5,215.31
+
+Terms: 45 days. Payment due by 2026-09-22.

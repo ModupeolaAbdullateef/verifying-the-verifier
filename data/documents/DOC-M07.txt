@@ -1,0 +1,27 @@
+From: accounts@brightwater-it.example
+To: ap@ardenvalley.example
+Subject: Invoice INV-91615 - PO PO-494747
+
+Hi team,
+
+Please find below our invoice INV-91615, dated 19-May-26, for the goods and services supplied against your purchase order PO-494747.
+Your internal reference for this order was CC-6710.
+
+Items supplied:
+- 1 x Laptop battery replacement at GBP 90.82 each = GBP 90.82
+- 3 x Firewall configuration review at GBP 1,433.85 each = GBP 4,301.55
+- 2 x Laptop imaging and deployment (per device) at GBP 54.62 each = GBP 109.24
+- 1 x On-site engineer (per day) at GBP 565.42 each = GBP 565.42
+- 20 x Endpoint security licence (annual, per seat) at GBP 36.22 each = GBP 724.40
+- 3 x Microsoft 365 migration workshop at GBP 1,072.39 each = GBP 3,217.17
+- 3 x Docking station at GBP 131.48 each = GBP 394.44
+
+That comes to GBP 9,403.04 net, plus VAT of GBP 1,880.61, making GBP 11,283.65 payable.
+Payment terms: 30 days from date of invoice.
+Our VAT registration number is GB 128 2973 77.
+
+Kind regards,
+Efe Morgan
+Accounts Team
+Brightwater IT Services Limited
+Unit 47, Park View, Bradford BD1 3NR

@@ -1,0 +1,24 @@
+From: accounts@pennine-fm.example
+To: ap@ardenvalley.example
+Subject: Invoice S003-41844 - PO PO-425090
+
+Hi team,
+
+Please find below our invoice S003-41844, dated 18-Feb-26, for the goods and services supplied against your purchase order PO-425090.
+Your internal reference for this order was CC-6744.
+
+Items supplied:
+- 5 x Boiler annual service at £347.22 each = £1,736.10
+- 1 x Lift service contract (monthly) at £920.04 each = £920.04
+- 4 x Water hygiene testing at £142.93 each = £571.72
+- 6 x Fire-door inspection at £224.29 each = £1,345.74
+
+That comes to £4,573.60 net, plus VAT of £914.72, making £5,488.32 payable.
+Payment terms: 30 days from date of invoice.
+Our VAT registration number is GB 450 2364 53.
+
+Kind regards,
+Niamh Walsh
+Accounts Team
+Pennine Facilities Management
+Unit 119, Victoria Terrace, Bradford BD1 1TT

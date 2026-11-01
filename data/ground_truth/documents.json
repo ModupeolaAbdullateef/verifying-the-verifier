@@ -1,0 +1,2219 @@
+[
+  {
+    "doc_id": "DOC-L01",
+    "complexity": "low",
+    "layout": "A",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "73395",
+      "invoice_date": "2026-08-13",
+      "due_date": "2026-09-12",
+      "po_number": "PO-460761",
+      "supplier_name": "Calder Valley Catering Ltd",
+      "supplier_vat_number": "GB 620 6538 86",
+      "currency": "GBP",
+      "subtotal": 386.4,
+      "vat_amount": 77.28,
+      "total_amount": 463.68,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-8173",
+      "line_items": [
+        {
+          "description": "Event staffing (per hour)",
+          "quantity": 20,
+          "unit_price": 19.32,
+          "line_total": 386.4
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "73395",
+      "invoice_date": "2026-08-13",
+      "due_date": "2026-09-12",
+      "po_number": "PO-460761",
+      "supplier_name": "Calder Valley Catering Ltd",
+      "supplier_vat_number": "GB 620 6538 86",
+      "currency": "GBP",
+      "subtotal": 386.4,
+      "vat_amount": 77.28,
+      "total_amount": 463.68,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-8173",
+      "line_items": [
+        {
+          "description": "Event staffing (per hour)",
+          "quantity": 20,
+          "unit_price": 19.32,
+          "line_total": 386.4
+        }
+      ],
+      "supplier_id": "SUP-007"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 1
+    }
+  },
+  {
+    "doc_id": "DOC-L02",
+    "complexity": "low",
+    "layout": "B",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "S005-26547",
+      "invoice_date": "2026-04-21",
+      "due_date": "2026-06-05",
+      "po_number": "PO-486216",
+      "supplier_name": "Brightwater IT Services Ltd",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 9199.3,
+      "vat_amount": 1839.86,
+      "total_amount": 11039.16,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1271",
+      "line_items": [
+        {
+          "description": "Endpoint security licence (annual, per seat)",
+          "quantity": 3,
+          "unit_price": 48.64,
+          "line_total": 145.92
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 7,
+          "unit_price": 1293.34,
+          "line_total": 9053.38
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S005-26547",
+      "invoice_date": "2026-04-21",
+      "due_date": "2026-06-05",
+      "po_number": "PO-486216",
+      "supplier_name": "Brightwater IT Services Ltd",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 9199.3,
+      "vat_amount": 1839.86,
+      "total_amount": 11039.16,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1271",
+      "line_items": [
+        {
+          "description": "Endpoint security licence (annual, per seat)",
+          "quantity": 3,
+          "unit_price": 48.64,
+          "line_total": 145.92
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 7,
+          "unit_price": 1293.34,
+          "line_total": 9053.38
+        }
+      ],
+      "supplier_id": "SUP-005"
+    },
+    "decision": "HOLD_APPROVAL_LIMIT",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 2
+    }
+  },
+  {
+    "doc_id": "DOC-L03",
+    "complexity": "low",
+    "layout": "C",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "SI/2026/51051",
+      "invoice_date": "2026-07-02",
+      "due_date": "2026-08-01",
+      "po_number": "PO-408429",
+      "supplier_name": "Ashdown Print & Design Ltd",
+      "supplier_vat_number": "GB 802 8178 21",
+      "currency": "GBP",
+      "subtotal": 513.84,
+      "vat_amount": 102.77,
+      "total_amount": 616.61,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-3710",
+      "line_items": [
+        {
+          "description": "Letterheads (box of 1,000)",
+          "quantity": 6,
+          "unit_price": 85.64,
+          "line_total": 513.84
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "SI/2026/51051",
+      "invoice_date": "2026-07-02",
+      "due_date": "2026-08-01",
+      "po_number": "PO-408429",
+      "supplier_name": "Ashdown Print & Design Ltd",
+      "supplier_vat_number": "GB 802 8178 21",
+      "currency": "GBP",
+      "subtotal": 513.84,
+      "vat_amount": 102.77,
+      "total_amount": 616.61,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-3710",
+      "line_items": [
+        {
+          "description": "Letterheads (box of 1,000)",
+          "quantity": 6,
+          "unit_price": 85.64,
+          "line_total": 513.84
+        }
+      ],
+      "supplier_id": "SUP-008"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 1
+    }
+  },
+  {
+    "doc_id": "DOC-L04",
+    "complexity": "low",
+    "layout": "A",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "53898",
+      "invoice_date": "2026-08-17",
+      "due_date": "2026-10-16",
+      "po_number": "PO-421947",
+      "supplier_name": "Highfield Cleaning Co Ltd",
+      "supplier_vat_number": "GB 871 2785 84",
+      "currency": "GBP",
+      "subtotal": 459.24,
+      "vat_amount": 91.85,
+      "total_amount": 551.09,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-1919",
+      "line_items": [
+        {
+          "description": "Carpet shampoo (per floor)",
+          "quantity": 1,
+          "unit_price": 459.24,
+          "line_total": 459.24
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "53898",
+      "invoice_date": "2026-08-17",
+      "due_date": "2026-10-16",
+      "po_number": "PO-421947",
+      "supplier_name": "Highfield Cleaning Co Ltd",
+      "supplier_vat_number": "GB 871 2785 84",
+      "currency": "GBP",
+      "subtotal": 459.24,
+      "vat_amount": 91.85,
+      "total_amount": 551.09,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-1919",
+      "line_items": [
+        {
+          "description": "Carpet shampoo (per floor)",
+          "quantity": 1,
+          "unit_price": 459.24,
+          "line_total": 459.24
+        }
+      ],
+      "supplier_id": "SUP-011"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 1
+    }
+  },
+  {
+    "doc_id": "DOC-L05",
+    "complexity": "low",
+    "layout": "B",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "29613",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-04-16",
+      "po_number": "PO-488281",
+      "supplier_name": "Meridian Logistics UK Ltd",
+      "supplier_vat_number": "GB 929 2906 52",
+      "currency": "GBP",
+      "subtotal": 253.71,
+      "vat_amount": 50.74,
+      "total_amount": 304.45,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-5826",
+      "line_items": [
+        {
+          "description": "Warehouse storage (per pallet, monthly)",
+          "quantity": 3,
+          "unit_price": 18.69,
+          "line_total": 56.07
+        },
+        {
+          "description": "Pallet wrapping and labelling",
+          "quantity": 12,
+          "unit_price": 16.47,
+          "line_total": 197.64
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "29613",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-04-16",
+      "po_number": "PO-488281",
+      "supplier_name": "Meridian Logistics UK Ltd",
+      "supplier_vat_number": "GB 929 2906 52",
+      "currency": "GBP",
+      "subtotal": 253.71,
+      "vat_amount": 50.74,
+      "total_amount": 304.45,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-5826",
+      "line_items": [
+        {
+          "description": "Warehouse storage (per pallet, monthly)",
+          "quantity": 3,
+          "unit_price": 18.69,
+          "line_total": 56.07
+        },
+        {
+          "description": "Pallet wrapping and labelling",
+          "quantity": 12,
+          "unit_price": 16.47,
+          "line_total": 197.64
+        }
+      ],
+      "supplier_id": "SUP-009"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 2
+    }
+  },
+  {
+    "doc_id": "DOC-L06",
+    "complexity": "low",
+    "layout": "C",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "S010-20882",
+      "invoice_date": "2026-08-23",
+      "due_date": "2026-09-22",
+      "po_number": "PO-416864",
+      "supplier_name": "Severn Electrical Contractors Ltd",
+      "supplier_vat_number": "GB 777 8221 00",
+      "currency": "GBP",
+      "subtotal": 10046.05,
+      "vat_amount": 2009.21,
+      "total_amount": 12055.26,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-8364",
+      "line_items": [
+        {
+          "description": "EV charger installation",
+          "quantity": 7,
+          "unit_price": 1435.15,
+          "line_total": 10046.05
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S010-20882",
+      "invoice_date": "2026-08-23",
+      "due_date": "2026-09-22",
+      "po_number": "PO-416864",
+      "supplier_name": "Severn Electrical Contractors Ltd",
+      "supplier_vat_number": "GB 777 8221 00",
+      "currency": "GBP",
+      "subtotal": 10046.05,
+      "vat_amount": 2009.21,
+      "total_amount": 12055.26,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-8364",
+      "line_items": [
+        {
+          "description": "EV charger installation",
+          "quantity": 7,
+          "unit_price": 1435.15,
+          "line_total": 10046.05
+        }
+      ],
+      "supplier_id": "SUP-010"
+    },
+    "decision": "HOLD_APPROVAL_LIMIT",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 1
+    }
+  },
+  {
+    "doc_id": "DOC-L07",
+    "complexity": "low",
+    "layout": "A",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "S013-29818",
+      "invoice_date": "2026-02-27",
+      "due_date": "2026-04-13",
+      "po_number": "PO-470372",
+      "supplier_name": "Kestrel Security Systems Ltd",
+      "supplier_vat_number": "GB 746 6048 08",
+      "currency": "GBP",
+      "subtotal": 625.32,
+      "vat_amount": 125.06,
+      "total_amount": 750.38,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1580",
+      "line_items": [
+        {
+          "description": "Access cards (pack of 50)",
+          "quantity": 6,
+          "unit_price": 104.22,
+          "line_total": 625.32
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S013-29818",
+      "invoice_date": "2026-02-27",
+      "due_date": "2026-04-13",
+      "po_number": "PO-470372",
+      "supplier_name": "Kestrel Security Systems Ltd",
+      "supplier_vat_number": "GB 746 6048 08",
+      "currency": "GBP",
+      "subtotal": 625.32,
+      "vat_amount": 125.06,
+      "total_amount": 750.38,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1580",
+      "line_items": [
+        {
+          "description": "Access cards (pack of 50)",
+          "quantity": 6,
+          "unit_price": 104.22,
+          "line_total": 625.32
+        }
+      ],
+      "supplier_id": "SUP-013"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": false,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 1
+    }
+  },
+  {
+    "doc_id": "DOC-M01",
+    "complexity": "medium",
+    "layout": "B",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "98812",
+      "invoice_date": "2026-08-13",
+      "due_date": "2026-09-27",
+      "po_number": "PO-490519",
+      "supplier_name": "Orbis Telecom Hardware",
+      "supplier_vat_number": "GB 349 7023 02",
+      "currency": "GBP",
+      "subtotal": 6612.32,
+      "vat_amount": 1322.46,
+      "total_amount": 7934.78,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-7182",
+      "line_items": [
+        {
+          "description": "Wireless access point",
+          "quantity": 4,
+          "unit_price": 221.86,
+          "line_total": 887.44
+        },
+        {
+          "description": "Rack-mount UPS",
+          "quantity": 2,
+          "unit_price": 1384.59,
+          "line_total": 2769.18
+        },
+        {
+          "description": "Headset, noise-cancelling",
+          "quantity": 3,
+          "unit_price": 69.76,
+          "line_total": 209.28
+        },
+        {
+          "description": "Cat6 cable (305 m box)",
+          "quantity": 5,
+          "unit_price": 166.21,
+          "line_total": 831.05
+        },
+        {
+          "description": "IP desk phone",
+          "quantity": 4,
+          "unit_price": 104.54,
+          "line_total": 418.16
+        },
+        {
+          "description": "SFP+ transceiver",
+          "quantity": 1,
+          "unit_price": 75.05,
+          "line_total": 75.05
+        },
+        {
+          "description": "Conference speakerphone",
+          "quantity": 4,
+          "unit_price": 355.54,
+          "line_total": 1422.16
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "98812",
+      "invoice_date": "2026-08-13",
+      "due_date": "2026-09-27",
+      "po_number": "PO-490519",
+      "supplier_name": "Orbis Telecom Hardware Ltd",
+      "supplier_vat_number": "GB 349 7023 02",
+      "currency": "GBP",
+      "subtotal": 6612.32,
+      "vat_amount": 1322.46,
+      "total_amount": 7934.78,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-7182",
+      "line_items": [
+        {
+          "description": "Wireless access point",
+          "quantity": 4,
+          "unit_price": 221.86,
+          "line_total": 887.44
+        },
+        {
+          "description": "Rack-mount UPS",
+          "quantity": 2,
+          "unit_price": 1384.59,
+          "line_total": 2769.18
+        },
+        {
+          "description": "Headset, noise-cancelling",
+          "quantity": 3,
+          "unit_price": 69.76,
+          "line_total": 209.28
+        },
+        {
+          "description": "Cat6 cable (305 m box)",
+          "quantity": 5,
+          "unit_price": 166.21,
+          "line_total": 831.05
+        },
+        {
+          "description": "IP desk phone",
+          "quantity": 4,
+          "unit_price": 104.54,
+          "line_total": 418.16
+        },
+        {
+          "description": "SFP+ transceiver",
+          "quantity": 1,
+          "unit_price": 75.05,
+          "line_total": 75.05
+        },
+        {
+          "description": "Conference speakerphone",
+          "quantity": 4,
+          "unit_price": 355.54,
+          "line_total": 1422.16
+        }
+      ],
+      "supplier_id": "SUP-012"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 7
+    }
+  },
+  {
+    "doc_id": "DOC-M02",
+    "complexity": "medium",
+    "layout": "C",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "S003-41844",
+      "invoice_date": "2026-02-18",
+      "due_date": "2026-03-20",
+      "po_number": "PO-425090",
+      "supplier_name": "Pennine Facilities Management",
+      "supplier_vat_number": "GB 450 2364 53",
+      "currency": "GBP",
+      "subtotal": 4573.6,
+      "vat_amount": 914.72,
+      "total_amount": 5488.32,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6744",
+      "line_items": [
+        {
+          "description": "Boiler annual service",
+          "quantity": 5,
+          "unit_price": 347.22,
+          "line_total": 1736.1
+        },
+        {
+          "description": "Lift service contract (monthly)",
+          "quantity": 1,
+          "unit_price": 920.04,
+          "line_total": 920.04
+        },
+        {
+          "description": "Water hygiene testing",
+          "quantity": 4,
+          "unit_price": 142.93,
+          "line_total": 571.72
+        },
+        {
+          "description": "Fire-door inspection",
+          "quantity": 6,
+          "unit_price": 224.29,
+          "line_total": 1345.74
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S003-41844",
+      "invoice_date": "2026-02-18",
+      "due_date": "2026-03-20",
+      "po_number": "PO-425090",
+      "supplier_name": "Pennine Facilities Management Ltd",
+      "supplier_vat_number": "GB 450 2364 53",
+      "currency": "GBP",
+      "subtotal": 4573.6,
+      "vat_amount": 914.72,
+      "total_amount": 5488.32,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6744",
+      "line_items": [
+        {
+          "description": "Boiler annual service",
+          "quantity": 5,
+          "unit_price": 347.22,
+          "line_total": 1736.1
+        },
+        {
+          "description": "Lift service contract (monthly)",
+          "quantity": 1,
+          "unit_price": 920.04,
+          "line_total": 920.04
+        },
+        {
+          "description": "Water hygiene testing",
+          "quantity": 4,
+          "unit_price": 142.93,
+          "line_total": 571.72
+        },
+        {
+          "description": "Fire-door inspection",
+          "quantity": 6,
+          "unit_price": 224.29,
+          "line_total": 1345.74
+        }
+      ],
+      "supplier_id": "SUP-003"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 4
+    }
+  },
+  {
+    "doc_id": "DOC-M03",
+    "complexity": "medium",
+    "layout": "A",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "S014-24336",
+      "invoice_date": "2026-02-08",
+      "due_date": "2026-03-10",
+      "po_number": "PO-460211",
+      "supplier_name": "LINDQVIST SOFTWARE AB",
+      "supplier_vat_number": "SE99891778001",
+      "currency": "EUR",
+      "subtotal": 17124.41,
+      "vat_amount": 0.0,
+      "total_amount": 17124.41,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-1818",
+      "line_items": [
+        {
+          "description": "Premium support add-on (annual)",
+          "quantity": 3,
+          "unit_price": 1864.81,
+          "line_total": 5594.43
+        },
+        {
+          "description": "Sandbox environment (annual)",
+          "quantity": 1,
+          "unit_price": 1042.82,
+          "line_total": 1042.82
+        },
+        {
+          "description": "Additional user licences (pack of 10)",
+          "quantity": 2,
+          "unit_price": 1006.29,
+          "line_total": 2012.58
+        },
+        {
+          "description": "Implementation consultancy (per day)",
+          "quantity": 1,
+          "unit_price": 1000.3,
+          "line_total": 1000.3
+        },
+        {
+          "description": "API integration module (annual)",
+          "quantity": 1,
+          "unit_price": 1445.0,
+          "line_total": 1445.0
+        },
+        {
+          "description": "Data migration service",
+          "quantity": 2,
+          "unit_price": 3014.64,
+          "line_total": 6029.28
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S014-24336",
+      "invoice_date": "2026-02-08",
+      "due_date": "2026-03-10",
+      "po_number": "PO-460211",
+      "supplier_name": "Lindqvist Software AB",
+      "supplier_vat_number": "SE99891778001",
+      "currency": "EUR",
+      "subtotal": 17124.41,
+      "vat_amount": 0.0,
+      "total_amount": 17124.41,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-1818",
+      "line_items": [
+        {
+          "description": "Premium support add-on (annual)",
+          "quantity": 3,
+          "unit_price": 1864.81,
+          "line_total": 5594.43
+        },
+        {
+          "description": "Sandbox environment (annual)",
+          "quantity": 1,
+          "unit_price": 1042.82,
+          "line_total": 1042.82
+        },
+        {
+          "description": "Additional user licences (pack of 10)",
+          "quantity": 2,
+          "unit_price": 1006.29,
+          "line_total": 2012.58
+        },
+        {
+          "description": "Implementation consultancy (per day)",
+          "quantity": 1,
+          "unit_price": 1000.3,
+          "line_total": 1000.3
+        },
+        {
+          "description": "API integration module (annual)",
+          "quantity": 1,
+          "unit_price": 1445.0,
+          "line_total": 1445.0
+        },
+        {
+          "description": "Data migration service",
+          "quantity": 2,
+          "unit_price": 3014.64,
+          "line_total": 6029.28
+        }
+      ],
+      "supplier_id": "SUP-014"
+    },
+    "decision": "HOLD_APPROVAL_LIMIT",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": true,
+      "line_item_count": 6
+    }
+  },
+  {
+    "doc_id": "DOC-M04",
+    "complexity": "medium",
+    "layout": "C",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "INV-79232",
+      "invoice_date": "2026-02-19",
+      "due_date": "2026-04-20",
+      "po_number": "PO-459654",
+      "supplier_name": "Ashdown Print and Design",
+      "supplier_vat_number": "GB 802 8178 21",
+      "currency": "GBP",
+      "subtotal": 4092.4,
+      "vat_amount": 818.48,
+      "total_amount": 4910.88,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-4374",
+      "line_items": [
+        {
+          "description": "Roller banner with stand",
+          "quantity": 25,
+          "unit_price": 129.2,
+          "line_total": 3230.0
+        },
+        {
+          "description": "A1 exhibition poster",
+          "quantity": 1,
+          "unit_price": 78.33,
+          "line_total": 78.33
+        },
+        {
+          "description": "Graphic design (per hour)",
+          "quantity": 5,
+          "unit_price": 74.86,
+          "line_total": 374.3
+        },
+        {
+          "description": "Branded notepads (pack of 50)",
+          "quantity": 3,
+          "unit_price": 136.59,
+          "line_total": 409.77
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-79232",
+      "invoice_date": "2026-02-19",
+      "due_date": "2026-04-20",
+      "po_number": "PO-459654",
+      "supplier_name": "Ashdown Print & Design Ltd",
+      "supplier_vat_number": "GB 802 8178 21",
+      "currency": "GBP",
+      "subtotal": 4092.4,
+      "vat_amount": 818.48,
+      "total_amount": 4910.88,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-4374",
+      "line_items": [
+        {
+          "description": "Roller banner with stand",
+          "quantity": 25,
+          "unit_price": 129.2,
+          "line_total": 3230.0
+        },
+        {
+          "description": "A1 exhibition poster",
+          "quantity": 1,
+          "unit_price": 78.33,
+          "line_total": 78.33
+        },
+        {
+          "description": "Graphic design (per hour)",
+          "quantity": 5,
+          "unit_price": 74.86,
+          "line_total": 374.3
+        },
+        {
+          "description": "Branded notepads (pack of 50)",
+          "quantity": 3,
+          "unit_price": 136.59,
+          "line_total": 409.77
+        }
+      ],
+      "supplier_id": "SUP-008"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 4
+    }
+  },
+  {
+    "doc_id": "DOC-M05",
+    "complexity": "medium",
+    "layout": "A",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "INV-63246",
+      "invoice_date": "2026-07-10",
+      "due_date": "2026-09-08",
+      "po_number": "PO-463464",
+      "supplier_name": "Calder Valley Catering Ltd.",
+      "supplier_vat_number": "GB 620 6538 86",
+      "currency": "GBP",
+      "subtotal": 4403.96,
+      "vat_amount": 880.79,
+      "total_amount": 5284.75,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-2221",
+      "line_items": [
+        {
+          "description": "Afternoon tea for 20 people",
+          "quantity": 1,
+          "unit_price": 243.42,
+          "line_total": 243.42
+        },
+        {
+          "description": "Tea and coffee service (weekly)",
+          "quantity": 20,
+          "unit_price": 96.59,
+          "line_total": 1931.8
+        },
+        {
+          "description": "Breakfast platter",
+          "quantity": 12,
+          "unit_price": 53.52,
+          "line_total": 642.24
+        },
+        {
+          "description": "Working lunch for 12 people",
+          "quantity": 10,
+          "unit_price": 152.74,
+          "line_total": 1527.4
+        },
+        {
+          "description": "Event staffing (per hour)",
+          "quantity": 2,
+          "unit_price": 29.55,
+          "line_total": 59.1
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-63246",
+      "invoice_date": "2026-07-10",
+      "due_date": "2026-09-08",
+      "po_number": "PO-463464",
+      "supplier_name": "Calder Valley Catering Ltd",
+      "supplier_vat_number": "GB 620 6538 86",
+      "currency": "GBP",
+      "subtotal": 4403.96,
+      "vat_amount": 880.79,
+      "total_amount": 5284.75,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-2221",
+      "line_items": [
+        {
+          "description": "Afternoon tea for 20 people",
+          "quantity": 1,
+          "unit_price": 243.42,
+          "line_total": 243.42
+        },
+        {
+          "description": "Tea and coffee service (weekly)",
+          "quantity": 20,
+          "unit_price": 96.59,
+          "line_total": 1931.8
+        },
+        {
+          "description": "Breakfast platter",
+          "quantity": 12,
+          "unit_price": 53.52,
+          "line_total": 642.24
+        },
+        {
+          "description": "Working lunch for 12 people",
+          "quantity": 10,
+          "unit_price": 152.74,
+          "line_total": 1527.4
+        },
+        {
+          "description": "Event staffing (per hour)",
+          "quantity": 2,
+          "unit_price": 29.55,
+          "line_total": 59.1
+        }
+      ],
+      "supplier_id": "SUP-007"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 5
+    }
+  },
+  {
+    "doc_id": "DOC-M06",
+    "complexity": "medium",
+    "layout": "B",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "SI/2026/24777",
+      "invoice_date": "2026-06-02",
+      "due_date": "2026-07-02",
+      "po_number": "PO-445908",
+      "supplier_name": "Northgate Office Supplies",
+      "supplier_vat_number": "GB 116 0003 45",
+      "currency": "GBP",
+      "subtotal": 3285.54,
+      "vat_amount": 657.11,
+      "total_amount": 3942.65,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6816",
+      "line_items": [
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams)",
+          "quantity": 20,
+          "unit_price": 21.17,
+          "line_total": 423.4
+        },
+        {
+          "description": "Desk organiser set",
+          "quantity": 3,
+          "unit_price": 29.08,
+          "line_total": 87.24
+        },
+        {
+          "description": "Black toner cartridge, high yield",
+          "quantity": 5,
+          "unit_price": 78.68,
+          "line_total": 393.4
+        },
+        {
+          "description": "Sticky notes (pack of 24)",
+          "quantity": 4,
+          "unit_price": 12.17,
+          "line_total": 48.68
+        },
+        {
+          "description": "Shredder, cross-cut",
+          "quantity": 10,
+          "unit_price": 180.39,
+          "line_total": 1803.9
+        },
+        {
+          "description": "Whiteboard markers (pack of 12)",
+          "quantity": 4,
+          "unit_price": 10.73,
+          "line_total": 42.92
+        },
+        {
+          "description": "Lever-arch files (pack of 10)",
+          "quantity": 25,
+          "unit_price": 19.44,
+          "line_total": 486.0
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "SI/2026/24777",
+      "invoice_date": "2026-06-02",
+      "due_date": "2026-07-02",
+      "po_number": "PO-445908",
+      "supplier_name": "Northgate Office Supplies Ltd",
+      "supplier_vat_number": "GB 116 0003 45",
+      "currency": "GBP",
+      "subtotal": 3285.54,
+      "vat_amount": 657.11,
+      "total_amount": 3942.65,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6816",
+      "line_items": [
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams)",
+          "quantity": 20,
+          "unit_price": 21.17,
+          "line_total": 423.4
+        },
+        {
+          "description": "Desk organiser set",
+          "quantity": 3,
+          "unit_price": 29.08,
+          "line_total": 87.24
+        },
+        {
+          "description": "Black toner cartridge, high yield",
+          "quantity": 5,
+          "unit_price": 78.68,
+          "line_total": 393.4
+        },
+        {
+          "description": "Sticky notes (pack of 24)",
+          "quantity": 4,
+          "unit_price": 12.17,
+          "line_total": 48.68
+        },
+        {
+          "description": "Shredder, cross-cut",
+          "quantity": 10,
+          "unit_price": 180.39,
+          "line_total": 1803.9
+        },
+        {
+          "description": "Whiteboard markers (pack of 12)",
+          "quantity": 4,
+          "unit_price": 10.73,
+          "line_total": 42.92
+        },
+        {
+          "description": "Lever-arch files (pack of 10)",
+          "quantity": 25,
+          "unit_price": 19.44,
+          "line_total": 486.0
+        }
+      ],
+      "supplier_id": "SUP-001"
+    },
+    "decision": "APPROVE",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 7
+    }
+  },
+  {
+    "doc_id": "DOC-M07",
+    "complexity": "medium",
+    "layout": "C",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "INV-91615",
+      "invoice_date": "2026-05-19",
+      "due_date": "2026-06-18",
+      "po_number": "PO-494747",
+      "supplier_name": "Brightwater IT Services Limited",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 9403.04,
+      "vat_amount": 1880.61,
+      "total_amount": 11283.65,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6710",
+      "line_items": [
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 1,
+          "unit_price": 90.82,
+          "line_total": 90.82
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 3,
+          "unit_price": 1433.85,
+          "line_total": 4301.55
+        },
+        {
+          "description": "Laptop imaging and deployment (per device)",
+          "quantity": 2,
+          "unit_price": 54.62,
+          "line_total": 109.24
+        },
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 1,
+          "unit_price": 565.42,
+          "line_total": 565.42
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat)",
+          "quantity": 20,
+          "unit_price": 36.22,
+          "line_total": 724.4
+        },
+        {
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 3,
+          "unit_price": 1072.39,
+          "line_total": 3217.17
+        },
+        {
+          "description": "Docking station",
+          "quantity": 3,
+          "unit_price": 131.48,
+          "line_total": 394.44
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-91615",
+      "invoice_date": "2026-05-19",
+      "due_date": "2026-06-18",
+      "po_number": "PO-494747",
+      "supplier_name": "Brightwater IT Services Ltd",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 9403.04,
+      "vat_amount": 1880.61,
+      "total_amount": 11283.65,
+      "payment_terms_days": 30,
+      "customer_reference": "CC-6710",
+      "line_items": [
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 1,
+          "unit_price": 90.82,
+          "line_total": 90.82
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 3,
+          "unit_price": 1433.85,
+          "line_total": 4301.55
+        },
+        {
+          "description": "Laptop imaging and deployment (per device)",
+          "quantity": 2,
+          "unit_price": 54.62,
+          "line_total": 109.24
+        },
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 1,
+          "unit_price": 565.42,
+          "line_total": 565.42
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat)",
+          "quantity": 20,
+          "unit_price": 36.22,
+          "line_total": 724.4
+        },
+        {
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 3,
+          "unit_price": 1072.39,
+          "line_total": 3217.17
+        },
+        {
+          "description": "Docking station",
+          "quantity": 3,
+          "unit_price": 131.48,
+          "line_total": 394.44
+        }
+      ],
+      "supplier_id": "SUP-005"
+    },
+    "decision": "HOLD_APPROVAL_LIMIT",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": true,
+      "customer_reference_blank": false,
+      "distractor_dates": false,
+      "superseded_total": null,
+      "reverse_charge_vat": false,
+      "line_item_count": 7
+    }
+  },
+  {
+    "doc_id": "DOC-H01",
+    "complexity": "high",
+    "layout": "A",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "INV-70349",
+      "invoice_date": "2026-08-08",
+      "due_date": "2026-09-22",
+      "po_number": "PO-421351",
+      "supplier_name": "NORTHGATE OFFICE SUPPLIES LTD",
+      "supplier_vat_number": "GB 116 0003 45",
+      "currency": "GBP",
+      "subtotal": 4346.09,
+      "vat_amount": 869.22,
+      "total_amount": 5215.31,
+      "payment_terms_days": 45,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Desk organiser set",
+          "quantity": 1,
+          "unit_price": 18.69,
+          "line_total": 18.69
+        },
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams)",
+          "quantity": 4,
+          "unit_price": 24.48,
+          "line_total": 97.92
+        },
+        {
+          "description": "Black toner cartridge, high yield",
+          "quantity": 1,
+          "unit_price": 62.1,
+          "line_total": 62.1
+        },
+        {
+          "description": "Shredder, cross-cut",
+          "quantity": 10,
+          "unit_price": 174.11,
+          "line_total": 1741.1
+        },
+        {
+          "description": "Lever-arch files (pack of 10)",
+          "quantity": 6,
+          "unit_price": 13.58,
+          "line_total": 81.48
+        },
+        {
+          "description": "Ergonomic office chair",
+          "quantity": 10,
+          "unit_price": 234.48,
+          "line_total": 2344.8
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-70349",
+      "invoice_date": "2026-08-08",
+      "due_date": "2026-09-22",
+      "po_number": "PO-421351",
+      "supplier_name": "Northgate Office Supplies Ltd",
+      "supplier_vat_number": "GB 116 0003 45",
+      "currency": "GBP",
+      "subtotal": 4346.09,
+      "vat_amount": 869.22,
+      "total_amount": 5215.31,
+      "payment_terms_days": 45,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Desk organiser set",
+          "quantity": 1,
+          "unit_price": 18.69,
+          "line_total": 18.69
+        },
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams)",
+          "quantity": 4,
+          "unit_price": 24.48,
+          "line_total": 97.92
+        },
+        {
+          "description": "Black toner cartridge, high yield",
+          "quantity": 1,
+          "unit_price": 62.1,
+          "line_total": 62.1
+        },
+        {
+          "description": "Shredder, cross-cut",
+          "quantity": 10,
+          "unit_price": 174.11,
+          "line_total": 1741.1
+        },
+        {
+          "description": "Lever-arch files (pack of 10)",
+          "quantity": 6,
+          "unit_price": 13.58,
+          "line_total": 81.48
+        },
+        {
+          "description": "Ergonomic office chair",
+          "quantity": 10,
+          "unit_price": 234.48,
+          "line_total": 2344.8
+        }
+      ],
+      "supplier_id": "SUP-001"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 6042.45,
+      "reverse_charge_vat": false,
+      "line_item_count": 6
+    }
+  },
+  {
+    "doc_id": "DOC-H02",
+    "complexity": "high",
+    "layout": "B",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "INV-89700",
+      "invoice_date": "2026-02-19",
+      "due_date": "2026-04-20",
+      "po_number": "PO-451275",
+      "supplier_name": "Pennine Facilities Management",
+      "supplier_vat_number": "GB 450 2364 53",
+      "currency": "GBP",
+      "subtotal": 6900.21,
+      "vat_amount": 1380.04,
+      "total_amount": 8280.25,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Lift service contract (monthly)",
+          "quantity": 3,
+          "unit_price": 801.45,
+          "line_total": 2404.35
+        },
+        {
+          "description": "Water hygiene testing",
+          "quantity": 3,
+          "unit_price": 190.54,
+          "line_total": 571.62
+        },
+        {
+          "description": "Car park line marking",
+          "quantity": 1,
+          "unit_price": 452.24,
+          "line_total": 452.24
+        },
+        {
+          "description": "Boiler annual service",
+          "quantity": 10,
+          "unit_price": 219.05,
+          "line_total": 2190.5
+        },
+        {
+          "description": "Planned maintenance visit",
+          "quantity": 1,
+          "unit_price": 312.74,
+          "line_total": 312.74
+        },
+        {
+          "description": "Emergency call-out (out of hours)",
+          "quantity": 3,
+          "unit_price": 322.92,
+          "line_total": 968.76
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-89700",
+      "invoice_date": "2026-02-19",
+      "due_date": "2026-04-20",
+      "po_number": "PO-451275",
+      "supplier_name": "Pennine Facilities Management Ltd",
+      "supplier_vat_number": "GB 450 2364 53",
+      "currency": "GBP",
+      "subtotal": 6900.21,
+      "vat_amount": 1380.04,
+      "total_amount": 8280.25,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Lift service contract (monthly)",
+          "quantity": 3,
+          "unit_price": 801.45,
+          "line_total": 2404.35
+        },
+        {
+          "description": "Water hygiene testing",
+          "quantity": 3,
+          "unit_price": 190.54,
+          "line_total": 571.62
+        },
+        {
+          "description": "Car park line marking",
+          "quantity": 1,
+          "unit_price": 452.24,
+          "line_total": 452.24
+        },
+        {
+          "description": "Boiler annual service",
+          "quantity": 10,
+          "unit_price": 219.05,
+          "line_total": 2190.5
+        },
+        {
+          "description": "Planned maintenance visit",
+          "quantity": 1,
+          "unit_price": 312.74,
+          "line_total": 312.74
+        },
+        {
+          "description": "Emergency call-out (out of hours)",
+          "quantity": 3,
+          "unit_price": 322.92,
+          "line_total": 968.76
+        }
+      ],
+      "supplier_id": "SUP-003"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 8538.95,
+      "reverse_charge_vat": false,
+      "line_item_count": 6
+    }
+  },
+  {
+    "doc_id": "DOC-H03",
+    "complexity": "high",
+    "layout": "C",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "83420",
+      "invoice_date": "2026-01-06",
+      "due_date": "2026-02-05",
+      "po_number": "PO-416910",
+      "supplier_name": "Brightwater IT Services Limited",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 15949.15,
+      "vat_amount": 3189.83,
+      "total_amount": 19138.98,
+      "payment_terms_days": 30,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 1,
+          "unit_price": 496.34,
+          "line_total": 496.34
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 3,
+          "unit_price": 1179.25,
+          "line_total": 3537.75
+        },
+        {
+          "description": "Laptop imaging and deployment (per device)",
+          "quantity": 1,
+          "unit_price": 55.93,
+          "line_total": 55.93
+        },
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 6,
+          "unit_price": 106.35,
+          "line_total": 638.1
+        },
+        {
+          "description": "Backup monitoring (monthly)",
+          "quantity": 2,
+          "unit_price": 612.71,
+          "line_total": 1225.42
+        },
+        {
+          "description": "Managed service desk (monthly)",
+          "quantity": 3,
+          "unit_price": 2844.02,
+          "line_total": 8532.06
+        },
+        {
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 1,
+          "unit_price": 1463.55,
+          "line_total": 1463.55
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "83420",
+      "invoice_date": "2026-01-06",
+      "due_date": "2026-02-05",
+      "po_number": "PO-416910",
+      "supplier_name": "Brightwater IT Services Ltd",
+      "supplier_vat_number": "GB 128 2973 77",
+      "currency": "GBP",
+      "subtotal": 15949.15,
+      "vat_amount": 3189.83,
+      "total_amount": 19138.98,
+      "payment_terms_days": 30,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 1,
+          "unit_price": 496.34,
+          "line_total": 496.34
+        },
+        {
+          "description": "Firewall configuration review",
+          "quantity": 3,
+          "unit_price": 1179.25,
+          "line_total": 3537.75
+        },
+        {
+          "description": "Laptop imaging and deployment (per device)",
+          "quantity": 1,
+          "unit_price": 55.93,
+          "line_total": 55.93
+        },
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 6,
+          "unit_price": 106.35,
+          "line_total": 638.1
+        },
+        {
+          "description": "Backup monitoring (monthly)",
+          "quantity": 2,
+          "unit_price": 612.71,
+          "line_total": 1225.42
+        },
+        {
+          "description": "Managed service desk (monthly)",
+          "quantity": 3,
+          "unit_price": 2844.02,
+          "line_total": 8532.06
+        },
+        {
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 1,
+          "unit_price": 1463.55,
+          "line_total": 1463.55
+        }
+      ],
+      "supplier_id": "SUP-005"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 19779.74,
+      "reverse_charge_vat": false,
+      "line_item_count": 7
+    }
+  },
+  {
+    "doc_id": "DOC-H04",
+    "complexity": "high",
+    "layout": "A",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "S012-96601",
+      "invoice_date": "2026-04-08",
+      "due_date": "2026-06-07",
+      "po_number": "PO-496143",
+      "supplier_name": "Orbis Telecom Hardware",
+      "supplier_vat_number": "GB 349 7023 02",
+      "currency": "GBP",
+      "subtotal": 7171.67,
+      "vat_amount": 1434.33,
+      "total_amount": 8606.0,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "SFP+ transceiver",
+          "quantity": 6,
+          "unit_price": 88.79,
+          "line_total": 532.74
+        },
+        {
+          "description": "Rack-mount UPS",
+          "quantity": 1,
+          "unit_price": 1160.66,
+          "line_total": 1160.66
+        },
+        {
+          "description": "24-port PoE switch",
+          "quantity": 1,
+          "unit_price": 745.63,
+          "line_total": 745.63
+        },
+        {
+          "description": "Wireless access point",
+          "quantity": 1,
+          "unit_price": 213.14,
+          "line_total": 213.14
+        },
+        {
+          "description": "Headset, noise-cancelling",
+          "quantity": 25,
+          "unit_price": 70.48,
+          "line_total": 1762.0
+        },
+        {
+          "description": "IP desk phone",
+          "quantity": 5,
+          "unit_price": 109.44,
+          "line_total": 547.2
+        },
+        {
+          "description": "Fibre patch leads (pack of 10)",
+          "quantity": 12,
+          "unit_price": 61.97,
+          "line_total": 743.64
+        },
+        {
+          "description": "Cat6 cable (305 m box)",
+          "quantity": 1,
+          "unit_price": 133.14,
+          "line_total": 133.14
+        },
+        {
+          "description": "Conference speakerphone",
+          "quantity": 4,
+          "unit_price": 333.38,
+          "line_total": 1333.52
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S012-96601",
+      "invoice_date": "2026-04-08",
+      "due_date": "2026-06-07",
+      "po_number": "PO-496143",
+      "supplier_name": "Orbis Telecom Hardware Ltd",
+      "supplier_vat_number": "GB 349 7023 02",
+      "currency": "GBP",
+      "subtotal": 7171.67,
+      "vat_amount": 1434.33,
+      "total_amount": 8606.0,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "SFP+ transceiver",
+          "quantity": 6,
+          "unit_price": 88.79,
+          "line_total": 532.74
+        },
+        {
+          "description": "Rack-mount UPS",
+          "quantity": 1,
+          "unit_price": 1160.66,
+          "line_total": 1160.66
+        },
+        {
+          "description": "24-port PoE switch",
+          "quantity": 1,
+          "unit_price": 745.63,
+          "line_total": 745.63
+        },
+        {
+          "description": "Wireless access point",
+          "quantity": 1,
+          "unit_price": 213.14,
+          "line_total": 213.14
+        },
+        {
+          "description": "Headset, noise-cancelling",
+          "quantity": 25,
+          "unit_price": 70.48,
+          "line_total": 1762.0
+        },
+        {
+          "description": "IP desk phone",
+          "quantity": 5,
+          "unit_price": 109.44,
+          "line_total": 547.2
+        },
+        {
+          "description": "Fibre patch leads (pack of 10)",
+          "quantity": 12,
+          "unit_price": 61.97,
+          "line_total": 743.64
+        },
+        {
+          "description": "Cat6 cable (305 m box)",
+          "quantity": 1,
+          "unit_price": 133.14,
+          "line_total": 133.14
+        },
+        {
+          "description": "Conference speakerphone",
+          "quantity": 4,
+          "unit_price": 333.38,
+          "line_total": 1333.52
+        }
+      ],
+      "supplier_id": "SUP-012"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 9006.52,
+      "reverse_charge_vat": false,
+      "line_item_count": 9
+    }
+  },
+  {
+    "doc_id": "DOC-H05",
+    "complexity": "high",
+    "layout": "B",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "SI/2026/83706",
+      "invoice_date": "2026-01-28",
+      "due_date": "2026-03-29",
+      "po_number": "PO-482585",
+      "supplier_name": "LINDQVIST SOFTWARE AB",
+      "supplier_vat_number": "SE99891778001",
+      "currency": "EUR",
+      "subtotal": 27695.83,
+      "vat_amount": 0.0,
+      "total_amount": 27695.83,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Premium support add-on (annual)",
+          "quantity": 3,
+          "unit_price": 2036.54,
+          "line_total": 6109.62
+        },
+        {
+          "description": "Single sign-on connector (annual)",
+          "quantity": 1,
+          "unit_price": 756.09,
+          "line_total": 756.09
+        },
+        {
+          "description": "Additional user licences (pack of 10)",
+          "quantity": 2,
+          "unit_price": 799.05,
+          "line_total": 1598.1
+        },
+        {
+          "description": "Workflow platform subscription (annual)",
+          "quantity": 2,
+          "unit_price": 6478.72,
+          "line_total": 12957.44
+        },
+        {
+          "description": "Training session (half day)",
+          "quantity": 2,
+          "unit_price": 595.43,
+          "line_total": 1190.86
+        },
+        {
+          "description": "API integration module (annual)",
+          "quantity": 3,
+          "unit_price": 1144.24,
+          "line_total": 3432.72
+        },
+        {
+          "description": "Data migration service",
+          "quantity": 1,
+          "unit_price": 1651.0,
+          "line_total": 1651.0
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "SI/2026/83706",
+      "invoice_date": "2026-01-28",
+      "due_date": "2026-03-29",
+      "po_number": "PO-482585",
+      "supplier_name": "Lindqvist Software AB",
+      "supplier_vat_number": "SE99891778001",
+      "currency": "EUR",
+      "subtotal": 27695.83,
+      "vat_amount": 0.0,
+      "total_amount": 27695.83,
+      "payment_terms_days": 60,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Premium support add-on (annual)",
+          "quantity": 3,
+          "unit_price": 2036.54,
+          "line_total": 6109.62
+        },
+        {
+          "description": "Single sign-on connector (annual)",
+          "quantity": 1,
+          "unit_price": 756.09,
+          "line_total": 756.09
+        },
+        {
+          "description": "Additional user licences (pack of 10)",
+          "quantity": 2,
+          "unit_price": 799.05,
+          "line_total": 1598.1
+        },
+        {
+          "description": "Workflow platform subscription (annual)",
+          "quantity": 2,
+          "unit_price": 6478.72,
+          "line_total": 12957.44
+        },
+        {
+          "description": "Training session (half day)",
+          "quantity": 2,
+          "unit_price": 595.43,
+          "line_total": 1190.86
+        },
+        {
+          "description": "API integration module (annual)",
+          "quantity": 3,
+          "unit_price": 1144.24,
+          "line_total": 3432.72
+        },
+        {
+          "description": "Data migration service",
+          "quantity": 1,
+          "unit_price": 1651.0,
+          "line_total": 1651.0
+        }
+      ],
+      "supplier_id": "SUP-014"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 28536.33,
+      "reverse_charge_vat": true,
+      "line_item_count": 7
+    }
+  },
+  {
+    "doc_id": "DOC-H06",
+    "complexity": "high",
+    "layout": "C",
+    "hitl_subset": true,
+    "extraction": {
+      "invoice_number": "INV-55970",
+      "invoice_date": "2026-03-14",
+      "due_date": "2026-04-13",
+      "po_number": "PO-426546",
+      "supplier_name": "Severn Electrical Contractors Ltd.",
+      "supplier_vat_number": "GB 777 8221 00",
+      "currency": "GBP",
+      "subtotal": 3935.69,
+      "vat_amount": 787.14,
+      "total_amount": 4722.83,
+      "payment_terms_days": 30,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Electrician (per day)",
+          "quantity": 2,
+          "unit_price": 285.08,
+          "line_total": 570.16
+        },
+        {
+          "description": "LED panel replacement",
+          "quantity": 1,
+          "unit_price": 70.04,
+          "line_total": 70.04
+        },
+        {
+          "description": "Electrical safety certificate",
+          "quantity": 2,
+          "unit_price": 162.75,
+          "line_total": 325.5
+        },
+        {
+          "description": "PAT testing (per item)",
+          "quantity": 3,
+          "unit_price": 4.72,
+          "line_total": 14.16
+        },
+        {
+          "description": "Fixed wire testing (per circuit)",
+          "quantity": 5,
+          "unit_price": 13.73,
+          "line_total": 68.65
+        },
+        {
+          "description": "EV charger installation",
+          "quantity": 1,
+          "unit_price": 1670.63,
+          "line_total": 1670.63
+        },
+        {
+          "description": "Socket and data-point installation",
+          "quantity": 2,
+          "unit_price": 140.26,
+          "line_total": 280.52
+        },
+        {
+          "description": "Emergency lighting test",
+          "quantity": 3,
+          "unit_price": 312.01,
+          "line_total": 936.03
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "INV-55970",
+      "invoice_date": "2026-03-14",
+      "due_date": "2026-04-13",
+      "po_number": "PO-426546",
+      "supplier_name": "Severn Electrical Contractors Ltd",
+      "supplier_vat_number": "GB 777 8221 00",
+      "currency": "GBP",
+      "subtotal": 3935.69,
+      "vat_amount": 787.14,
+      "total_amount": 4722.83,
+      "payment_terms_days": 30,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Electrician (per day)",
+          "quantity": 2,
+          "unit_price": 285.08,
+          "line_total": 570.16
+        },
+        {
+          "description": "LED panel replacement",
+          "quantity": 1,
+          "unit_price": 70.04,
+          "line_total": 70.04
+        },
+        {
+          "description": "Electrical safety certificate",
+          "quantity": 2,
+          "unit_price": 162.75,
+          "line_total": 325.5
+        },
+        {
+          "description": "PAT testing (per item)",
+          "quantity": 3,
+          "unit_price": 4.72,
+          "line_total": 14.16
+        },
+        {
+          "description": "Fixed wire testing (per circuit)",
+          "quantity": 5,
+          "unit_price": 13.73,
+          "line_total": 68.65
+        },
+        {
+          "description": "EV charger installation",
+          "quantity": 1,
+          "unit_price": 1670.63,
+          "line_total": 1670.63
+        },
+        {
+          "description": "Socket and data-point installation",
+          "quantity": 2,
+          "unit_price": 140.26,
+          "line_total": 280.52
+        },
+        {
+          "description": "Emergency lighting test",
+          "quantity": 3,
+          "unit_price": 312.01,
+          "line_total": 936.03
+        }
+      ],
+      "supplier_id": "SUP-010"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 5086.33,
+      "reverse_charge_vat": false,
+      "line_item_count": 8
+    }
+  },
+  {
+    "doc_id": "DOC-H07",
+    "complexity": "high",
+    "layout": "A",
+    "hitl_subset": false,
+    "extraction": {
+      "invoice_number": "S013-45363",
+      "invoice_date": "2026-08-04",
+      "due_date": "2026-09-18",
+      "po_number": "PO-403652",
+      "supplier_name": "Kestrel Security Systems",
+      "supplier_vat_number": "GB 746 6048 08",
+      "currency": "GBP",
+      "subtotal": 6906.01,
+      "vat_amount": 1381.2,
+      "total_amount": 8287.21,
+      "payment_terms_days": 45,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Security patrol (per night)",
+          "quantity": 5,
+          "unit_price": 204.0,
+          "line_total": 1020.0
+        },
+        {
+          "description": "Alarm system service",
+          "quantity": 2,
+          "unit_price": 228.01,
+          "line_total": 456.02
+        },
+        {
+          "description": "Security risk assessment",
+          "quantity": 2,
+          "unit_price": 942.92,
+          "line_total": 1885.84
+        },
+        {
+          "description": "Video door entry unit",
+          "quantity": 3,
+          "unit_price": 505.96,
+          "line_total": 1517.88
+        },
+        {
+          "description": "Access cards (pack of 50)",
+          "quantity": 4,
+          "unit_price": 120.54,
+          "line_total": 482.16
+        },
+        {
+          "description": "Access-control card readers",
+          "quantity": 1,
+          "unit_price": 339.61,
+          "line_total": 339.61
+        },
+        {
+          "description": "Intruder alarm keypad",
+          "quantity": 5,
+          "unit_price": 240.9,
+          "line_total": 1204.5
+        }
+      ]
+    },
+    "final": {
+      "invoice_number": "S013-45363",
+      "invoice_date": "2026-08-04",
+      "due_date": "2026-09-18",
+      "po_number": "PO-403652",
+      "supplier_name": "Kestrel Security Systems Ltd",
+      "supplier_vat_number": "GB 746 6048 08",
+      "currency": "GBP",
+      "subtotal": 6906.01,
+      "vat_amount": 1381.2,
+      "total_amount": 8287.21,
+      "payment_terms_days": 45,
+      "customer_reference": null,
+      "line_items": [
+        {
+          "description": "Security patrol (per night)",
+          "quantity": 5,
+          "unit_price": 204.0,
+          "line_total": 1020.0
+        },
+        {
+          "description": "Alarm system service",
+          "quantity": 2,
+          "unit_price": 228.01,
+          "line_total": 456.02
+        },
+        {
+          "description": "Security risk assessment",
+          "quantity": 2,
+          "unit_price": 942.92,
+          "line_total": 1885.84
+        },
+        {
+          "description": "Video door entry unit",
+          "quantity": 3,
+          "unit_price": 505.96,
+          "line_total": 1517.88
+        },
+        {
+          "description": "Access cards (pack of 50)",
+          "quantity": 4,
+          "unit_price": 120.54,
+          "line_total": 482.16
+        },
+        {
+          "description": "Access-control card readers",
+          "quantity": 1,
+          "unit_price": 339.61,
+          "line_total": 339.61
+        },
+        {
+          "description": "Intruder alarm keypad",
+          "quantity": 5,
+          "unit_price": 240.9,
+          "line_total": 1204.5
+        }
+      ],
+      "supplier_id": "SUP-013"
+    },
+    "decision": "HOLD_PO_MISMATCH",
+    "difficulty_features": {
+      "printed_name_differs_from_master": true,
+      "due_date_must_be_derived": false,
+      "customer_reference_blank": true,
+      "distractor_dates": true,
+      "superseded_total": 8519.76,
+      "reverse_charge_vat": false,
+      "line_item_count": 7
+    }
+  }
+]

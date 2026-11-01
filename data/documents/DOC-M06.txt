@@ -1,0 +1,25 @@
+INVOICE
+========================================
+Supplier ................ Northgate Office Supplies
+Address ................. Unit 34, Canal Street, Harrogate HG1 9UD
+VAT number .............. GB 116 0003 45
+Invoice reference ....... SI/2026/24777
+Date of issue ........... 02/06/2026
+Purchase order .......... PO-445908
+Your reference .......... CC-6816
+Customer ................ Arden Valley Communications plc
+
+Items
+  1. A4 copier paper, 80gsm (box of 5 reams) | 20 x £21.17 = £423.40
+  2. Desk organiser set | 3 x £29.08 = £87.24
+  3. Black toner cartridge, high yield | 5 x £78.68 = £393.40
+  4. Sticky notes (pack of 24) | 4 x £12.17 = £48.68
+  5. Shredder, cross-cut | 10 x £180.39 = £1,803.90
+  6. Whiteboard markers (pack of 12) | 4 x £10.73 = £42.92
+  7. Lever-arch files (pack of 10) | 25 x £19.44 = £486.00
+
+Net ..................... £3,285.54
+VAT ..................... £657.11
+Gross amount payable .... £3,942.65
+
+Please pay within 30 days of the invoice date.

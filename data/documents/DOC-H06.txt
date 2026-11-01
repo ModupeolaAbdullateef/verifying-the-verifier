@@ -1,0 +1,31 @@
+From: accounts@severn-electrical.example
+To: ap@ardenvalley.example
+Subject: Invoice INV-55970 - PO PO-426546
+
+Hi team,
+
+Please find below our invoice INV-55970, dated 14th March 2026, for the goods and services supplied against your purchase order PO-426546.
+
+Order date: 5 March 2026
+Goods delivered: 13/03/2026
+Note: the original invoice total of £5,086.33 has been superseded following credit note CN-5795. The amended amount below is now payable.
+
+Items supplied:
+- 2 x Electrician (per day) at £285.08 each = £570.16
+- 1 x LED panel replacement at £70.04 each = £70.04
+- 2 x Electrical safety certificate at £162.75 each = £325.50
+- 3 x PAT testing (per item) at £4.72 each = £14.16
+- 5 x Fixed wire testing (per circuit) at £13.73 each = £68.65
+- 1 x EV charger installation at £1,670.63 each = £1,670.63
+- 2 x Socket and data-point installation at £140.26 each = £280.52
+- 3 x Emergency lighting test at £312.01 each = £936.03
+
+That comes to £3,935.69 net, plus VAT of £787.14, making £4,722.83 payable.
+Terms: 30 days. Payment due by 2026-04-13.
+Our VAT registration number is GB 777 8221 00.
+
+Kind regards,
+Hannah Fraser
+Accounts Team
+Severn Electrical Contractors Ltd.
+Unit 98, Park View, Bradford BD1 7BA

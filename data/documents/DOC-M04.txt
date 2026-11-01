@@ -1,0 +1,24 @@
+From: accounts@ashdown-print.example
+To: ap@ardenvalley.example
+Subject: Invoice INV-79232 - PO PO-459654
+
+Hi team,
+
+Please find below our invoice INV-79232, dated 19-Feb-26, for the goods and services supplied against your purchase order PO-459654.
+Your internal reference for this order was CC-4374.
+
+Items supplied:
+- 25 x Roller banner with stand at GBP 129.20 each = GBP 3,230.00
+- 1 x A1 exhibition poster at GBP 78.33 each = GBP 78.33
+- 5 x Graphic design (per hour) at GBP 74.86 each = GBP 374.30
+- 3 x Branded notepads (pack of 50) at GBP 136.59 each = GBP 409.77
+
+That comes to GBP 4,092.40 net, plus VAT of GBP 818.48, making GBP 4,910.88 payable.
+Please pay within 60 days of the invoice date.
+Our VAT registration number is GB 802 8178 21.
+
+Kind regards,
+Tom Fraser
+Accounts Team
+Ashdown Print and Design
+Unit 158, Bridge Street, York YO1 6EU

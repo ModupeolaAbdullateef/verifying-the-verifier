@@ -1,0 +1,128 @@
+[
+  {
+    "po_number": "PO-403652",
+    "supplier_id": "SUP-013",
+    "currency": "GBP",
+    "approved_amount": 8519.76
+  },
+  {
+    "po_number": "PO-408429",
+    "supplier_id": "SUP-008",
+    "currency": "GBP",
+    "approved_amount": 616.61
+  },
+  {
+    "po_number": "PO-416864",
+    "supplier_id": "SUP-010",
+    "currency": "GBP",
+    "approved_amount": 12055.26
+  },
+  {
+    "po_number": "PO-416910",
+    "supplier_id": "SUP-005",
+    "currency": "GBP",
+    "approved_amount": 19779.74
+  },
+  {
+    "po_number": "PO-421351",
+    "supplier_id": "SUP-001",
+    "currency": "GBP",
+    "approved_amount": 6042.45
+  },
+  {
+    "po_number": "PO-421947",
+    "supplier_id": "SUP-011",
+    "currency": "GBP",
+    "approved_amount": 551.09
+  },
+  {
+    "po_number": "PO-425090",
+    "supplier_id": "SUP-003",
+    "currency": "GBP",
+    "approved_amount": 5488.32
+  },
+  {
+    "po_number": "PO-426546",
+    "supplier_id": "SUP-010",
+    "currency": "GBP",
+    "approved_amount": 5086.33
+  },
+  {
+    "po_number": "PO-445908",
+    "supplier_id": "SUP-001",
+    "currency": "GBP",
+    "approved_amount": 3942.65
+  },
+  {
+    "po_number": "PO-451275",
+    "supplier_id": "SUP-003",
+    "currency": "GBP",
+    "approved_amount": 8538.95
+  },
+  {
+    "po_number": "PO-459654",
+    "supplier_id": "SUP-008",
+    "currency": "GBP",
+    "approved_amount": 4910.88
+  },
+  {
+    "po_number": "PO-460211",
+    "supplier_id": "SUP-014",
+    "currency": "EUR",
+    "approved_amount": 17124.41
+  },
+  {
+    "po_number": "PO-460761",
+    "supplier_id": "SUP-007",
+    "currency": "GBP",
+    "approved_amount": 463.68
+  },
+  {
+    "po_number": "PO-463464",
+    "supplier_id": "SUP-007",
+    "currency": "GBP",
+    "approved_amount": 5284.75
+  },
+  {
+    "po_number": "PO-470372",
+    "supplier_id": "SUP-013",
+    "currency": "GBP",
+    "approved_amount": 750.38
+  },
+  {
+    "po_number": "PO-482585",
+    "supplier_id": "SUP-014",
+    "currency": "EUR",
+    "approved_amount": 28536.33
+  },
+  {
+    "po_number": "PO-486216",
+    "supplier_id": "SUP-005",
+    "currency": "GBP",
+    "approved_amount": 11039.16
+  },
+  {
+    "po_number": "PO-488281",
+    "supplier_id": "SUP-009",
+    "currency": "GBP",
+    "approved_amount": 304.45
+  },
+  {
+    "po_number": "PO-490519",
+    "supplier_id": "SUP-012",
+    "currency": "GBP",
+    "approved_amount": 7934.78
+  },
+  {
+    "po_number": "PO-494747",
+    "supplier_id": "SUP-005",
+    "currency": "GBP",
+    "approved_amount": 11283.65
+  },
+  {
+    "po_number": "PO-496143",
+    "supplier_id": "SUP-012",
+    "currency": "GBP",
+    "approved_amount": 9006.52
+  }
+]

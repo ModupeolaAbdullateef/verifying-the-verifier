@@ -1,0 +1,23 @@
+                           TAX INVOICE                            
+
+Calder Valley Catering Ltd.
+Unit 34, Kingsway, Huddersfield HD1 9WW
+VAT Reg No: GB 620 6538 86
+
+Invoice No: INV-63246             Invoice Date: 10-Jul-26
+Your PO: PO-463464                Your Ref: CC-2221
+Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+
+Description                                  Qty        Unit      Amount
+------------------------------------------------------------------------
+Afternoon tea for 20 people                    1      243.42      243.42
+Tea and coffee service (weekly)               20       96.59     1931.80
+Breakfast platter                             12       53.52      642.24
+Working lunch for 12 people                   10      152.74     1527.40
+Event staffing (per hour)                      2       29.55       59.10
+------------------------------------------------------------------------
+                                                 Subtotal: £4,403.96
+                                                VAT @ 20%: £880.79
+                                                TOTAL DUE: £5,284.75
+
+Terms: net 60 days.

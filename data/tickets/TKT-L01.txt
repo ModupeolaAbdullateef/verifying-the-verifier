@@ -1,0 +1,11 @@
+Ticket ID: TKT-L01
+Received: 2026-03-13 via Phone
+Reported by: Efe Fraser (Customer Operations)
+Subject: VPN down for the whole Leeds office
+
+Hello,
+
+The VPN has been down since 08:30 for everyone in the Leeds office. None of us (about 40 people) can connect to any internal systems, so the whole office is stuck.
+
+Kind regards,
+Efe

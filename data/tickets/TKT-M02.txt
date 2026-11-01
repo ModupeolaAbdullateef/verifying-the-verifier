@@ -1,0 +1,11 @@
+Ticket ID: TKT-M02
+Received: 2026-06-22 via Phone
+Reported by: George Hughes (Marketing)
+Subject: Can't post invoices - month end tomorrow
+
+Hi IT,
+
+Month-end close is tomorrow and nobody in Accounts Payable can post invoices. The posting screen just spins and then times out. Other parts of the finance system load fine.
+
+Thanks,
+George

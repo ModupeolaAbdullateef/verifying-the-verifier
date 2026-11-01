@@ -1,0 +1,152 @@
+[
+  {
+    "ticket_id": "TKT-L01",
+    "complexity": "low",
+    "hitl_subset": true,
+    "labels": {
+      "category": "Network",
+      "priority": "P1",
+      "assignment_group": "Network Operations",
+      "affected_service": "VPN"
+    },
+    "reasoning": {
+      "impact": 1,
+      "urgency": 1
+    }
+  },
+  {
+    "ticket_id": "TKT-L02",
+    "complexity": "low",
+    "hitl_subset": false,
+    "labels": {
+      "category": "Access & Identity",
+      "priority": "P3",
+      "assignment_group": "Identity & Access Management",
+      "affected_service": "Account lockout"
+    },
+    "reasoning": {
+      "impact": 3,
+      "urgency": 1
+    }
+  },
+  {
+    "ticket_id": "TKT-L03",
+    "complexity": "low",
+    "hitl_subset": true,
+    "labels": {
+      "category": "Hardware",
+      "priority": "P4",
+      "assignment_group": "Desktop Support",
+      "affected_service": "Laptop"
+    },
+    "reasoning": {
+      "impact": 3,
+      "urgency": 2
+    }
+  },
+  {
+    "ticket_id": "TKT-M01",
+    "complexity": "medium",
+    "hitl_subset": false,
+    "labels": {
+      "category": "Email & Collaboration",
+      "priority": "P3",
+      "assignment_group": "Messaging Team",
+      "affected_service": "Microsoft Teams"
+    },
+    "reasoning": {
+      "impact": 2,
+      "urgency": 2
+    }
+  },
+  {
+    "ticket_id": "TKT-M02",
+    "complexity": "medium",
+    "hitl_subset": true,
+    "labels": {
+      "category": "Business Application",
+      "priority": "P2",
+      "assignment_group": "Application Support",
+      "affected_service": "Finance system (invoice posting)"
+    },
+    "reasoning": {
+      "impact": 2,
+      "urgency": 1
+    }
+  },
+  {
+    "ticket_id": "TKT-M03",
+    "complexity": "medium",
+    "hitl_subset": false,
+    "labels": {
+      "category": "Printing",
+      "priority": "P3",
+      "assignment_group": "Desktop Support",
+      "affected_service": "Floor 3 printer"
+    },
+    "reasoning": {
+      "impact": 2,
+      "urgency": 2
+    }
+  },
+  {
+    "ticket_id": "TKT-M04",
+    "complexity": "medium",
+    "hitl_subset": true,
+    "labels": {
+      "category": "Telephony",
+      "priority": "P1",
+      "assignment_group": "Unified Communications",
+      "affected_service": "Contact-centre telephony"
+    },
+    "reasoning": {
+      "impact": 1,
+      "urgency": 1
+    }
+  },
+  {
+    "ticket_id": "TKT-H01",
+    "complexity": "high",
+    "hitl_subset": true,
+    "labels": {
+      "category": "Security Incident",
+      "priority": "P2",
+      "assignment_group": "Security Operations",
+      "affected_service": "Phishing / credential compromise"
+    },
+    "reasoning": {
+      "impact": 2,
+      "urgency": 1
+    }
+  },
+  {
+    "ticket_id": "TKT-H02",
+    "complexity": "high",
+    "hitl_subset": false,
+    "labels": {
+      "category": "Access & Identity",
+      "priority": "P4",
+      "assignment_group": "Identity & Access Management",
+      "affected_service": "Shared drive access"
+    },
+    "reasoning": {
+      "impact": 3,
+      "urgency": 3
+    }
+  },
+  {
+    "ticket_id": "TKT-H03",
+    "complexity": "high",
+    "hitl_subset": false,
+    "labels": {
+      "category": "Hardware",
+      "priority": "P4",
+      "assignment_group": "Desktop Support",
+      "affected_service": "Laptop"
+    },
+    "reasoning": {
+      "impact": 3,
+      "urgency": 2
+    }
+  }
+]

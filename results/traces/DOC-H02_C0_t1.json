@@ -1,0 +1,203 @@
+{
+  "task_id": "DOC-H02",
+  "condition": "C0",
+  "trial": 1,
+  "seed": 20261102,
+  "extraction": {
+    "invoice_number": "INV-89700",
+    "invoice_date": "2026-02-19",
+    "due_date": "2026-04-20",
+    "po_number": "PO-451275",
+    "supplier_name": "Pennine Facilities Management",
+    "supplier_vat_number": "GB 450 2364 53",
+    "currency": "GBP",
+    "subtotal": 6900.21,
+    "vat_amount": 1380.04,
+    "total_amount": 8280.25,
+    "payment_terms_days": 60,
+    "customer_reference": null,
+    "line_items": [
+      {
+        "description": "Lift service contract (monthly)",
+        "quantity": 3,
+        "unit_price": 801.45,
+        "line_total": 2404.35
+      },
+      {
+        "description": "Water hygiene testing",
+        "quantity": 3,
+        "unit_price": 190.54,
+        "line_total": 571.62
+      },
+      {
+        "description": "Car park line marking",
+        "quantity": 1,
+        "unit_price": 452.24,
+        "line_total": 452.24
+      },
+      {
+        "description": "Boiler annual service",
+        "quantity": 10,
+        "unit_price": 219.05,
+        "line_total": 2190.5
+      },
+      {
+        "description": "Planned maintenance visit",
+        "quantity": 1,
+        "unit_price": 312.74,
+        "line_total": 312.74
+      },
+      {
+        "description": "Emergency call-out (out of hours)",
+        "quantity": 3,
+        "unit_price": 322.92,
+        "line_total": 968.76
+      }
+    ]
+  },
+  "gate_history": [
+    {
+      "revision": 0,
+      "passed": true,
+      "issues": [],
+      "gate_seconds": 0.0
+    }
+  ],
+  "revisions": 0,
+  "flagged": false,
+  "candidates": [
+    {
+      "supplier_id": "SUP-003",
+      "name": "Pennine Facilities Management Ltd",
+      "vat_number": "GB 450 2364 53",
+      "currency": "GBP",
+      "similarity": 2.0
+    },
+    {
+      "supplier_id": "SUP-004",
+      "name": "Pennine Facility Services Ltd",
+      "vat_number": "GB 257 2771 62",
+      "currency": "GBP",
+      "similarity": 0.667
+    },
+    {
+      "supplier_id": "SUP-013",
+      "name": "Kestrel Security Systems Ltd",
+      "vat_number": "GB 746 6048 08",
+      "currency": "GBP",
+      "similarity": 0.34
+    }
+  ],
+  "final_record": {
+    "invoice_number": "INV-89700",
+    "invoice_date": "2026-02-19",
+    "due_date": "2026-04-20",
+    "po_number": "PO-451275",
+    "supplier_name": "Pennine Facilities Management Ltd",
+    "supplier_vat_number": "GB 450 2364 53",
+    "currency": "GBP",
+    "subtotal": 6900.21,
+    "vat_amount": 1380.04,
+    "total_amount": 8280.25,
+    "payment_terms_days": 60,
+    "customer_reference": null,
+    "line_items": [
+      {
+        "description": "Lift service contract (monthly)",
+        "quantity": 3,
+        "unit_price": 801.45,
+        "line_total": 2404.35
+      },
+      {
+        "description": "Water hygiene testing",
+        "quantity": 3,
+        "unit_price": 190.54,
+        "line_total": 571.62
+      },
+      {
+        "description": "Car park line marking",
+        "quantity": 1,
+        "unit_price": 452.24,
+        "line_total": 452.24
+      },
+      {
+        "description": "Boiler annual service",
+        "quantity": 10,
+        "unit_price": 219.05,
+        "line_total": 2190.5
+      },
+      {
+        "description": "Planned maintenance visit",
+        "quantity": 1,
+        "unit_price": 312.74,
+        "line_total": 312.74
+      },
+      {
+        "description": "Emergency call-out (out of hours)",
+        "quantity": 3,
+        "unit_price": 322.92,
+        "line_total": 968.76
+      }
+    ],
+    "supplier_id": "SUP-003"
+  },
+  "purchase_order": {
+    "po_number": "PO-451275",
+    "supplier_id": "SUP-003",
+    "currency": "GBP",
+    "approved_amount": 8538.95
+  },
+  "decision": "HOLD_PO_MISMATCH",
+  "justification": "The invoice total of 8280.25 differs from the purchase order approved amount of 8538.95 by more than 0.50.",
+  "calls": [
+    {
+      "node": "extract",
+      "attempt_retries": 0,
+      "latency_s": 4.828,
+      "input_tokens": 690,
+      "output_tokens": 529,
+      "thinking_tokens": 0,
+      "cost_usd": 0.000966,
+      "parse_ok": true,
+      "error": null
+    },
+    {
+      "node": "normalise",
+      "attempt_retries": 0,
+      "latency_s": 1.707,
+      "input_tokens": 924,
+      "output_tokens": 544,
+      "thinking_tokens": 0,
+      "cost_usd": 0.001047,
+      "parse_ok": true,
+      "error": null
+    },
+    {
+      "node": "decide",
+      "attempt_retries": 0,
+      "latency_s": 0.678,
+      "input_tokens": 853,
+      "output_tokens": 60,
+      "thinking_tokens": 0,
+      "cost_usd": 0.00030325,
+      "parse_ok": true,
+      "error": null
+    }
+  ],
+  "summary": {
+    "wall_clock_s": 7.521,
+    "model_calls": 3,
+    "input_tokens": 2467,
+    "output_tokens": 1133,
+    "thinking_tokens": 0,
+    "token_cost_usd": 0.00231625,
+    "api_retries": 0,
+    "parse_failures": 0,
+    "revisions": 0,
+    "flagged": false,
+    "human_seconds": 0.0
+  },
+  "model_id": "gemini-3.1-flash-lite",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-01T13:29:26+00:00"
+}

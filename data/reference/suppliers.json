@@ -1,0 +1,114 @@
+[
+  {
+    "supplier_id": "SUP-001",
+    "name": "Northgate Office Supplies Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 116 0003 45",
+    "address": "Unit 34, Canal Street, Harrogate HG1 9UD",
+    "email": "accounts@northgate-supplies.example"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "name": "Northgate Office Solutions Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 290 5076 17",
+    "address": "Unit 3, Canal Street, Huddersfield HD1 6JG",
+    "email": "accounts@northgate-solutions.example"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "name": "Pennine Facilities Management Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 450 2364 53",
+    "address": "Unit 119, Victoria Terrace, Bradford BD1 1TT",
+    "email": "accounts@pennine-fm.example"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "name": "Pennine Facility Services Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 257 2771 62",
+    "address": "Unit 173, Market Place, Harrogate HG1 8YA",
+    "email": "accounts@pennine-services.example"
+  },
+  {
+    "supplier_id": "SUP-005",
+    "name": "Brightwater IT Services Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 128 2973 77",
+    "address": "Unit 47, Park View, Bradford BD1 3NR",
+    "email": "accounts@brightwater-it.example"
+  },
+  {
+    "supplier_id": "SUP-006",
+    "name": "Brightwater IT Solutions Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 865 0124 45",
+    "address": "Unit 5, Albion Road, York YO1 6QU",
+    "email": "accounts@brightwater-solutions.example"
+  },
+  {
+    "supplier_id": "SUP-007",
+    "name": "Calder Valley Catering Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 620 6538 86",
+    "address": "Unit 34, Kingsway, Huddersfield HD1 9WW",
+    "email": "accounts@caldervalley-catering.example"
+  },
+  {
+    "supplier_id": "SUP-008",
+    "name": "Ashdown Print & Design Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 802 8178 21",
+    "address": "Unit 158, Bridge Street, York YO1 6EU",
+    "email": "accounts@ashdown-print.example"
+  },
+  {
+    "supplier_id": "SUP-009",
+    "name": "Meridian Logistics UK Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 929 2906 52",
+    "address": "Unit 13, Albion Road, Harrogate HG1 8LS",
+    "email": "accounts@meridian-logistics.example"
+  },
+  {
+    "supplier_id": "SUP-010",
+    "name": "Severn Electrical Contractors Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 777 8221 00",
+    "address": "Unit 98, Park View, Bradford BD1 7BA",
+    "email": "accounts@severn-electrical.example"
+  },
+  {
+    "supplier_id": "SUP-011",
+    "name": "Highfield Cleaning Co Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 871 2785 84",
+    "address": "Unit 33, Market Place, Huddersfield HD1 7JD",
+    "email": "accounts@highfield-cleaning.example"
+  },
+  {
+    "supplier_id": "SUP-012",
+    "name": "Orbis Telecom Hardware Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 349 7023 02",
+    "address": "Unit 15, Kingsway, Manchester M1 6GB",
+    "email": "accounts@orbis-telecom.example"
+  },
+  {
+    "supplier_id": "SUP-013",
+    "name": "Kestrel Security Systems Ltd",
+    "currency": "GBP",
+    "vat_number": "GB 746 6048 08",
+    "address": "Unit 83, Bridge Street, Bradford BD1 3GQ",
+    "email": "accounts@kestrel-security.example"
+  },
+  {
+    "supplier_id": "SUP-014",
+    "name": "Lindqvist Software AB",
+    "currency": "EUR",
+    "vat_number": "SE99891778001",
+    "address": "Sveavägen 155, 111 34 Stockholm, Sweden",
+    "email": "accounts@lindqvist-software.example"
+  }
+]

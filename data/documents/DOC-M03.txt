@@ -1,0 +1,25 @@
+                           TAX INVOICE                            
+
+LINDQVIST SOFTWARE AB
+Sveavägen 155, 111 34 Stockholm, Sweden
+VAT Reg No: SE99891778001
+
+Invoice No: S014-24336            Invoice Date: 08/02/2026
+Your PO: PO-460211                Your Ref: CC-1818
+Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+
+Description                                  Qty        Unit      Amount
+------------------------------------------------------------------------
+Premium support add-on (annual)                3     1864.81     5594.43
+Sandbox environment (annual)                   1     1042.82     1042.82
+Additional user licences (pack of 10)          2     1006.29     2012.58
+Implementation consultancy (per day)           1     1000.30     1000.30
+API integration module (annual)                1     1445.00     1445.00
+Data migration service                         2     3014.64     6029.28
+------------------------------------------------------------------------
+                                                 Subtotal: EUR 17,124.41
+                                     VAT (reverse charge): EUR 0.00
+                                                TOTAL DUE: EUR 17,124.41
+
+Please pay within 30 days of the invoice date.
+Reverse charge: customer to account for VAT to HMRC.

@@ -1,0 +1,11 @@
+Ticket ID: TKT-M03
+Received: 2026-04-10 via Self-service portal
+Reported by: George Roberts (Engineering)
+Subject: Floor 3 printer printing blank pages
+
+Hello,
+
+The shared printer by the lifts on floor 3 has started printing blank pages. People on our floor are walking down to the floor 2 printer in the meantime.
+
+Thanks,
+George

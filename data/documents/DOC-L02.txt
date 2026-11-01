@@ -1,0 +1,20 @@
+INVOICE
+========================================
+Supplier ................ Brightwater IT Services Ltd
+Address ................. Unit 47, Park View, Bradford BD1 3NR
+VAT number .............. GB 128 2973 77
+Invoice reference ....... S005-26547
+Date of issue ........... 21 April 2026
+Purchase order .......... PO-486216
+Your reference .......... CC-1271
+Customer ................ Arden Valley Communications plc
+
+Items
+  1. Endpoint security licence (annual, per seat) | 3 x £48.64 = £145.92
+  2. Firewall configuration review | 7 x £1,293.34 = £9,053.38
+
+Net ..................... £9,199.30
+VAT ..................... £1,839.86
+Gross amount payable .... £11,039.16
+
+Payment terms: 45 days. Due date: 5 June 2026.
