@@ -1,17 +1,21 @@
 From: accounts@severn-electrical.example
 To: ap@ardenvalley.example
-Subject: Invoice S010-20882 - PO PO-416864
+Subject: Invoice INV-80216 - PO PO-441735
 
 Hi team,
 
-Please find below our invoice S010-20882, dated 23 August 2026, for the goods and services supplied against your purchase order PO-416864.
-Your internal reference for this order was CC-8364.
+Please find below our invoice INV-80216, dated 1 April 2026, for the goods and services supplied against your purchase order PO-441735.
+Our reference is SR-80369.
+Your internal reference for this order was CC-8223.
 
 Items supplied:
-- 7 x EV charger installation at £1,435.15 each = £10,046.05
+- 10 x PAT testing (per item) at £3.74 each = £37.40
+- 3 x Distribution board upgrade at £2,975.21 each = £8,925.63
+- 5 x Electrical safety certificate at £233.81 each = £1,169.05
+- 2 x Emergency lighting test at £313.30 each = £626.60
 
-That comes to £10,046.05 net, plus VAT of £2,009.21, making £12,055.26 payable.
-Payment terms: 30 days. Due date: 22 September 2026.
+That comes to £10,758.68 net, plus VAT of £2,151.74, making £12,910.42 payable on this invoice.
+Payment terms: 45 days. Due date: 16 May 2026.
 Our VAT registration number is GB 777 8221 00.
 
 Kind regards,

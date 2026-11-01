@@ -15,7 +15,14 @@ load_dotenv()
 # --- Paths -----------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-RESULTS_DIR = ROOT / "results"
+# Results location; VTV_RESULTS selects a separate folder (for example, for the pilot).
+_results = Path(os.environ.get("VTV_RESULTS", "results"))
+RESULTS_DIR = _results if _results.is_absolute() else ROOT / _results
+
+# --- Input -----------------------------------------------------------------
+# Agents that read the source document (extractor and checker) receive the
+# scanned page images; the plain text is used only for ground truth and scoring.
+INPUT_MODE = "image"
 
 # --- Model and sampling ----------------------------------------------------
 PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT", "")

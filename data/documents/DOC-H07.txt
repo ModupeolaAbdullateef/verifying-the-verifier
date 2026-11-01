@@ -1,29 +1,67 @@
-                           TAX INVOICE                            
+                       TAX INVOICE                        
 
 Kestrel Security Systems
 Unit 83, Bridge Street, Bradford BD1 3GQ
 VAT Reg No: GB 746 6048 08
 
-Invoice No: S013-45363            Invoice Date: 04/08/2026
-Your PO: PO-403652                Your Ref: 
+Invoice No: SI/2026/79116         Invoice Date: 17/07/2026
+Our ref: SR-78057                 Delivery note: DN-836694
+Your PO: PO-487781                Your Ref: 
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+Customer VAT No: GB 914 2275 08
 
-Order date: 26 July 2026
-Goods delivered: 04/08/2026
-Note: the original invoice total of £8,519.76 has been superseded following credit note CN-6384. The amended amount below is now payable.
+Order date: 9 July 2026
+Goods delivered: 16/07/2026
+Note: the original invoice total of £9,410.19 has been superseded following credit note CN-2692. The amended amount below is now payable.
+Our previous invoice S013-93906 dated 08/06/2026 for £4,111.83 (your PO PO-400148) has been settled in full - thank you.
 
-Description                                  Qty        Unit      Amount
-------------------------------------------------------------------------
-Security patrol (per night)                    5      204.00     1020.00
-Alarm system service                           2      228.01      456.02
-Security risk assessment                       2      942.92     1885.84
-Video door entry unit                          3      505.96     1517.88
-Access cards (pack of 50)                      4      120.54      482.16
-Access-control card readers                    1      339.61      339.61
-Intruder alarm keypad                          5      240.90     1204.50
-------------------------------------------------------------------------
-                                                 Subtotal: £6,906.01
-                                                VAT @ 20%: £1,381.20
-                                                TOTAL DUE: £8,287.21
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+Access cards (pack of 50) -     12      127.55     1530.60
+  Wakefield site
+Intruder alarm keypad - March    1      135.17      135.17
+Security patrol (per night) -    1      237.34      237.34
+  Bradford depot
+Key-holding service (monthly)    1      139.38      139.38
+  - February
+Video door entry unit - May      1      477.74      477.74
+Security risk assessment -       1      845.70      845.70
+  February
+CCTV camera, dome - Leeds HQ     1      177.23      177.23
+Intruder alarm keypad -          1      228.20      228.20
+  February
+----------------------------------------------------------
+                              Carried forward      3771.36
 
-Terms: 45 days. Payment due by 2026-09-18.
+                                               Page 1 of 2
+
+TAX INVOICE (continued) - Invoice No: SI/2026/79116
+
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+                              Brought forward      3771.36
+Security risk assessment -       1      708.44      708.44
+  Reception
+CCTV camera, dome - Batch A      1      164.59      164.59
+Key-holding service (monthly)    6       84.50      507.00
+  - April
+Video door entry unit -          1      533.93      533.93
+  Wakefield site
+Video door entry unit -          1      625.26      625.26
+  January
+Access-control card readers -    1      276.14      276.14
+  Phase 2
+Alarm system service - Leeds     1      200.85      200.85
+  HQ
+Access-control card readers -    1      371.37      371.37
+  Batch A
+Security patrol (per night) -    1      247.66      247.66
+  Phase 2
+----------------------------------------------------------
+                                   Subtotal: £7,406.60
+                                  VAT @ 20%: £1,481.32
+                                  TOTAL DUE: £8,887.92
+
+Terms: 30 days. Payment due by 2026-08-16.
+
+                                               Page 2 of 2

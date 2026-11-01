@@ -3,23 +3,29 @@ INVOICE
 Supplier ................ Orbis Telecom Hardware
 Address ................. Unit 15, Kingsway, Manchester M1 6GB
 VAT number .............. GB 349 7023 02
-Invoice reference ....... 98812
-Date of issue ........... 13/08/2026
-Purchase order .......... PO-490519
-Your reference .......... CC-7182
+Invoice reference ....... 35090
+Supplier reference ...... SR-31129
+Delivery note ........... DN-912127
+Date of issue ........... 25/04/2026
+Purchase order .......... PO-445959
+Your reference .......... CC-5180
 Customer ................ Arden Valley Communications plc
+Customer VAT number ..... GB 914 2275 08
 
 Items
-  1. Wireless access point | 4 x £221.86 = £887.44
-  2. Rack-mount UPS | 2 x £1,384.59 = £2,769.18
-  3. Headset, noise-cancelling | 3 x £69.76 = £209.28
-  4. Cat6 cable (305 m box) | 5 x £166.21 = £831.05
-  5. IP desk phone | 4 x £104.54 = £418.16
-  6. SFP+ transceiver | 1 x £75.05 = £75.05
-  7. Conference speakerphone | 4 x £355.54 = £1,422.16
+  1. IP desk phone - York office | 6 x £158.98 = £953.88
+  2. Rack-mount UPS - Wakefield site | 1 x £1,002.69 = £1,002.69
+  3. Headset, noise-cancelling - York office | 5 x £94.30 = £471.50
+  4. Wireless access point - January | 5 x £340.02 = £1,700.10
+  5. Conference speakerphone - Server room | 2 x £378.42 = £756.84
+  6. 24-port PoE switch - Reception | 4 x £391.73 = £1,566.92
+  7. SFP+ transceiver - Wakefield site | 6 x £67.14 = £402.84
+  8. Fibre patch leads (pack of 10) - March | 1 x £54.08 = £54.08
 
-Net ..................... £6,612.32
-VAT ..................... £1,322.46
-Gross amount payable .... £7,934.78
+Net ..................... £6,908.85
+VAT ..................... £1,381.77
+Gross amount payable .... £8,290.62
+Balance brought forward . £2,710.22
+Account balance ......... £11,000.84
 
-Payment terms: 45 days from date of invoice.
+Payment terms: 60 days from date of invoice.

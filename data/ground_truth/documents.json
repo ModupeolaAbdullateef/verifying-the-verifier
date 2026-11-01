@@ -5,46 +5,58 @@
     "layout": "A",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "73395",
-      "invoice_date": "2026-08-13",
-      "due_date": "2026-09-12",
-      "po_number": "PO-460761",
+      "invoice_number": "S007-98652",
+      "invoice_date": "2026-06-19",
+      "due_date": "2026-07-19",
+      "po_number": "PO-472213",
       "supplier_name": "Calder Valley Catering Ltd",
       "supplier_vat_number": "GB 620 6538 86",
       "currency": "GBP",
-      "subtotal": 386.4,
-      "vat_amount": 77.28,
-      "total_amount": 463.68,
+      "subtotal": 191.31,
+      "vat_amount": 38.26,
+      "total_amount": 229.57,
       "payment_terms_days": 30,
-      "customer_reference": "CC-8173",
+      "customer_reference": "CC-5223",
       "line_items": [
         {
           "description": "Event staffing (per hour)",
-          "quantity": 20,
-          "unit_price": 19.32,
-          "line_total": 386.4
+          "quantity": 1,
+          "unit_price": 23.91,
+          "line_total": 23.91
+        },
+        {
+          "description": "Conference catering (per head)",
+          "quantity": 6,
+          "unit_price": 27.9,
+          "line_total": 167.4
         }
       ]
     },
     "final": {
-      "invoice_number": "73395",
-      "invoice_date": "2026-08-13",
-      "due_date": "2026-09-12",
-      "po_number": "PO-460761",
+      "invoice_number": "S007-98652",
+      "invoice_date": "2026-06-19",
+      "due_date": "2026-07-19",
+      "po_number": "PO-472213",
       "supplier_name": "Calder Valley Catering Ltd",
       "supplier_vat_number": "GB 620 6538 86",
       "currency": "GBP",
-      "subtotal": 386.4,
-      "vat_amount": 77.28,
-      "total_amount": 463.68,
+      "subtotal": 191.31,
+      "vat_amount": 38.26,
+      "total_amount": 229.57,
       "payment_terms_days": 30,
-      "customer_reference": "CC-8173",
+      "customer_reference": "CC-5223",
       "line_items": [
         {
           "description": "Event staffing (per hour)",
-          "quantity": 20,
-          "unit_price": 19.32,
-          "line_total": 386.4
+          "quantity": 1,
+          "unit_price": 23.91,
+          "line_total": 23.91
+        },
+        {
+          "description": "Conference catering (per head)",
+          "quantity": 6,
+          "unit_price": 27.9,
+          "line_total": 167.4
         }
       ],
       "supplier_id": "SUP-007"
@@ -57,8 +69,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 1
-    }
+      "line_item_count": 2,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L02",
@@ -66,58 +87,82 @@
     "layout": "B",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "S005-26547",
-      "invoice_date": "2026-04-21",
-      "due_date": "2026-06-05",
-      "po_number": "PO-486216",
+      "invoice_number": "INV-92623",
+      "invoice_date": "2026-08-21",
+      "due_date": "2026-10-20",
+      "po_number": "PO-420871",
       "supplier_name": "Brightwater IT Services Ltd",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 9199.3,
-      "vat_amount": 1839.86,
-      "total_amount": 11039.16,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-1271",
+      "subtotal": 9028.33,
+      "vat_amount": 1805.67,
+      "total_amount": 10834.0,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-6487",
       "line_items": [
         {
-          "description": "Endpoint security licence (annual, per seat)",
-          "quantity": 3,
-          "unit_price": 48.64,
-          "line_total": 145.92
+          "description": "Managed service desk (monthly)",
+          "quantity": 2,
+          "unit_price": 3320.58,
+          "line_total": 6641.16
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 7,
-          "unit_price": 1293.34,
-          "line_total": 9053.38
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 1,
+          "unit_price": 1433.47,
+          "line_total": 1433.47
+        },
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 1,
+          "unit_price": 75.26,
+          "line_total": 75.26
+        },
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 2,
+          "unit_price": 439.22,
+          "line_total": 878.44
         }
       ]
     },
     "final": {
-      "invoice_number": "S005-26547",
-      "invoice_date": "2026-04-21",
-      "due_date": "2026-06-05",
-      "po_number": "PO-486216",
+      "invoice_number": "INV-92623",
+      "invoice_date": "2026-08-21",
+      "due_date": "2026-10-20",
+      "po_number": "PO-420871",
       "supplier_name": "Brightwater IT Services Ltd",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 9199.3,
-      "vat_amount": 1839.86,
-      "total_amount": 11039.16,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-1271",
+      "subtotal": 9028.33,
+      "vat_amount": 1805.67,
+      "total_amount": 10834.0,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-6487",
       "line_items": [
         {
-          "description": "Endpoint security licence (annual, per seat)",
-          "quantity": 3,
-          "unit_price": 48.64,
-          "line_total": 145.92
+          "description": "Managed service desk (monthly)",
+          "quantity": 2,
+          "unit_price": 3320.58,
+          "line_total": 6641.16
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 7,
-          "unit_price": 1293.34,
-          "line_total": 9053.38
+          "description": "Microsoft 365 migration workshop",
+          "quantity": 1,
+          "unit_price": 1433.47,
+          "line_total": 1433.47
+        },
+        {
+          "description": "Laptop battery replacement",
+          "quantity": 1,
+          "unit_price": 75.26,
+          "line_total": 75.26
+        },
+        {
+          "description": "On-site engineer (per day)",
+          "quantity": 2,
+          "unit_price": 439.22,
+          "line_total": 878.44
         }
       ],
       "supplier_id": "SUP-005"
@@ -130,8 +175,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 2
-    }
+      "line_item_count": 4,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L03",
@@ -139,46 +193,58 @@
     "layout": "C",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "SI/2026/51051",
-      "invoice_date": "2026-07-02",
-      "due_date": "2026-08-01",
-      "po_number": "PO-408429",
+      "invoice_number": "SI/2026/14919",
+      "invoice_date": "2026-03-25",
+      "due_date": "2026-04-08",
+      "po_number": "PO-432321",
       "supplier_name": "Ashdown Print & Design Ltd",
       "supplier_vat_number": "GB 802 8178 21",
       "currency": "GBP",
-      "subtotal": 513.84,
-      "vat_amount": 102.77,
-      "total_amount": 616.61,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-3710",
+      "subtotal": 2127.44,
+      "vat_amount": 425.49,
+      "total_amount": 2552.93,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-3451",
       "line_items": [
         {
+          "description": "Branded notepads (pack of 50)",
+          "quantity": 12,
+          "unit_price": 147.85,
+          "line_total": 1774.2
+        },
+        {
           "description": "Letterheads (box of 1,000)",
-          "quantity": 6,
-          "unit_price": 85.64,
-          "line_total": 513.84
+          "quantity": 4,
+          "unit_price": 88.31,
+          "line_total": 353.24
         }
       ]
     },
     "final": {
-      "invoice_number": "SI/2026/51051",
-      "invoice_date": "2026-07-02",
-      "due_date": "2026-08-01",
-      "po_number": "PO-408429",
+      "invoice_number": "SI/2026/14919",
+      "invoice_date": "2026-03-25",
+      "due_date": "2026-04-08",
+      "po_number": "PO-432321",
       "supplier_name": "Ashdown Print & Design Ltd",
       "supplier_vat_number": "GB 802 8178 21",
       "currency": "GBP",
-      "subtotal": 513.84,
-      "vat_amount": 102.77,
-      "total_amount": 616.61,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-3710",
+      "subtotal": 2127.44,
+      "vat_amount": 425.49,
+      "total_amount": 2552.93,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-3451",
       "line_items": [
         {
+          "description": "Branded notepads (pack of 50)",
+          "quantity": 12,
+          "unit_price": 147.85,
+          "line_total": 1774.2
+        },
+        {
           "description": "Letterheads (box of 1,000)",
-          "quantity": 6,
-          "unit_price": 85.64,
-          "line_total": 513.84
+          "quantity": 4,
+          "unit_price": 88.31,
+          "line_total": 353.24
         }
       ],
       "supplier_id": "SUP-008"
@@ -191,8 +257,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 1
-    }
+      "line_item_count": 2,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L04",
@@ -200,46 +275,82 @@
     "layout": "A",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "53898",
-      "invoice_date": "2026-08-17",
-      "due_date": "2026-10-16",
-      "po_number": "PO-421947",
+      "invoice_number": "INV-58756",
+      "invoice_date": "2026-04-19",
+      "due_date": "2026-06-03",
+      "po_number": "PO-450973",
       "supplier_name": "Highfield Cleaning Co Ltd",
       "supplier_vat_number": "GB 871 2785 84",
       "currency": "GBP",
-      "subtotal": 459.24,
-      "vat_amount": 91.85,
-      "total_amount": 551.09,
-      "payment_terms_days": 60,
-      "customer_reference": "CC-1919",
+      "subtotal": 5851.82,
+      "vat_amount": 1170.36,
+      "total_amount": 7022.18,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-2360",
       "line_items": [
         {
           "description": "Carpet shampoo (per floor)",
+          "quantity": 12,
+          "unit_price": 389.91,
+          "line_total": 4678.92
+        },
+        {
+          "description": "Window cleaning, external",
           "quantity": 1,
-          "unit_price": 459.24,
-          "line_total": 459.24
+          "unit_price": 290.38,
+          "line_total": 290.38
+        },
+        {
+          "description": "Office cleaning (weekly)",
+          "quantity": 1,
+          "unit_price": 454.82,
+          "line_total": 454.82
+        },
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 5,
+          "unit_price": 85.54,
+          "line_total": 427.7
         }
       ]
     },
     "final": {
-      "invoice_number": "53898",
-      "invoice_date": "2026-08-17",
-      "due_date": "2026-10-16",
-      "po_number": "PO-421947",
+      "invoice_number": "INV-58756",
+      "invoice_date": "2026-04-19",
+      "due_date": "2026-06-03",
+      "po_number": "PO-450973",
       "supplier_name": "Highfield Cleaning Co Ltd",
       "supplier_vat_number": "GB 871 2785 84",
       "currency": "GBP",
-      "subtotal": 459.24,
-      "vat_amount": 91.85,
-      "total_amount": 551.09,
-      "payment_terms_days": 60,
-      "customer_reference": "CC-1919",
+      "subtotal": 5851.82,
+      "vat_amount": 1170.36,
+      "total_amount": 7022.18,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-2360",
       "line_items": [
         {
           "description": "Carpet shampoo (per floor)",
+          "quantity": 12,
+          "unit_price": 389.91,
+          "line_total": 4678.92
+        },
+        {
+          "description": "Window cleaning, external",
           "quantity": 1,
-          "unit_price": 459.24,
-          "line_total": 459.24
+          "unit_price": 290.38,
+          "line_total": 290.38
+        },
+        {
+          "description": "Office cleaning (weekly)",
+          "quantity": 1,
+          "unit_price": 454.82,
+          "line_total": 454.82
+        },
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 5,
+          "unit_price": 85.54,
+          "line_total": 427.7
         }
       ],
       "supplier_id": "SUP-011"
@@ -252,8 +363,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 1
-    }
+      "line_item_count": 4,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L05",
@@ -261,58 +381,70 @@
     "layout": "B",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "29613",
-      "invoice_date": "2026-04-02",
-      "due_date": "2026-04-16",
-      "po_number": "PO-488281",
+      "invoice_number": "INV-65050",
+      "invoice_date": "2026-07-11",
+      "due_date": "2026-09-09",
+      "po_number": "PO-440228",
       "supplier_name": "Meridian Logistics UK Ltd",
       "supplier_vat_number": "GB 929 2906 52",
       "currency": "GBP",
-      "subtotal": 253.71,
-      "vat_amount": 50.74,
-      "total_amount": 304.45,
-      "payment_terms_days": 14,
-      "customer_reference": "CC-5826",
+      "subtotal": 459.62,
+      "vat_amount": 91.92,
+      "total_amount": 551.54,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-6657",
       "line_items": [
         {
+          "description": "Courier collection, same day",
+          "quantity": 2,
+          "unit_price": 67.12,
+          "line_total": 134.24
+        },
+        {
           "description": "Warehouse storage (per pallet, monthly)",
-          "quantity": 3,
-          "unit_price": 18.69,
-          "line_total": 56.07
+          "quantity": 6,
+          "unit_price": 24.08,
+          "line_total": 144.48
         },
         {
           "description": "Pallet wrapping and labelling",
-          "quantity": 12,
-          "unit_price": 16.47,
-          "line_total": 197.64
+          "quantity": 10,
+          "unit_price": 18.09,
+          "line_total": 180.9
         }
       ]
     },
     "final": {
-      "invoice_number": "29613",
-      "invoice_date": "2026-04-02",
-      "due_date": "2026-04-16",
-      "po_number": "PO-488281",
+      "invoice_number": "INV-65050",
+      "invoice_date": "2026-07-11",
+      "due_date": "2026-09-09",
+      "po_number": "PO-440228",
       "supplier_name": "Meridian Logistics UK Ltd",
       "supplier_vat_number": "GB 929 2906 52",
       "currency": "GBP",
-      "subtotal": 253.71,
-      "vat_amount": 50.74,
-      "total_amount": 304.45,
-      "payment_terms_days": 14,
-      "customer_reference": "CC-5826",
+      "subtotal": 459.62,
+      "vat_amount": 91.92,
+      "total_amount": 551.54,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-6657",
       "line_items": [
         {
+          "description": "Courier collection, same day",
+          "quantity": 2,
+          "unit_price": 67.12,
+          "line_total": 134.24
+        },
+        {
           "description": "Warehouse storage (per pallet, monthly)",
-          "quantity": 3,
-          "unit_price": 18.69,
-          "line_total": 56.07
+          "quantity": 6,
+          "unit_price": 24.08,
+          "line_total": 144.48
         },
         {
           "description": "Pallet wrapping and labelling",
-          "quantity": 12,
-          "unit_price": 16.47,
-          "line_total": 197.64
+          "quantity": 10,
+          "unit_price": 18.09,
+          "line_total": 180.9
         }
       ],
       "supplier_id": "SUP-009"
@@ -325,8 +457,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 2
-    }
+      "line_item_count": 3,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L06",
@@ -334,46 +475,82 @@
     "layout": "C",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "S010-20882",
-      "invoice_date": "2026-08-23",
-      "due_date": "2026-09-22",
-      "po_number": "PO-416864",
+      "invoice_number": "INV-80216",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-16",
+      "po_number": "PO-441735",
       "supplier_name": "Severn Electrical Contractors Ltd",
       "supplier_vat_number": "GB 777 8221 00",
       "currency": "GBP",
-      "subtotal": 10046.05,
-      "vat_amount": 2009.21,
-      "total_amount": 12055.26,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-8364",
+      "subtotal": 10758.68,
+      "vat_amount": 2151.74,
+      "total_amount": 12910.42,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-8223",
       "line_items": [
         {
-          "description": "EV charger installation",
-          "quantity": 7,
-          "unit_price": 1435.15,
-          "line_total": 10046.05
+          "description": "PAT testing (per item)",
+          "quantity": 10,
+          "unit_price": 3.74,
+          "line_total": 37.4
+        },
+        {
+          "description": "Distribution board upgrade",
+          "quantity": 3,
+          "unit_price": 2975.21,
+          "line_total": 8925.63
+        },
+        {
+          "description": "Electrical safety certificate",
+          "quantity": 5,
+          "unit_price": 233.81,
+          "line_total": 1169.05
+        },
+        {
+          "description": "Emergency lighting test",
+          "quantity": 2,
+          "unit_price": 313.3,
+          "line_total": 626.6
         }
       ]
     },
     "final": {
-      "invoice_number": "S010-20882",
-      "invoice_date": "2026-08-23",
-      "due_date": "2026-09-22",
-      "po_number": "PO-416864",
+      "invoice_number": "INV-80216",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-16",
+      "po_number": "PO-441735",
       "supplier_name": "Severn Electrical Contractors Ltd",
       "supplier_vat_number": "GB 777 8221 00",
       "currency": "GBP",
-      "subtotal": 10046.05,
-      "vat_amount": 2009.21,
-      "total_amount": 12055.26,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-8364",
+      "subtotal": 10758.68,
+      "vat_amount": 2151.74,
+      "total_amount": 12910.42,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-8223",
       "line_items": [
         {
-          "description": "EV charger installation",
-          "quantity": 7,
-          "unit_price": 1435.15,
-          "line_total": 10046.05
+          "description": "PAT testing (per item)",
+          "quantity": 10,
+          "unit_price": 3.74,
+          "line_total": 37.4
+        },
+        {
+          "description": "Distribution board upgrade",
+          "quantity": 3,
+          "unit_price": 2975.21,
+          "line_total": 8925.63
+        },
+        {
+          "description": "Electrical safety certificate",
+          "quantity": 5,
+          "unit_price": 233.81,
+          "line_total": 1169.05
+        },
+        {
+          "description": "Emergency lighting test",
+          "quantity": 2,
+          "unit_price": 313.3,
+          "line_total": 626.6
         }
       ],
       "supplier_id": "SUP-010"
@@ -386,8 +563,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 1
-    }
+      "line_item_count": 4,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-L07",
@@ -395,46 +581,58 @@
     "layout": "A",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "S013-29818",
-      "invoice_date": "2026-02-27",
-      "due_date": "2026-04-13",
-      "po_number": "PO-470372",
+      "invoice_number": "INV-99524",
+      "invoice_date": "2026-07-01",
+      "due_date": "2026-08-30",
+      "po_number": "PO-467903",
       "supplier_name": "Kestrel Security Systems Ltd",
       "supplier_vat_number": "GB 746 6048 08",
       "currency": "GBP",
-      "subtotal": 625.32,
-      "vat_amount": 125.06,
-      "total_amount": 750.38,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-1580",
+      "subtotal": 1320.15,
+      "vat_amount": 264.03,
+      "total_amount": 1584.18,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-5605",
       "line_items": [
         {
-          "description": "Access cards (pack of 50)",
-          "quantity": 6,
-          "unit_price": 104.22,
-          "line_total": 625.32
+          "description": "Video door entry unit",
+          "quantity": 1,
+          "unit_price": 672.81,
+          "line_total": 672.81
+        },
+        {
+          "description": "CCTV camera, dome",
+          "quantity": 3,
+          "unit_price": 215.78,
+          "line_total": 647.34
         }
       ]
     },
     "final": {
-      "invoice_number": "S013-29818",
-      "invoice_date": "2026-02-27",
-      "due_date": "2026-04-13",
-      "po_number": "PO-470372",
+      "invoice_number": "INV-99524",
+      "invoice_date": "2026-07-01",
+      "due_date": "2026-08-30",
+      "po_number": "PO-467903",
       "supplier_name": "Kestrel Security Systems Ltd",
       "supplier_vat_number": "GB 746 6048 08",
       "currency": "GBP",
-      "subtotal": 625.32,
-      "vat_amount": 125.06,
-      "total_amount": 750.38,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-1580",
+      "subtotal": 1320.15,
+      "vat_amount": 264.03,
+      "total_amount": 1584.18,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-5605",
       "line_items": [
         {
-          "description": "Access cards (pack of 50)",
-          "quantity": 6,
-          "unit_price": 104.22,
-          "line_total": 625.32
+          "description": "Video door entry unit",
+          "quantity": 1,
+          "unit_price": 672.81,
+          "line_total": 672.81
+        },
+        {
+          "description": "CCTV camera, dome",
+          "quantity": 3,
+          "unit_price": 215.78,
+          "line_total": 647.34
         }
       ],
       "supplier_id": "SUP-013"
@@ -447,8 +645,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 1
-    }
+      "line_item_count": 2,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": false,
+      "buyer_vat_distractor": false,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M01",
@@ -456,118 +663,130 @@
     "layout": "B",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "98812",
-      "invoice_date": "2026-08-13",
-      "due_date": "2026-09-27",
-      "po_number": "PO-490519",
+      "invoice_number": "35090",
+      "invoice_date": "2026-04-25",
+      "due_date": "2026-06-24",
+      "po_number": "PO-445959",
       "supplier_name": "Orbis Telecom Hardware",
       "supplier_vat_number": "GB 349 7023 02",
       "currency": "GBP",
-      "subtotal": 6612.32,
-      "vat_amount": 1322.46,
-      "total_amount": 7934.78,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-7182",
+      "subtotal": 6908.85,
+      "vat_amount": 1381.77,
+      "total_amount": 8290.62,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-5180",
       "line_items": [
         {
-          "description": "Wireless access point",
-          "quantity": 4,
-          "unit_price": 221.86,
-          "line_total": 887.44
+          "description": "IP desk phone - York office",
+          "quantity": 6,
+          "unit_price": 158.98,
+          "line_total": 953.88
         },
         {
-          "description": "Rack-mount UPS",
-          "quantity": 2,
-          "unit_price": 1384.59,
-          "line_total": 2769.18
-        },
-        {
-          "description": "Headset, noise-cancelling",
-          "quantity": 3,
-          "unit_price": 69.76,
-          "line_total": 209.28
-        },
-        {
-          "description": "Cat6 cable (305 m box)",
-          "quantity": 5,
-          "unit_price": 166.21,
-          "line_total": 831.05
-        },
-        {
-          "description": "IP desk phone",
-          "quantity": 4,
-          "unit_price": 104.54,
-          "line_total": 418.16
-        },
-        {
-          "description": "SFP+ transceiver",
+          "description": "Rack-mount UPS - Wakefield site",
           "quantity": 1,
-          "unit_price": 75.05,
-          "line_total": 75.05
+          "unit_price": 1002.69,
+          "line_total": 1002.69
         },
         {
-          "description": "Conference speakerphone",
+          "description": "Headset, noise-cancelling - York office",
+          "quantity": 5,
+          "unit_price": 94.3,
+          "line_total": 471.5
+        },
+        {
+          "description": "Wireless access point - January",
+          "quantity": 5,
+          "unit_price": 340.02,
+          "line_total": 1700.1
+        },
+        {
+          "description": "Conference speakerphone - Server room",
+          "quantity": 2,
+          "unit_price": 378.42,
+          "line_total": 756.84
+        },
+        {
+          "description": "24-port PoE switch - Reception",
           "quantity": 4,
-          "unit_price": 355.54,
-          "line_total": 1422.16
+          "unit_price": 391.73,
+          "line_total": 1566.92
+        },
+        {
+          "description": "SFP+ transceiver - Wakefield site",
+          "quantity": 6,
+          "unit_price": 67.14,
+          "line_total": 402.84
+        },
+        {
+          "description": "Fibre patch leads (pack of 10) - March",
+          "quantity": 1,
+          "unit_price": 54.08,
+          "line_total": 54.08
         }
       ]
     },
     "final": {
-      "invoice_number": "98812",
-      "invoice_date": "2026-08-13",
-      "due_date": "2026-09-27",
-      "po_number": "PO-490519",
+      "invoice_number": "35090",
+      "invoice_date": "2026-04-25",
+      "due_date": "2026-06-24",
+      "po_number": "PO-445959",
       "supplier_name": "Orbis Telecom Hardware Ltd",
       "supplier_vat_number": "GB 349 7023 02",
       "currency": "GBP",
-      "subtotal": 6612.32,
-      "vat_amount": 1322.46,
-      "total_amount": 7934.78,
-      "payment_terms_days": 45,
-      "customer_reference": "CC-7182",
+      "subtotal": 6908.85,
+      "vat_amount": 1381.77,
+      "total_amount": 8290.62,
+      "payment_terms_days": 60,
+      "customer_reference": "CC-5180",
       "line_items": [
         {
-          "description": "Wireless access point",
-          "quantity": 4,
-          "unit_price": 221.86,
-          "line_total": 887.44
+          "description": "IP desk phone - York office",
+          "quantity": 6,
+          "unit_price": 158.98,
+          "line_total": 953.88
         },
         {
-          "description": "Rack-mount UPS",
-          "quantity": 2,
-          "unit_price": 1384.59,
-          "line_total": 2769.18
-        },
-        {
-          "description": "Headset, noise-cancelling",
-          "quantity": 3,
-          "unit_price": 69.76,
-          "line_total": 209.28
-        },
-        {
-          "description": "Cat6 cable (305 m box)",
-          "quantity": 5,
-          "unit_price": 166.21,
-          "line_total": 831.05
-        },
-        {
-          "description": "IP desk phone",
-          "quantity": 4,
-          "unit_price": 104.54,
-          "line_total": 418.16
-        },
-        {
-          "description": "SFP+ transceiver",
+          "description": "Rack-mount UPS - Wakefield site",
           "quantity": 1,
-          "unit_price": 75.05,
-          "line_total": 75.05
+          "unit_price": 1002.69,
+          "line_total": 1002.69
         },
         {
-          "description": "Conference speakerphone",
+          "description": "Headset, noise-cancelling - York office",
+          "quantity": 5,
+          "unit_price": 94.3,
+          "line_total": 471.5
+        },
+        {
+          "description": "Wireless access point - January",
+          "quantity": 5,
+          "unit_price": 340.02,
+          "line_total": 1700.1
+        },
+        {
+          "description": "Conference speakerphone - Server room",
+          "quantity": 2,
+          "unit_price": 378.42,
+          "line_total": 756.84
+        },
+        {
+          "description": "24-port PoE switch - Reception",
           "quantity": 4,
-          "unit_price": 355.54,
-          "line_total": 1422.16
+          "unit_price": 391.73,
+          "line_total": 1566.92
+        },
+        {
+          "description": "SFP+ transceiver - Wakefield site",
+          "quantity": 6,
+          "unit_price": 67.14,
+          "line_total": 402.84
+        },
+        {
+          "description": "Fibre patch leads (pack of 10) - March",
+          "quantity": 1,
+          "unit_price": 54.08,
+          "line_total": 54.08
         }
       ],
       "supplier_id": "SUP-012"
@@ -580,8 +799,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 7
-    }
+      "line_item_count": 8,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": 2710.22,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M02",
@@ -589,82 +817,178 @@
     "layout": "C",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "S003-41844",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "po_number": "PO-425090",
-      "supplier_name": "Pennine Facilities Management",
+      "invoice_number": "S003-44715",
+      "invoice_date": "2026-08-07",
+      "due_date": "2026-09-21",
+      "po_number": "PO-423452",
+      "supplier_name": "Pennine Facilities Management Limited",
       "supplier_vat_number": "GB 450 2364 53",
       "currency": "GBP",
-      "subtotal": 4573.6,
-      "vat_amount": 914.72,
-      "total_amount": 5488.32,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-6744",
+      "subtotal": 7284.53,
+      "vat_amount": 1456.91,
+      "total_amount": 8741.44,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-7147",
       "line_items": [
         {
-          "description": "Boiler annual service",
-          "quantity": 5,
-          "unit_price": 347.22,
-          "line_total": 1736.1
-        },
-        {
-          "description": "Lift service contract (monthly)",
+          "description": "Car park line marking - Floor 4",
           "quantity": 1,
-          "unit_price": 920.04,
-          "line_total": 920.04
+          "unit_price": 450.3,
+          "line_total": 450.3
         },
         {
-          "description": "Water hygiene testing",
-          "quantity": 4,
-          "unit_price": 142.93,
-          "line_total": 571.72
+          "description": "Water hygiene testing - February",
+          "quantity": 12,
+          "unit_price": 208.12,
+          "line_total": 2497.44
         },
         {
-          "description": "Fire-door inspection",
-          "quantity": 6,
-          "unit_price": 224.29,
-          "line_total": 1345.74
+          "description": "Boiler annual service - Wakefield site",
+          "quantity": 3,
+          "unit_price": 274.53,
+          "line_total": 823.59
+        },
+        {
+          "description": "Car park line marking - April",
+          "quantity": 1,
+          "unit_price": 395.28,
+          "line_total": 395.28
+        },
+        {
+          "description": "Roof gutter clearance - Floor 2",
+          "quantity": 3,
+          "unit_price": 223.88,
+          "line_total": 671.64
+        },
+        {
+          "description": "Fire-door inspection - May",
+          "quantity": 1,
+          "unit_price": 232.23,
+          "line_total": 232.23
+        },
+        {
+          "description": "Car park line marking - February",
+          "quantity": 1,
+          "unit_price": 732.4,
+          "line_total": 732.4
+        },
+        {
+          "description": "Fire-door inspection - Server room",
+          "quantity": 1,
+          "unit_price": 225.26,
+          "line_total": 225.26
+        },
+        {
+          "description": "Car park line marking - Phase 1",
+          "quantity": 1,
+          "unit_price": 393.0,
+          "line_total": 393.0
+        },
+        {
+          "description": "Emergency call-out (out of hours) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 289.17,
+          "line_total": 289.17
+        },
+        {
+          "description": "Lift service contract (monthly) - January",
+          "quantity": 1,
+          "unit_price": 957.62,
+          "line_total": 957.62
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -383.4,
+          "line_total": -383.4
         }
       ]
     },
     "final": {
-      "invoice_number": "S003-41844",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "po_number": "PO-425090",
+      "invoice_number": "S003-44715",
+      "invoice_date": "2026-08-07",
+      "due_date": "2026-09-21",
+      "po_number": "PO-423452",
       "supplier_name": "Pennine Facilities Management Ltd",
       "supplier_vat_number": "GB 450 2364 53",
       "currency": "GBP",
-      "subtotal": 4573.6,
-      "vat_amount": 914.72,
-      "total_amount": 5488.32,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-6744",
+      "subtotal": 7284.53,
+      "vat_amount": 1456.91,
+      "total_amount": 8741.44,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-7147",
       "line_items": [
         {
-          "description": "Boiler annual service",
-          "quantity": 5,
-          "unit_price": 347.22,
-          "line_total": 1736.1
-        },
-        {
-          "description": "Lift service contract (monthly)",
+          "description": "Car park line marking - Floor 4",
           "quantity": 1,
-          "unit_price": 920.04,
-          "line_total": 920.04
+          "unit_price": 450.3,
+          "line_total": 450.3
         },
         {
-          "description": "Water hygiene testing",
-          "quantity": 4,
-          "unit_price": 142.93,
-          "line_total": 571.72
+          "description": "Water hygiene testing - February",
+          "quantity": 12,
+          "unit_price": 208.12,
+          "line_total": 2497.44
         },
         {
-          "description": "Fire-door inspection",
-          "quantity": 6,
-          "unit_price": 224.29,
-          "line_total": 1345.74
+          "description": "Boiler annual service - Wakefield site",
+          "quantity": 3,
+          "unit_price": 274.53,
+          "line_total": 823.59
+        },
+        {
+          "description": "Car park line marking - April",
+          "quantity": 1,
+          "unit_price": 395.28,
+          "line_total": 395.28
+        },
+        {
+          "description": "Roof gutter clearance - Floor 2",
+          "quantity": 3,
+          "unit_price": 223.88,
+          "line_total": 671.64
+        },
+        {
+          "description": "Fire-door inspection - May",
+          "quantity": 1,
+          "unit_price": 232.23,
+          "line_total": 232.23
+        },
+        {
+          "description": "Car park line marking - February",
+          "quantity": 1,
+          "unit_price": 732.4,
+          "line_total": 732.4
+        },
+        {
+          "description": "Fire-door inspection - Server room",
+          "quantity": 1,
+          "unit_price": 225.26,
+          "line_total": 225.26
+        },
+        {
+          "description": "Car park line marking - Phase 1",
+          "quantity": 1,
+          "unit_price": 393.0,
+          "line_total": 393.0
+        },
+        {
+          "description": "Emergency call-out (out of hours) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 289.17,
+          "line_total": 289.17
+        },
+        {
+          "description": "Lift service contract (monthly) - January",
+          "quantity": 1,
+          "unit_price": 957.62,
+          "line_total": 957.62
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -383.4,
+          "line_total": -383.4
         }
       ],
       "supplier_id": "SUP-003"
@@ -677,8 +1001,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 4
-    }
+      "line_item_count": 12,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M03",
@@ -686,106 +1019,166 @@
     "layout": "A",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "S014-24336",
-      "invoice_date": "2026-02-08",
-      "due_date": "2026-03-10",
-      "po_number": "PO-460211",
+      "invoice_number": "SI/2026/86012",
+      "invoice_date": "2026-07-26",
+      "due_date": "2026-09-09",
+      "po_number": "PO-440861",
       "supplier_name": "LINDQVIST SOFTWARE AB",
       "supplier_vat_number": "SE99891778001",
       "currency": "EUR",
-      "subtotal": 17124.41,
+      "subtotal": 24582.8,
       "vat_amount": 0.0,
-      "total_amount": 17124.41,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-1818",
+      "total_amount": 24582.8,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1074",
       "line_items": [
         {
-          "description": "Premium support add-on (annual)",
-          "quantity": 3,
-          "unit_price": 1864.81,
-          "line_total": 5594.43
-        },
-        {
-          "description": "Sandbox environment (annual)",
-          "quantity": 1,
-          "unit_price": 1042.82,
-          "line_total": 1042.82
-        },
-        {
-          "description": "Additional user licences (pack of 10)",
+          "description": "Single sign-on connector (annual) - York office",
           "quantity": 2,
-          "unit_price": 1006.29,
-          "line_total": 2012.58
+          "unit_price": 630.99,
+          "line_total": 1261.98
         },
         {
-          "description": "Implementation consultancy (per day)",
-          "quantity": 1,
-          "unit_price": 1000.3,
-          "line_total": 1000.3
-        },
-        {
-          "description": "API integration module (annual)",
-          "quantity": 1,
-          "unit_price": 1445.0,
-          "line_total": 1445.0
-        },
-        {
-          "description": "Data migration service",
+          "description": "Premium support add-on (annual) - April",
           "quantity": 2,
-          "unit_price": 3014.64,
-          "line_total": 6029.28
+          "unit_price": 2154.19,
+          "line_total": 4308.38
+        },
+        {
+          "description": "API integration module (annual) - Leeds HQ",
+          "quantity": 2,
+          "unit_price": 1813.06,
+          "line_total": 3626.12
+        },
+        {
+          "description": "Workflow platform subscription (annual) - Floor 2",
+          "quantity": 1,
+          "unit_price": 4316.46,
+          "line_total": 4316.46
+        },
+        {
+          "description": "Implementation consultancy (per day) - York office",
+          "quantity": 1,
+          "unit_price": 948.85,
+          "line_total": 948.85
+        },
+        {
+          "description": "Single sign-on connector (annual) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 936.9,
+          "line_total": 936.9
+        },
+        {
+          "description": "Workflow platform subscription (annual) - March",
+          "quantity": 1,
+          "unit_price": 4639.69,
+          "line_total": 4639.69
+        },
+        {
+          "description": "API integration module (annual) - Server room",
+          "quantity": 2,
+          "unit_price": 1611.49,
+          "line_total": 3222.98
+        },
+        {
+          "description": "Implementation consultancy (per day) - January",
+          "quantity": 1,
+          "unit_price": 1081.51,
+          "line_total": 1081.51
+        },
+        {
+          "description": "Single sign-on connector (annual) - May",
+          "quantity": 2,
+          "unit_price": 766.88,
+          "line_total": 1533.76
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -1293.83,
+          "line_total": -1293.83
         }
       ]
     },
     "final": {
-      "invoice_number": "S014-24336",
-      "invoice_date": "2026-02-08",
-      "due_date": "2026-03-10",
-      "po_number": "PO-460211",
+      "invoice_number": "SI/2026/86012",
+      "invoice_date": "2026-07-26",
+      "due_date": "2026-09-09",
+      "po_number": "PO-440861",
       "supplier_name": "Lindqvist Software AB",
       "supplier_vat_number": "SE99891778001",
       "currency": "EUR",
-      "subtotal": 17124.41,
+      "subtotal": 24582.8,
       "vat_amount": 0.0,
-      "total_amount": 17124.41,
-      "payment_terms_days": 30,
-      "customer_reference": "CC-1818",
+      "total_amount": 24582.8,
+      "payment_terms_days": 45,
+      "customer_reference": "CC-1074",
       "line_items": [
         {
-          "description": "Premium support add-on (annual)",
-          "quantity": 3,
-          "unit_price": 1864.81,
-          "line_total": 5594.43
-        },
-        {
-          "description": "Sandbox environment (annual)",
-          "quantity": 1,
-          "unit_price": 1042.82,
-          "line_total": 1042.82
-        },
-        {
-          "description": "Additional user licences (pack of 10)",
+          "description": "Single sign-on connector (annual) - York office",
           "quantity": 2,
-          "unit_price": 1006.29,
-          "line_total": 2012.58
+          "unit_price": 630.99,
+          "line_total": 1261.98
         },
         {
-          "description": "Implementation consultancy (per day)",
-          "quantity": 1,
-          "unit_price": 1000.3,
-          "line_total": 1000.3
-        },
-        {
-          "description": "API integration module (annual)",
-          "quantity": 1,
-          "unit_price": 1445.0,
-          "line_total": 1445.0
-        },
-        {
-          "description": "Data migration service",
+          "description": "Premium support add-on (annual) - April",
           "quantity": 2,
-          "unit_price": 3014.64,
-          "line_total": 6029.28
+          "unit_price": 2154.19,
+          "line_total": 4308.38
+        },
+        {
+          "description": "API integration module (annual) - Leeds HQ",
+          "quantity": 2,
+          "unit_price": 1813.06,
+          "line_total": 3626.12
+        },
+        {
+          "description": "Workflow platform subscription (annual) - Floor 2",
+          "quantity": 1,
+          "unit_price": 4316.46,
+          "line_total": 4316.46
+        },
+        {
+          "description": "Implementation consultancy (per day) - York office",
+          "quantity": 1,
+          "unit_price": 948.85,
+          "line_total": 948.85
+        },
+        {
+          "description": "Single sign-on connector (annual) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 936.9,
+          "line_total": 936.9
+        },
+        {
+          "description": "Workflow platform subscription (annual) - March",
+          "quantity": 1,
+          "unit_price": 4639.69,
+          "line_total": 4639.69
+        },
+        {
+          "description": "API integration module (annual) - Server room",
+          "quantity": 2,
+          "unit_price": 1611.49,
+          "line_total": 3222.98
+        },
+        {
+          "description": "Implementation consultancy (per day) - January",
+          "quantity": 1,
+          "unit_price": 1081.51,
+          "line_total": 1081.51
+        },
+        {
+          "description": "Single sign-on connector (annual) - May",
+          "quantity": 2,
+          "unit_price": 766.88,
+          "line_total": 1533.76
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -1293.83,
+          "line_total": -1293.83
         }
       ],
       "supplier_id": "SUP-014"
@@ -798,8 +1191,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": true,
-      "line_item_count": 6
-    }
+      "line_item_count": 11,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": 4437.26,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": true
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M04",
@@ -807,82 +1209,202 @@
     "layout": "C",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "INV-79232",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-04-20",
-      "po_number": "PO-459654",
-      "supplier_name": "Ashdown Print and Design",
+      "invoice_number": "32857",
+      "invoice_date": "2026-01-30",
+      "due_date": "2026-03-31",
+      "po_number": "PO-467291",
+      "supplier_name": "ASHDOWN PRINT & DESIGN LTD",
       "supplier_vat_number": "GB 802 8178 21",
       "currency": "GBP",
-      "subtotal": 4092.4,
-      "vat_amount": 818.48,
-      "total_amount": 4910.88,
+      "subtotal": 6691.35,
+      "vat_amount": 1338.27,
+      "total_amount": 8029.62,
       "payment_terms_days": 60,
-      "customer_reference": "CC-4374",
+      "customer_reference": "CC-9432",
       "line_items": [
         {
-          "description": "Roller banner with stand",
-          "quantity": 25,
-          "unit_price": 129.2,
-          "line_total": 3230.0
-        },
-        {
-          "description": "A1 exhibition poster",
+          "description": "Brochure print run (1,000 copies) - Phase 2",
           "quantity": 1,
-          "unit_price": 78.33,
-          "line_total": 78.33
+          "unit_price": 951.41,
+          "line_total": 951.41
         },
         {
-          "description": "Graphic design (per hour)",
+          "description": "Brochure print run (1,000 copies) - January",
+          "quantity": 1,
+          "unit_price": 1043.85,
+          "line_total": 1043.85
+        },
+        {
+          "description": "Graphic design (per hour) - Batch A",
+          "quantity": 1,
+          "unit_price": 80.46,
+          "line_total": 80.46
+        },
+        {
+          "description": "Roller banner with stand - Floor 4",
           "quantity": 5,
-          "unit_price": 74.86,
-          "line_total": 374.3
+          "unit_price": 157.38,
+          "line_total": 786.9
         },
         {
-          "description": "Branded notepads (pack of 50)",
+          "description": "Letterheads (box of 1,000) - May",
           "quantity": 3,
-          "unit_price": 136.59,
-          "line_total": 409.77
+          "unit_price": 70.74,
+          "line_total": 212.22
+        },
+        {
+          "description": "Brochure print run (1,000 copies) - April",
+          "quantity": 2,
+          "unit_price": 794.85,
+          "line_total": 1589.7
+        },
+        {
+          "description": "A1 exhibition poster - April",
+          "quantity": 1,
+          "unit_price": 46.96,
+          "line_total": 46.96
+        },
+        {
+          "description": "Large-format vinyl signage - Reception",
+          "quantity": 4,
+          "unit_price": 324.03,
+          "line_total": 1296.12
+        },
+        {
+          "description": "Graphic design (per hour) - April",
+          "quantity": 1,
+          "unit_price": 78.81,
+          "line_total": 78.81
+        },
+        {
+          "description": "A1 exhibition poster - Phase 2",
+          "quantity": 10,
+          "unit_price": 53.75,
+          "line_total": 537.5
+        },
+        {
+          "description": "Branded notepads (pack of 50) - Phase 1",
+          "quantity": 1,
+          "unit_price": 72.24,
+          "line_total": 72.24
+        },
+        {
+          "description": "Roller banner with stand - May",
+          "quantity": 3,
+          "unit_price": 92.04,
+          "line_total": 276.12
+        },
+        {
+          "description": "Branded notepads (pack of 50) - Floor 4",
+          "quantity": 1,
+          "unit_price": 71.24,
+          "line_total": 71.24
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -352.18,
+          "line_total": -352.18
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-79232",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-04-20",
-      "po_number": "PO-459654",
+      "invoice_number": "32857",
+      "invoice_date": "2026-01-30",
+      "due_date": "2026-03-31",
+      "po_number": "PO-467291",
       "supplier_name": "Ashdown Print & Design Ltd",
       "supplier_vat_number": "GB 802 8178 21",
       "currency": "GBP",
-      "subtotal": 4092.4,
-      "vat_amount": 818.48,
-      "total_amount": 4910.88,
+      "subtotal": 6691.35,
+      "vat_amount": 1338.27,
+      "total_amount": 8029.62,
       "payment_terms_days": 60,
-      "customer_reference": "CC-4374",
+      "customer_reference": "CC-9432",
       "line_items": [
         {
-          "description": "Roller banner with stand",
-          "quantity": 25,
-          "unit_price": 129.2,
-          "line_total": 3230.0
-        },
-        {
-          "description": "A1 exhibition poster",
+          "description": "Brochure print run (1,000 copies) - Phase 2",
           "quantity": 1,
-          "unit_price": 78.33,
-          "line_total": 78.33
+          "unit_price": 951.41,
+          "line_total": 951.41
         },
         {
-          "description": "Graphic design (per hour)",
+          "description": "Brochure print run (1,000 copies) - January",
+          "quantity": 1,
+          "unit_price": 1043.85,
+          "line_total": 1043.85
+        },
+        {
+          "description": "Graphic design (per hour) - Batch A",
+          "quantity": 1,
+          "unit_price": 80.46,
+          "line_total": 80.46
+        },
+        {
+          "description": "Roller banner with stand - Floor 4",
           "quantity": 5,
-          "unit_price": 74.86,
-          "line_total": 374.3
+          "unit_price": 157.38,
+          "line_total": 786.9
         },
         {
-          "description": "Branded notepads (pack of 50)",
+          "description": "Letterheads (box of 1,000) - May",
           "quantity": 3,
-          "unit_price": 136.59,
-          "line_total": 409.77
+          "unit_price": 70.74,
+          "line_total": 212.22
+        },
+        {
+          "description": "Brochure print run (1,000 copies) - April",
+          "quantity": 2,
+          "unit_price": 794.85,
+          "line_total": 1589.7
+        },
+        {
+          "description": "A1 exhibition poster - April",
+          "quantity": 1,
+          "unit_price": 46.96,
+          "line_total": 46.96
+        },
+        {
+          "description": "Large-format vinyl signage - Reception",
+          "quantity": 4,
+          "unit_price": 324.03,
+          "line_total": 1296.12
+        },
+        {
+          "description": "Graphic design (per hour) - April",
+          "quantity": 1,
+          "unit_price": 78.81,
+          "line_total": 78.81
+        },
+        {
+          "description": "A1 exhibition poster - Phase 2",
+          "quantity": 10,
+          "unit_price": 53.75,
+          "line_total": 537.5
+        },
+        {
+          "description": "Branded notepads (pack of 50) - Phase 1",
+          "quantity": 1,
+          "unit_price": 72.24,
+          "line_total": 72.24
+        },
+        {
+          "description": "Roller banner with stand - May",
+          "quantity": 3,
+          "unit_price": 92.04,
+          "line_total": 276.12
+        },
+        {
+          "description": "Branded notepads (pack of 50) - Floor 4",
+          "quantity": 1,
+          "unit_price": 71.24,
+          "line_total": 71.24
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -352.18,
+          "line_total": -352.18
         }
       ],
       "supplier_id": "SUP-008"
@@ -895,8 +1417,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 4
-    }
+      "line_item_count": 14,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M05",
@@ -904,94 +1435,202 @@
     "layout": "A",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "INV-63246",
-      "invoice_date": "2026-07-10",
-      "due_date": "2026-09-08",
-      "po_number": "PO-463464",
+      "invoice_number": "SI/2026/91964",
+      "invoice_date": "2026-04-30",
+      "due_date": "2026-05-14",
+      "po_number": "PO-426064",
       "supplier_name": "Calder Valley Catering Ltd.",
       "supplier_vat_number": "GB 620 6538 86",
       "currency": "GBP",
-      "subtotal": 4403.96,
-      "vat_amount": 880.79,
-      "total_amount": 5284.75,
-      "payment_terms_days": 60,
-      "customer_reference": "CC-2221",
+      "subtotal": 1876.18,
+      "vat_amount": 375.24,
+      "total_amount": 2251.42,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-4451",
       "line_items": [
         {
-          "description": "Afternoon tea for 20 people",
+          "description": "Event staffing (per hour) - Phase 2",
           "quantity": 1,
-          "unit_price": 243.42,
-          "line_total": 243.42
+          "unit_price": 20.7,
+          "line_total": 20.7
         },
         {
-          "description": "Tea and coffee service (weekly)",
-          "quantity": 20,
-          "unit_price": 96.59,
-          "line_total": 1931.8
+          "description": "Fruit bowl delivery (weekly) - Reception",
+          "quantity": 1,
+          "unit_price": 32.37,
+          "line_total": 32.37
         },
         {
-          "description": "Breakfast platter",
+          "description": "Bottled water (case of 24) - Phase 2",
           "quantity": 12,
-          "unit_price": 53.52,
-          "line_total": 642.24
+          "unit_price": 13.43,
+          "line_total": 161.16
         },
         {
-          "description": "Working lunch for 12 people",
-          "quantity": 10,
-          "unit_price": 152.74,
-          "line_total": 1527.4
-        },
-        {
-          "description": "Event staffing (per hour)",
+          "description": "Conference catering (per head) - Reception",
           "quantity": 2,
-          "unit_price": 29.55,
-          "line_total": 59.1
+          "unit_price": 33.94,
+          "line_total": 67.88
+        },
+        {
+          "description": "Sandwich platter - February",
+          "quantity": 5,
+          "unit_price": 106.52,
+          "line_total": 532.6
+        },
+        {
+          "description": "Tea and coffee service (weekly) - Floor 4",
+          "quantity": 2,
+          "unit_price": 100.53,
+          "line_total": 201.06
+        },
+        {
+          "description": "Event staffing (per hour) - Floor 4",
+          "quantity": 2,
+          "unit_price": 23.69,
+          "line_total": 47.38
+        },
+        {
+          "description": "Fruit bowl delivery (weekly) - Phase 1",
+          "quantity": 4,
+          "unit_price": 20.27,
+          "line_total": 81.08
+        },
+        {
+          "description": "Bottled water (case of 24) - May",
+          "quantity": 1,
+          "unit_price": 10.35,
+          "line_total": 10.35
+        },
+        {
+          "description": "Sandwich platter - Bradford depot",
+          "quantity": 2,
+          "unit_price": 56.74,
+          "line_total": 113.48
+        },
+        {
+          "description": "Conference catering (per head) - Floor 2",
+          "quantity": 3,
+          "unit_price": 21.64,
+          "line_total": 64.92
+        },
+        {
+          "description": "Working lunch for 12 people - Bradford depot",
+          "quantity": 1,
+          "unit_price": 206.67,
+          "line_total": 206.67
+        },
+        {
+          "description": "Afternoon tea for 20 people - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 222.25,
+          "line_total": 222.25
+        },
+        {
+          "description": "Fruit bowl delivery (weekly) - Leeds HQ",
+          "quantity": 4,
+          "unit_price": 28.57,
+          "line_total": 114.28
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-63246",
-      "invoice_date": "2026-07-10",
-      "due_date": "2026-09-08",
-      "po_number": "PO-463464",
+      "invoice_number": "SI/2026/91964",
+      "invoice_date": "2026-04-30",
+      "due_date": "2026-05-14",
+      "po_number": "PO-426064",
       "supplier_name": "Calder Valley Catering Ltd",
       "supplier_vat_number": "GB 620 6538 86",
       "currency": "GBP",
-      "subtotal": 4403.96,
-      "vat_amount": 880.79,
-      "total_amount": 5284.75,
-      "payment_terms_days": 60,
-      "customer_reference": "CC-2221",
+      "subtotal": 1876.18,
+      "vat_amount": 375.24,
+      "total_amount": 2251.42,
+      "payment_terms_days": 14,
+      "customer_reference": "CC-4451",
       "line_items": [
         {
-          "description": "Afternoon tea for 20 people",
+          "description": "Event staffing (per hour) - Phase 2",
           "quantity": 1,
-          "unit_price": 243.42,
-          "line_total": 243.42
+          "unit_price": 20.7,
+          "line_total": 20.7
         },
         {
-          "description": "Tea and coffee service (weekly)",
-          "quantity": 20,
-          "unit_price": 96.59,
-          "line_total": 1931.8
+          "description": "Fruit bowl delivery (weekly) - Reception",
+          "quantity": 1,
+          "unit_price": 32.37,
+          "line_total": 32.37
         },
         {
-          "description": "Breakfast platter",
+          "description": "Bottled water (case of 24) - Phase 2",
           "quantity": 12,
-          "unit_price": 53.52,
-          "line_total": 642.24
+          "unit_price": 13.43,
+          "line_total": 161.16
         },
         {
-          "description": "Working lunch for 12 people",
-          "quantity": 10,
-          "unit_price": 152.74,
-          "line_total": 1527.4
-        },
-        {
-          "description": "Event staffing (per hour)",
+          "description": "Conference catering (per head) - Reception",
           "quantity": 2,
-          "unit_price": 29.55,
-          "line_total": 59.1
+          "unit_price": 33.94,
+          "line_total": 67.88
+        },
+        {
+          "description": "Sandwich platter - February",
+          "quantity": 5,
+          "unit_price": 106.52,
+          "line_total": 532.6
+        },
+        {
+          "description": "Tea and coffee service (weekly) - Floor 4",
+          "quantity": 2,
+          "unit_price": 100.53,
+          "line_total": 201.06
+        },
+        {
+          "description": "Event staffing (per hour) - Floor 4",
+          "quantity": 2,
+          "unit_price": 23.69,
+          "line_total": 47.38
+        },
+        {
+          "description": "Fruit bowl delivery (weekly) - Phase 1",
+          "quantity": 4,
+          "unit_price": 20.27,
+          "line_total": 81.08
+        },
+        {
+          "description": "Bottled water (case of 24) - May",
+          "quantity": 1,
+          "unit_price": 10.35,
+          "line_total": 10.35
+        },
+        {
+          "description": "Sandwich platter - Bradford depot",
+          "quantity": 2,
+          "unit_price": 56.74,
+          "line_total": 113.48
+        },
+        {
+          "description": "Conference catering (per head) - Floor 2",
+          "quantity": 3,
+          "unit_price": 21.64,
+          "line_total": 64.92
+        },
+        {
+          "description": "Working lunch for 12 people - Bradford depot",
+          "quantity": 1,
+          "unit_price": 206.67,
+          "line_total": 206.67
+        },
+        {
+          "description": "Afternoon tea for 20 people - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 222.25,
+          "line_total": 222.25
+        },
+        {
+          "description": "Fruit bowl delivery (weekly) - Leeds HQ",
+          "quantity": 4,
+          "unit_price": 28.57,
+          "line_total": 114.28
         }
       ],
       "supplier_id": "SUP-007"
@@ -1004,8 +1643,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 5
-    }
+      "line_item_count": 14,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": 3342.81,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": true
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M06",
@@ -1013,118 +1661,142 @@
     "layout": "B",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "SI/2026/24777",
-      "invoice_date": "2026-06-02",
-      "due_date": "2026-07-02",
-      "po_number": "PO-445908",
+      "invoice_number": "S001-33460",
+      "invoice_date": "2026-06-24",
+      "due_date": "2026-07-24",
+      "po_number": "PO-450359",
       "supplier_name": "Northgate Office Supplies",
       "supplier_vat_number": "GB 116 0003 45",
       "currency": "GBP",
-      "subtotal": 3285.54,
-      "vat_amount": 657.11,
-      "total_amount": 3942.65,
+      "subtotal": 734.74,
+      "vat_amount": 146.95,
+      "total_amount": 881.69,
       "payment_terms_days": 30,
-      "customer_reference": "CC-6816",
+      "customer_reference": "CC-2733",
       "line_items": [
         {
-          "description": "A4 copier paper, 80gsm (box of 5 reams)",
-          "quantity": 20,
-          "unit_price": 21.17,
-          "line_total": 423.4
+          "description": "Sticky notes (pack of 24) - Phase 1",
+          "quantity": 1,
+          "unit_price": 14.37,
+          "line_total": 14.37
         },
         {
-          "description": "Desk organiser set",
+          "description": "A4 copier paper, 80gsm (box of 5 reams) - May",
           "quantity": 3,
-          "unit_price": 29.08,
-          "line_total": 87.24
+          "unit_price": 21.81,
+          "line_total": 65.43
         },
         {
-          "description": "Black toner cartridge, high yield",
+          "description": "Sticky notes (pack of 24) - June",
           "quantity": 5,
-          "unit_price": 78.68,
-          "line_total": 393.4
+          "unit_price": 12.12,
+          "line_total": 60.6
         },
         {
-          "description": "Sticky notes (pack of 24)",
-          "quantity": 4,
-          "unit_price": 12.17,
-          "line_total": 48.68
+          "description": "Shredder, cross-cut - May",
+          "quantity": 3,
+          "unit_price": 140.54,
+          "line_total": 421.62
         },
         {
-          "description": "Shredder, cross-cut",
-          "quantity": 10,
-          "unit_price": 180.39,
-          "line_total": 1803.9
+          "description": "Whiteboard markers (pack of 12) - Batch B",
+          "quantity": 2,
+          "unit_price": 7.59,
+          "line_total": 15.18
         },
         {
-          "description": "Whiteboard markers (pack of 12)",
-          "quantity": 4,
-          "unit_price": 10.73,
-          "line_total": 42.92
+          "description": "Monitor riser - Phase 2",
+          "quantity": 1,
+          "unit_price": 32.71,
+          "line_total": 32.71
         },
         {
-          "description": "Lever-arch files (pack of 10)",
-          "quantity": 25,
-          "unit_price": 19.44,
-          "line_total": 486.0
+          "description": "Desk organiser set - February",
+          "quantity": 3,
+          "unit_price": 26.43,
+          "line_total": 79.29
+        },
+        {
+          "description": "Desk organiser set - Batch A",
+          "quantity": 2,
+          "unit_price": 18.48,
+          "line_total": 36.96
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - May",
+          "quantity": 1,
+          "unit_price": 8.58,
+          "line_total": 8.58
         }
       ]
     },
     "final": {
-      "invoice_number": "SI/2026/24777",
-      "invoice_date": "2026-06-02",
-      "due_date": "2026-07-02",
-      "po_number": "PO-445908",
+      "invoice_number": "S001-33460",
+      "invoice_date": "2026-06-24",
+      "due_date": "2026-07-24",
+      "po_number": "PO-450359",
       "supplier_name": "Northgate Office Supplies Ltd",
       "supplier_vat_number": "GB 116 0003 45",
       "currency": "GBP",
-      "subtotal": 3285.54,
-      "vat_amount": 657.11,
-      "total_amount": 3942.65,
+      "subtotal": 734.74,
+      "vat_amount": 146.95,
+      "total_amount": 881.69,
       "payment_terms_days": 30,
-      "customer_reference": "CC-6816",
+      "customer_reference": "CC-2733",
       "line_items": [
         {
-          "description": "A4 copier paper, 80gsm (box of 5 reams)",
-          "quantity": 20,
-          "unit_price": 21.17,
-          "line_total": 423.4
+          "description": "Sticky notes (pack of 24) - Phase 1",
+          "quantity": 1,
+          "unit_price": 14.37,
+          "line_total": 14.37
         },
         {
-          "description": "Desk organiser set",
+          "description": "A4 copier paper, 80gsm (box of 5 reams) - May",
           "quantity": 3,
-          "unit_price": 29.08,
-          "line_total": 87.24
+          "unit_price": 21.81,
+          "line_total": 65.43
         },
         {
-          "description": "Black toner cartridge, high yield",
+          "description": "Sticky notes (pack of 24) - June",
           "quantity": 5,
-          "unit_price": 78.68,
-          "line_total": 393.4
+          "unit_price": 12.12,
+          "line_total": 60.6
         },
         {
-          "description": "Sticky notes (pack of 24)",
-          "quantity": 4,
-          "unit_price": 12.17,
-          "line_total": 48.68
+          "description": "Shredder, cross-cut - May",
+          "quantity": 3,
+          "unit_price": 140.54,
+          "line_total": 421.62
         },
         {
-          "description": "Shredder, cross-cut",
-          "quantity": 10,
-          "unit_price": 180.39,
-          "line_total": 1803.9
+          "description": "Whiteboard markers (pack of 12) - Batch B",
+          "quantity": 2,
+          "unit_price": 7.59,
+          "line_total": 15.18
         },
         {
-          "description": "Whiteboard markers (pack of 12)",
-          "quantity": 4,
-          "unit_price": 10.73,
-          "line_total": 42.92
+          "description": "Monitor riser - Phase 2",
+          "quantity": 1,
+          "unit_price": 32.71,
+          "line_total": 32.71
         },
         {
-          "description": "Lever-arch files (pack of 10)",
-          "quantity": 25,
-          "unit_price": 19.44,
-          "line_total": 486.0
+          "description": "Desk organiser set - February",
+          "quantity": 3,
+          "unit_price": 26.43,
+          "line_total": 79.29
+        },
+        {
+          "description": "Desk organiser set - Batch A",
+          "quantity": 2,
+          "unit_price": 18.48,
+          "line_total": 36.96
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - May",
+          "quantity": 1,
+          "unit_price": 8.58,
+          "line_total": 8.58
         }
       ],
       "supplier_id": "SUP-001"
@@ -1137,8 +1809,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 7
-    }
+      "line_item_count": 9,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": 3307.24,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-M07",
@@ -1146,118 +1827,190 @@
     "layout": "C",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "INV-91615",
-      "invoice_date": "2026-05-19",
-      "due_date": "2026-06-18",
-      "po_number": "PO-494747",
-      "supplier_name": "Brightwater IT Services Limited",
+      "invoice_number": "INV-87660",
+      "invoice_date": "2026-07-16",
+      "due_date": "2026-08-15",
+      "po_number": "PO-424647",
+      "supplier_name": "Brightwater IT Services",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 9403.04,
-      "vat_amount": 1880.61,
-      "total_amount": 11283.65,
+      "subtotal": 10612.34,
+      "vat_amount": 2122.47,
+      "total_amount": 12734.81,
       "payment_terms_days": 30,
-      "customer_reference": "CC-6710",
+      "customer_reference": "CC-1213",
       "line_items": [
         {
-          "description": "Laptop battery replacement",
+          "description": "Laptop imaging and deployment (per device) - Server room",
+          "quantity": 6,
+          "unit_price": 55.4,
+          "line_total": 332.4
+        },
+        {
+          "description": "On-site engineer (per day) - May",
           "quantity": 1,
-          "unit_price": 90.82,
-          "line_total": 90.82
+          "unit_price": 552.25,
+          "line_total": 552.25
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 3,
-          "unit_price": 1433.85,
-          "line_total": 4301.55
-        },
-        {
-          "description": "Laptop imaging and deployment (per device)",
-          "quantity": 2,
-          "unit_price": 54.62,
-          "line_total": 109.24
-        },
-        {
-          "description": "On-site engineer (per day)",
+          "description": "Microsoft 365 migration workshop - Floor 4",
           "quantity": 1,
-          "unit_price": 565.42,
-          "line_total": 565.42
+          "unit_price": 1243.86,
+          "line_total": 1243.86
         },
         {
-          "description": "Endpoint security licence (annual, per seat)",
-          "quantity": 20,
-          "unit_price": 36.22,
-          "line_total": 724.4
+          "description": "Microsoft 365 migration workshop - Phase 2",
+          "quantity": 1,
+          "unit_price": 1208.77,
+          "line_total": 1208.77
         },
         {
-          "description": "Microsoft 365 migration workshop",
-          "quantity": 3,
-          "unit_price": 1072.39,
-          "line_total": 3217.17
+          "description": "Laptop imaging and deployment (per device) - January",
+          "quantity": 12,
+          "unit_price": 44.05,
+          "line_total": 528.6
         },
         {
-          "description": "Docking station",
-          "quantity": 3,
-          "unit_price": 131.48,
-          "line_total": 394.44
+          "description": "Firewall configuration review - April",
+          "quantity": 1,
+          "unit_price": 943.73,
+          "line_total": 943.73
+        },
+        {
+          "description": "Managed service desk (monthly) - Floor 2",
+          "quantity": 1,
+          "unit_price": 4259.68,
+          "line_total": 4259.68
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - March",
+          "quantity": 1,
+          "unit_price": 41.27,
+          "line_total": 41.27
+        },
+        {
+          "description": "Docking station - June",
+          "quantity": 6,
+          "unit_price": 205.98,
+          "line_total": 1235.88
+        },
+        {
+          "description": "Backup monitoring (monthly) - Floor 2",
+          "quantity": 1,
+          "unit_price": 475.07,
+          "line_total": 475.07
+        },
+        {
+          "description": "Laptop imaging and deployment (per device) - Bradford depot",
+          "quantity": 6,
+          "unit_price": 43.49,
+          "line_total": 260.94
+        },
+        {
+          "description": "Laptop battery replacement - Floor 4",
+          "quantity": 1,
+          "unit_price": 88.43,
+          "line_total": 88.43
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -558.54,
+          "line_total": -558.54
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-91615",
-      "invoice_date": "2026-05-19",
-      "due_date": "2026-06-18",
-      "po_number": "PO-494747",
+      "invoice_number": "INV-87660",
+      "invoice_date": "2026-07-16",
+      "due_date": "2026-08-15",
+      "po_number": "PO-424647",
       "supplier_name": "Brightwater IT Services Ltd",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 9403.04,
-      "vat_amount": 1880.61,
-      "total_amount": 11283.65,
+      "subtotal": 10612.34,
+      "vat_amount": 2122.47,
+      "total_amount": 12734.81,
       "payment_terms_days": 30,
-      "customer_reference": "CC-6710",
+      "customer_reference": "CC-1213",
       "line_items": [
         {
-          "description": "Laptop battery replacement",
+          "description": "Laptop imaging and deployment (per device) - Server room",
+          "quantity": 6,
+          "unit_price": 55.4,
+          "line_total": 332.4
+        },
+        {
+          "description": "On-site engineer (per day) - May",
           "quantity": 1,
-          "unit_price": 90.82,
-          "line_total": 90.82
+          "unit_price": 552.25,
+          "line_total": 552.25
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 3,
-          "unit_price": 1433.85,
-          "line_total": 4301.55
-        },
-        {
-          "description": "Laptop imaging and deployment (per device)",
-          "quantity": 2,
-          "unit_price": 54.62,
-          "line_total": 109.24
-        },
-        {
-          "description": "On-site engineer (per day)",
+          "description": "Microsoft 365 migration workshop - Floor 4",
           "quantity": 1,
-          "unit_price": 565.42,
-          "line_total": 565.42
+          "unit_price": 1243.86,
+          "line_total": 1243.86
         },
         {
-          "description": "Endpoint security licence (annual, per seat)",
-          "quantity": 20,
-          "unit_price": 36.22,
-          "line_total": 724.4
+          "description": "Microsoft 365 migration workshop - Phase 2",
+          "quantity": 1,
+          "unit_price": 1208.77,
+          "line_total": 1208.77
         },
         {
-          "description": "Microsoft 365 migration workshop",
-          "quantity": 3,
-          "unit_price": 1072.39,
-          "line_total": 3217.17
+          "description": "Laptop imaging and deployment (per device) - January",
+          "quantity": 12,
+          "unit_price": 44.05,
+          "line_total": 528.6
         },
         {
-          "description": "Docking station",
-          "quantity": 3,
-          "unit_price": 131.48,
-          "line_total": 394.44
+          "description": "Firewall configuration review - April",
+          "quantity": 1,
+          "unit_price": 943.73,
+          "line_total": 943.73
+        },
+        {
+          "description": "Managed service desk (monthly) - Floor 2",
+          "quantity": 1,
+          "unit_price": 4259.68,
+          "line_total": 4259.68
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - March",
+          "quantity": 1,
+          "unit_price": 41.27,
+          "line_total": 41.27
+        },
+        {
+          "description": "Docking station - June",
+          "quantity": 6,
+          "unit_price": 205.98,
+          "line_total": 1235.88
+        },
+        {
+          "description": "Backup monitoring (monthly) - Floor 2",
+          "quantity": 1,
+          "unit_price": 475.07,
+          "line_total": 475.07
+        },
+        {
+          "description": "Laptop imaging and deployment (per device) - Bradford depot",
+          "quantity": 6,
+          "unit_price": 43.49,
+          "line_total": 260.94
+        },
+        {
+          "description": "Laptop battery replacement - Floor 4",
+          "quantity": 1,
+          "unit_price": 88.43,
+          "line_total": 88.43
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -558.54,
+          "line_total": -558.54
         }
       ],
       "supplier_id": "SUP-005"
@@ -1270,8 +2023,17 @@
       "distractor_dates": false,
       "superseded_total": null,
       "reverse_charge_vat": false,
-      "line_item_count": 7
-    }
+      "line_item_count": 13,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": false,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-H01",
@@ -1279,106 +2041,322 @@
     "layout": "A",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "INV-70349",
-      "invoice_date": "2026-08-08",
-      "due_date": "2026-09-22",
-      "po_number": "PO-421351",
-      "supplier_name": "NORTHGATE OFFICE SUPPLIES LTD",
+      "invoice_number": "SI/2026/88331",
+      "invoice_date": "2026-01-19",
+      "due_date": "2026-03-20",
+      "po_number": "PO-411734",
+      "supplier_name": "Northgate Office Supplies",
       "supplier_vat_number": "GB 116 0003 45",
       "currency": "GBP",
-      "subtotal": 4346.09,
-      "vat_amount": 869.22,
-      "total_amount": 5215.31,
-      "payment_terms_days": 45,
+      "subtotal": 5363.24,
+      "vat_amount": 1072.65,
+      "total_amount": 6435.89,
+      "payment_terms_days": 60,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Desk organiser set",
-          "quantity": 1,
-          "unit_price": 18.69,
-          "line_total": 18.69
-        },
-        {
-          "description": "A4 copier paper, 80gsm (box of 5 reams)",
-          "quantity": 4,
-          "unit_price": 24.48,
-          "line_total": 97.92
-        },
-        {
-          "description": "Black toner cartridge, high yield",
-          "quantity": 1,
-          "unit_price": 62.1,
-          "line_total": 62.1
-        },
-        {
-          "description": "Shredder, cross-cut",
-          "quantity": 10,
-          "unit_price": 174.11,
-          "line_total": 1741.1
-        },
-        {
-          "description": "Lever-arch files (pack of 10)",
+          "description": "Desk organiser set - February",
           "quantity": 6,
-          "unit_price": 13.58,
-          "line_total": 81.48
+          "unit_price": 34.88,
+          "line_total": 209.28
         },
         {
-          "description": "Ergonomic office chair",
+          "description": "Black toner cartridge, high yield - Bradford depot",
           "quantity": 10,
-          "unit_price": 234.48,
-          "line_total": 2344.8
+          "unit_price": 87.49,
+          "line_total": 874.9
+        },
+        {
+          "description": "Monitor riser - Batch A",
+          "quantity": 4,
+          "unit_price": 49.53,
+          "line_total": 198.12
+        },
+        {
+          "description": "Black toner cartridge, high yield - Batch B",
+          "quantity": 5,
+          "unit_price": 94.69,
+          "line_total": 473.45
+        },
+        {
+          "description": "Monitor riser - York office",
+          "quantity": 1,
+          "unit_price": 34.87,
+          "line_total": 34.87
+        },
+        {
+          "description": "Black toner cartridge, high yield - Batch A",
+          "quantity": 2,
+          "unit_price": 57.28,
+          "line_total": 114.56
+        },
+        {
+          "description": "Desk organiser set - Server room",
+          "quantity": 12,
+          "unit_price": 18.85,
+          "line_total": 226.2
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - January",
+          "quantity": 3,
+          "unit_price": 7.39,
+          "line_total": 22.17
+        },
+        {
+          "description": "Desk organiser set - May",
+          "quantity": 12,
+          "unit_price": 16.42,
+          "line_total": 197.04
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - April",
+          "quantity": 5,
+          "unit_price": 8.13,
+          "line_total": 40.65
+        },
+        {
+          "description": "Sticky notes (pack of 24) - Floor 4",
+          "quantity": 1,
+          "unit_price": 14.63,
+          "line_total": 14.63
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - York office",
+          "quantity": 6,
+          "unit_price": 8.78,
+          "line_total": 52.68
+        },
+        {
+          "description": "Sticky notes (pack of 24) - June",
+          "quantity": 3,
+          "unit_price": 13.69,
+          "line_total": 41.07
+        },
+        {
+          "description": "Lever-arch files (pack of 10) - Reception",
+          "quantity": 5,
+          "unit_price": 13.21,
+          "line_total": 66.05
+        },
+        {
+          "description": "Sticky notes (pack of 24) - January",
+          "quantity": 4,
+          "unit_price": 15.89,
+          "line_total": 63.56
+        },
+        {
+          "description": "Ergonomic office chair - March",
+          "quantity": 1,
+          "unit_price": 234.41,
+          "line_total": 234.41
+        },
+        {
+          "description": "Monitor riser - February",
+          "quantity": 1,
+          "unit_price": 31.73,
+          "line_total": 31.73
+        },
+        {
+          "description": "Ergonomic office chair - Wakefield site",
+          "quantity": 5,
+          "unit_price": 274.96,
+          "line_total": 1374.8
+        },
+        {
+          "description": "Black toner cartridge, high yield - Floor 4",
+          "quantity": 6,
+          "unit_price": 72.88,
+          "line_total": 437.28
+        },
+        {
+          "description": "Black toner cartridge, high yield - Leeds HQ",
+          "quantity": 10,
+          "unit_price": 82.74,
+          "line_total": 827.4
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - Reception",
+          "quantity": 1,
+          "unit_price": 13.96,
+          "line_total": 13.96
+        },
+        {
+          "description": "Sticky notes (pack of 24) - Reception",
+          "quantity": 5,
+          "unit_price": 8.23,
+          "line_total": 41.15
+        },
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams) - February",
+          "quantity": 3,
+          "unit_price": 18.52,
+          "line_total": 55.56
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -282.28,
+          "line_total": -282.28
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-70349",
-      "invoice_date": "2026-08-08",
-      "due_date": "2026-09-22",
-      "po_number": "PO-421351",
+      "invoice_number": "SI/2026/88331",
+      "invoice_date": "2026-01-19",
+      "due_date": "2026-03-20",
+      "po_number": "PO-411734",
       "supplier_name": "Northgate Office Supplies Ltd",
       "supplier_vat_number": "GB 116 0003 45",
       "currency": "GBP",
-      "subtotal": 4346.09,
-      "vat_amount": 869.22,
-      "total_amount": 5215.31,
-      "payment_terms_days": 45,
+      "subtotal": 5363.24,
+      "vat_amount": 1072.65,
+      "total_amount": 6435.89,
+      "payment_terms_days": 60,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Desk organiser set",
-          "quantity": 1,
-          "unit_price": 18.69,
-          "line_total": 18.69
-        },
-        {
-          "description": "A4 copier paper, 80gsm (box of 5 reams)",
-          "quantity": 4,
-          "unit_price": 24.48,
-          "line_total": 97.92
-        },
-        {
-          "description": "Black toner cartridge, high yield",
-          "quantity": 1,
-          "unit_price": 62.1,
-          "line_total": 62.1
-        },
-        {
-          "description": "Shredder, cross-cut",
-          "quantity": 10,
-          "unit_price": 174.11,
-          "line_total": 1741.1
-        },
-        {
-          "description": "Lever-arch files (pack of 10)",
+          "description": "Desk organiser set - February",
           "quantity": 6,
-          "unit_price": 13.58,
-          "line_total": 81.48
+          "unit_price": 34.88,
+          "line_total": 209.28
         },
         {
-          "description": "Ergonomic office chair",
+          "description": "Black toner cartridge, high yield - Bradford depot",
           "quantity": 10,
-          "unit_price": 234.48,
-          "line_total": 2344.8
+          "unit_price": 87.49,
+          "line_total": 874.9
+        },
+        {
+          "description": "Monitor riser - Batch A",
+          "quantity": 4,
+          "unit_price": 49.53,
+          "line_total": 198.12
+        },
+        {
+          "description": "Black toner cartridge, high yield - Batch B",
+          "quantity": 5,
+          "unit_price": 94.69,
+          "line_total": 473.45
+        },
+        {
+          "description": "Monitor riser - York office",
+          "quantity": 1,
+          "unit_price": 34.87,
+          "line_total": 34.87
+        },
+        {
+          "description": "Black toner cartridge, high yield - Batch A",
+          "quantity": 2,
+          "unit_price": 57.28,
+          "line_total": 114.56
+        },
+        {
+          "description": "Desk organiser set - Server room",
+          "quantity": 12,
+          "unit_price": 18.85,
+          "line_total": 226.2
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - January",
+          "quantity": 3,
+          "unit_price": 7.39,
+          "line_total": 22.17
+        },
+        {
+          "description": "Desk organiser set - May",
+          "quantity": 12,
+          "unit_price": 16.42,
+          "line_total": 197.04
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - April",
+          "quantity": 5,
+          "unit_price": 8.13,
+          "line_total": 40.65
+        },
+        {
+          "description": "Sticky notes (pack of 24) - Floor 4",
+          "quantity": 1,
+          "unit_price": 14.63,
+          "line_total": 14.63
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - York office",
+          "quantity": 6,
+          "unit_price": 8.78,
+          "line_total": 52.68
+        },
+        {
+          "description": "Sticky notes (pack of 24) - June",
+          "quantity": 3,
+          "unit_price": 13.69,
+          "line_total": 41.07
+        },
+        {
+          "description": "Lever-arch files (pack of 10) - Reception",
+          "quantity": 5,
+          "unit_price": 13.21,
+          "line_total": 66.05
+        },
+        {
+          "description": "Sticky notes (pack of 24) - January",
+          "quantity": 4,
+          "unit_price": 15.89,
+          "line_total": 63.56
+        },
+        {
+          "description": "Ergonomic office chair - March",
+          "quantity": 1,
+          "unit_price": 234.41,
+          "line_total": 234.41
+        },
+        {
+          "description": "Monitor riser - February",
+          "quantity": 1,
+          "unit_price": 31.73,
+          "line_total": 31.73
+        },
+        {
+          "description": "Ergonomic office chair - Wakefield site",
+          "quantity": 5,
+          "unit_price": 274.96,
+          "line_total": 1374.8
+        },
+        {
+          "description": "Black toner cartridge, high yield - Floor 4",
+          "quantity": 6,
+          "unit_price": 72.88,
+          "line_total": 437.28
+        },
+        {
+          "description": "Black toner cartridge, high yield - Leeds HQ",
+          "quantity": 10,
+          "unit_price": 82.74,
+          "line_total": 827.4
+        },
+        {
+          "description": "Whiteboard markers (pack of 12) - Reception",
+          "quantity": 1,
+          "unit_price": 13.96,
+          "line_total": 13.96
+        },
+        {
+          "description": "Sticky notes (pack of 24) - Reception",
+          "quantity": 5,
+          "unit_price": 8.23,
+          "line_total": 41.15
+        },
+        {
+          "description": "A4 copier paper, 80gsm (box of 5 reams) - February",
+          "quantity": 3,
+          "unit_price": 18.52,
+          "line_total": 55.56
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -282.28,
+          "line_total": -282.28
         }
       ],
       "supplier_id": "SUP-001"
@@ -1389,10 +2367,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 6042.45,
+      "superseded_total": 7323.86,
       "reverse_charge_vat": false,
-      "line_item_count": 6
-    }
+      "line_item_count": 24,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": 5748.09,
+      "two_page_layout": true,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": true
+    },
+    "pages": 2
   },
   {
     "doc_id": "DOC-H02",
@@ -1400,106 +2387,274 @@
     "layout": "B",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "INV-89700",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-04-20",
-      "po_number": "PO-451275",
+      "invoice_number": "SI/2026/57831",
+      "invoice_date": "2026-03-05",
+      "due_date": "2026-03-19",
+      "po_number": "PO-489833",
       "supplier_name": "Pennine Facilities Management",
       "supplier_vat_number": "GB 450 2364 53",
       "currency": "GBP",
-      "subtotal": 6900.21,
-      "vat_amount": 1380.04,
-      "total_amount": 8280.25,
-      "payment_terms_days": 60,
+      "subtotal": 7402.2,
+      "vat_amount": 1480.44,
+      "total_amount": 8882.64,
+      "payment_terms_days": 14,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Lift service contract (monthly)",
-          "quantity": 3,
-          "unit_price": 801.45,
-          "line_total": 2404.35
-        },
-        {
-          "description": "Water hygiene testing",
-          "quantity": 3,
-          "unit_price": 190.54,
-          "line_total": 571.62
-        },
-        {
-          "description": "Car park line marking",
+          "description": "Planned maintenance visit - Floor 2",
           "quantity": 1,
-          "unit_price": 452.24,
-          "line_total": 452.24
+          "unit_price": 402.05,
+          "line_total": 402.05
         },
         {
-          "description": "Boiler annual service",
-          "quantity": 10,
-          "unit_price": 219.05,
-          "line_total": 2190.5
-        },
-        {
-          "description": "Planned maintenance visit",
+          "description": "Planned maintenance visit - Phase 2",
           "quantity": 1,
-          "unit_price": 312.74,
-          "line_total": 312.74
+          "unit_price": 389.79,
+          "line_total": 389.79
         },
         {
-          "description": "Emergency call-out (out of hours)",
-          "quantity": 3,
-          "unit_price": 322.92,
-          "line_total": 968.76
+          "description": "Planned maintenance visit - January",
+          "quantity": 1,
+          "unit_price": 398.63,
+          "line_total": 398.63
+        },
+        {
+          "description": "Water hygiene testing - Wakefield site",
+          "quantity": 1,
+          "unit_price": 236.58,
+          "line_total": 236.58
+        },
+        {
+          "description": "Fire-door inspection - Floor 4",
+          "quantity": 1,
+          "unit_price": 245.03,
+          "line_total": 245.03
+        },
+        {
+          "description": "Boiler annual service - Floor 4",
+          "quantity": 1,
+          "unit_price": 320.79,
+          "line_total": 320.79
+        },
+        {
+          "description": "Planned maintenance visit - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 405.11,
+          "line_total": 405.11
+        },
+        {
+          "description": "Fire-door inspection - Reception",
+          "quantity": 1,
+          "unit_price": 210.56,
+          "line_total": 210.56
+        },
+        {
+          "description": "Car park line marking - Batch A",
+          "quantity": 1,
+          "unit_price": 441.45,
+          "line_total": 441.45
+        },
+        {
+          "description": "Boiler annual service - Wakefield site",
+          "quantity": 1,
+          "unit_price": 300.05,
+          "line_total": 300.05
+        },
+        {
+          "description": "Car park line marking - Floor 2",
+          "quantity": 1,
+          "unit_price": 820.38,
+          "line_total": 820.38
+        },
+        {
+          "description": "HVAC filter replacement - Bradford depot",
+          "quantity": 1,
+          "unit_price": 158.83,
+          "line_total": 158.83
+        },
+        {
+          "description": "HVAC filter replacement - Floor 2",
+          "quantity": 7,
+          "unit_price": 120.85,
+          "line_total": 845.95
+        },
+        {
+          "description": "HVAC filter replacement - Server room",
+          "quantity": 12,
+          "unit_price": 118.47,
+          "line_total": 1421.64
+        },
+        {
+          "description": "HVAC filter replacement - Floor 4",
+          "quantity": 1,
+          "unit_price": 134.01,
+          "line_total": 134.01
+        },
+        {
+          "description": "HVAC filter replacement - February",
+          "quantity": 1,
+          "unit_price": 113.75,
+          "line_total": 113.75
+        },
+        {
+          "description": "Water hygiene testing - March",
+          "quantity": 1,
+          "unit_price": 280.24,
+          "line_total": 280.24
+        },
+        {
+          "description": "Emergency call-out (out of hours) - June",
+          "quantity": 1,
+          "unit_price": 384.39,
+          "line_total": 384.39
+        },
+        {
+          "description": "Fire-door inspection - March",
+          "quantity": 1,
+          "unit_price": 282.56,
+          "line_total": 282.56
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -389.59,
+          "line_total": -389.59
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-89700",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-04-20",
-      "po_number": "PO-451275",
+      "invoice_number": "SI/2026/57831",
+      "invoice_date": "2026-03-05",
+      "due_date": "2026-03-19",
+      "po_number": "PO-489833",
       "supplier_name": "Pennine Facilities Management Ltd",
       "supplier_vat_number": "GB 450 2364 53",
       "currency": "GBP",
-      "subtotal": 6900.21,
-      "vat_amount": 1380.04,
-      "total_amount": 8280.25,
-      "payment_terms_days": 60,
+      "subtotal": 7402.2,
+      "vat_amount": 1480.44,
+      "total_amount": 8882.64,
+      "payment_terms_days": 14,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Lift service contract (monthly)",
-          "quantity": 3,
-          "unit_price": 801.45,
-          "line_total": 2404.35
-        },
-        {
-          "description": "Water hygiene testing",
-          "quantity": 3,
-          "unit_price": 190.54,
-          "line_total": 571.62
-        },
-        {
-          "description": "Car park line marking",
+          "description": "Planned maintenance visit - Floor 2",
           "quantity": 1,
-          "unit_price": 452.24,
-          "line_total": 452.24
+          "unit_price": 402.05,
+          "line_total": 402.05
         },
         {
-          "description": "Boiler annual service",
-          "quantity": 10,
-          "unit_price": 219.05,
-          "line_total": 2190.5
-        },
-        {
-          "description": "Planned maintenance visit",
+          "description": "Planned maintenance visit - Phase 2",
           "quantity": 1,
-          "unit_price": 312.74,
-          "line_total": 312.74
+          "unit_price": 389.79,
+          "line_total": 389.79
         },
         {
-          "description": "Emergency call-out (out of hours)",
-          "quantity": 3,
-          "unit_price": 322.92,
-          "line_total": 968.76
+          "description": "Planned maintenance visit - January",
+          "quantity": 1,
+          "unit_price": 398.63,
+          "line_total": 398.63
+        },
+        {
+          "description": "Water hygiene testing - Wakefield site",
+          "quantity": 1,
+          "unit_price": 236.58,
+          "line_total": 236.58
+        },
+        {
+          "description": "Fire-door inspection - Floor 4",
+          "quantity": 1,
+          "unit_price": 245.03,
+          "line_total": 245.03
+        },
+        {
+          "description": "Boiler annual service - Floor 4",
+          "quantity": 1,
+          "unit_price": 320.79,
+          "line_total": 320.79
+        },
+        {
+          "description": "Planned maintenance visit - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 405.11,
+          "line_total": 405.11
+        },
+        {
+          "description": "Fire-door inspection - Reception",
+          "quantity": 1,
+          "unit_price": 210.56,
+          "line_total": 210.56
+        },
+        {
+          "description": "Car park line marking - Batch A",
+          "quantity": 1,
+          "unit_price": 441.45,
+          "line_total": 441.45
+        },
+        {
+          "description": "Boiler annual service - Wakefield site",
+          "quantity": 1,
+          "unit_price": 300.05,
+          "line_total": 300.05
+        },
+        {
+          "description": "Car park line marking - Floor 2",
+          "quantity": 1,
+          "unit_price": 820.38,
+          "line_total": 820.38
+        },
+        {
+          "description": "HVAC filter replacement - Bradford depot",
+          "quantity": 1,
+          "unit_price": 158.83,
+          "line_total": 158.83
+        },
+        {
+          "description": "HVAC filter replacement - Floor 2",
+          "quantity": 7,
+          "unit_price": 120.85,
+          "line_total": 845.95
+        },
+        {
+          "description": "HVAC filter replacement - Server room",
+          "quantity": 12,
+          "unit_price": 118.47,
+          "line_total": 1421.64
+        },
+        {
+          "description": "HVAC filter replacement - Floor 4",
+          "quantity": 1,
+          "unit_price": 134.01,
+          "line_total": 134.01
+        },
+        {
+          "description": "HVAC filter replacement - February",
+          "quantity": 1,
+          "unit_price": 113.75,
+          "line_total": 113.75
+        },
+        {
+          "description": "Water hygiene testing - March",
+          "quantity": 1,
+          "unit_price": 280.24,
+          "line_total": 280.24
+        },
+        {
+          "description": "Emergency call-out (out of hours) - June",
+          "quantity": 1,
+          "unit_price": 384.39,
+          "line_total": 384.39
+        },
+        {
+          "description": "Fire-door inspection - March",
+          "quantity": 1,
+          "unit_price": 282.56,
+          "line_total": 282.56
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -389.59,
+          "line_total": -389.59
         }
       ],
       "supplier_id": "SUP-003"
@@ -1510,10 +2665,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 8538.95,
+      "superseded_total": 9283.16,
       "reverse_charge_vat": false,
-      "line_item_count": 6
-    }
+      "line_item_count": 20,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": true,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": false
+    },
+    "pages": 2
   },
   {
     "doc_id": "DOC-H03",
@@ -1521,118 +2685,310 @@
     "layout": "C",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "83420",
-      "invoice_date": "2026-01-06",
-      "due_date": "2026-02-05",
-      "po_number": "PO-416910",
-      "supplier_name": "Brightwater IT Services Limited",
+      "invoice_number": "41812",
+      "invoice_date": "2026-05-07",
+      "due_date": "2026-05-21",
+      "po_number": "PO-418908",
+      "supplier_name": "BRIGHTWATER IT SERVICES LTD",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 15949.15,
-      "vat_amount": 3189.83,
-      "total_amount": 19138.98,
-      "payment_terms_days": 30,
+      "subtotal": 30468.65,
+      "vat_amount": 6093.73,
+      "total_amount": 36562.38,
+      "payment_terms_days": 14,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "On-site engineer (per day)",
+          "description": "Managed service desk (monthly) - Reception",
           "quantity": 1,
-          "unit_price": 496.34,
-          "line_total": 496.34
+          "unit_price": 3974.12,
+          "line_total": 3974.12
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 3,
-          "unit_price": 1179.25,
-          "line_total": 3537.75
-        },
-        {
-          "description": "Laptop imaging and deployment (per device)",
+          "description": "Firewall configuration review - Leeds HQ",
           "quantity": 1,
-          "unit_price": 55.93,
-          "line_total": 55.93
+          "unit_price": 1470.5,
+          "line_total": 1470.5
         },
         {
-          "description": "Laptop battery replacement",
-          "quantity": 6,
-          "unit_price": 106.35,
-          "line_total": 638.1
+          "description": "Docking station - April",
+          "quantity": 4,
+          "unit_price": 158.12,
+          "line_total": 632.48
         },
         {
-          "description": "Backup monitoring (monthly)",
+          "description": "Docking station - March",
+          "quantity": 1,
+          "unit_price": 193.71,
+          "line_total": 193.71
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - April",
+          "quantity": 1,
+          "unit_price": 29.02,
+          "line_total": 29.02
+        },
+        {
+          "description": "Microsoft 365 migration workshop - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 1541.52,
+          "line_total": 1541.52
+        },
+        {
+          "description": "Firewall configuration review - Floor 4",
+          "quantity": 1,
+          "unit_price": 929.81,
+          "line_total": 929.81
+        },
+        {
+          "description": "Firewall configuration review - January",
           "quantity": 2,
-          "unit_price": 612.71,
-          "line_total": 1225.42
+          "unit_price": 1448.27,
+          "line_total": 2896.54
         },
         {
-          "description": "Managed service desk (monthly)",
-          "quantity": 3,
-          "unit_price": 2844.02,
-          "line_total": 8532.06
+          "description": "Laptop battery replacement - Wakefield site",
+          "quantity": 12,
+          "unit_price": 102.05,
+          "line_total": 1224.6
         },
         {
-          "description": "Microsoft 365 migration workshop",
+          "description": "Firewall configuration review - Floor 2",
           "quantity": 1,
-          "unit_price": 1463.55,
-          "line_total": 1463.55
+          "unit_price": 1038.41,
+          "line_total": 1038.41
+        },
+        {
+          "description": "Firewall configuration review - Phase 2",
+          "quantity": 1,
+          "unit_price": 1135.59,
+          "line_total": 1135.59
+        },
+        {
+          "description": "Microsoft 365 migration workshop - York office",
+          "quantity": 1,
+          "unit_price": 1600.24,
+          "line_total": 1600.24
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - June",
+          "quantity": 2,
+          "unit_price": 39.36,
+          "line_total": 78.72
+        },
+        {
+          "description": "On-site engineer (per day) - April",
+          "quantity": 1,
+          "unit_price": 591.6,
+          "line_total": 591.6
+        },
+        {
+          "description": "Microsoft 365 migration workshop - March",
+          "quantity": 1,
+          "unit_price": 1143.5,
+          "line_total": 1143.5
+        },
+        {
+          "description": "Laptop battery replacement - Phase 2",
+          "quantity": 12,
+          "unit_price": 85.79,
+          "line_total": 1029.48
+        },
+        {
+          "description": "Managed service desk (monthly) - Phase 1",
+          "quantity": 1,
+          "unit_price": 3719.84,
+          "line_total": 3719.84
+        },
+        {
+          "description": "Managed service desk (monthly) - January",
+          "quantity": 1,
+          "unit_price": 3528.64,
+          "line_total": 3528.64
+        },
+        {
+          "description": "Laptop imaging and deployment (per device) - Floor 4",
+          "quantity": 6,
+          "unit_price": 37.43,
+          "line_total": 224.58
+        },
+        {
+          "description": "Docking station - Batch A",
+          "quantity": 4,
+          "unit_price": 205.05,
+          "line_total": 820.2
+        },
+        {
+          "description": "Backup monitoring (monthly) - January",
+          "quantity": 2,
+          "unit_price": 623.68,
+          "line_total": 1247.36
+        },
+        {
+          "description": "Microsoft 365 migration workshop - June",
+          "quantity": 2,
+          "unit_price": 1510.9,
+          "line_total": 3021.8
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -1603.61,
+          "line_total": -1603.61
         }
       ]
     },
     "final": {
-      "invoice_number": "83420",
-      "invoice_date": "2026-01-06",
-      "due_date": "2026-02-05",
-      "po_number": "PO-416910",
+      "invoice_number": "41812",
+      "invoice_date": "2026-05-07",
+      "due_date": "2026-05-21",
+      "po_number": "PO-418908",
       "supplier_name": "Brightwater IT Services Ltd",
       "supplier_vat_number": "GB 128 2973 77",
       "currency": "GBP",
-      "subtotal": 15949.15,
-      "vat_amount": 3189.83,
-      "total_amount": 19138.98,
-      "payment_terms_days": 30,
+      "subtotal": 30468.65,
+      "vat_amount": 6093.73,
+      "total_amount": 36562.38,
+      "payment_terms_days": 14,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "On-site engineer (per day)",
+          "description": "Managed service desk (monthly) - Reception",
           "quantity": 1,
-          "unit_price": 496.34,
-          "line_total": 496.34
+          "unit_price": 3974.12,
+          "line_total": 3974.12
         },
         {
-          "description": "Firewall configuration review",
-          "quantity": 3,
-          "unit_price": 1179.25,
-          "line_total": 3537.75
-        },
-        {
-          "description": "Laptop imaging and deployment (per device)",
+          "description": "Firewall configuration review - Leeds HQ",
           "quantity": 1,
-          "unit_price": 55.93,
-          "line_total": 55.93
+          "unit_price": 1470.5,
+          "line_total": 1470.5
         },
         {
-          "description": "Laptop battery replacement",
-          "quantity": 6,
-          "unit_price": 106.35,
-          "line_total": 638.1
+          "description": "Docking station - April",
+          "quantity": 4,
+          "unit_price": 158.12,
+          "line_total": 632.48
         },
         {
-          "description": "Backup monitoring (monthly)",
+          "description": "Docking station - March",
+          "quantity": 1,
+          "unit_price": 193.71,
+          "line_total": 193.71
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - April",
+          "quantity": 1,
+          "unit_price": 29.02,
+          "line_total": 29.02
+        },
+        {
+          "description": "Microsoft 365 migration workshop - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 1541.52,
+          "line_total": 1541.52
+        },
+        {
+          "description": "Firewall configuration review - Floor 4",
+          "quantity": 1,
+          "unit_price": 929.81,
+          "line_total": 929.81
+        },
+        {
+          "description": "Firewall configuration review - January",
           "quantity": 2,
-          "unit_price": 612.71,
-          "line_total": 1225.42
+          "unit_price": 1448.27,
+          "line_total": 2896.54
         },
         {
-          "description": "Managed service desk (monthly)",
-          "quantity": 3,
-          "unit_price": 2844.02,
-          "line_total": 8532.06
+          "description": "Laptop battery replacement - Wakefield site",
+          "quantity": 12,
+          "unit_price": 102.05,
+          "line_total": 1224.6
         },
         {
-          "description": "Microsoft 365 migration workshop",
+          "description": "Firewall configuration review - Floor 2",
           "quantity": 1,
-          "unit_price": 1463.55,
-          "line_total": 1463.55
+          "unit_price": 1038.41,
+          "line_total": 1038.41
+        },
+        {
+          "description": "Firewall configuration review - Phase 2",
+          "quantity": 1,
+          "unit_price": 1135.59,
+          "line_total": 1135.59
+        },
+        {
+          "description": "Microsoft 365 migration workshop - York office",
+          "quantity": 1,
+          "unit_price": 1600.24,
+          "line_total": 1600.24
+        },
+        {
+          "description": "Endpoint security licence (annual, per seat) - June",
+          "quantity": 2,
+          "unit_price": 39.36,
+          "line_total": 78.72
+        },
+        {
+          "description": "On-site engineer (per day) - April",
+          "quantity": 1,
+          "unit_price": 591.6,
+          "line_total": 591.6
+        },
+        {
+          "description": "Microsoft 365 migration workshop - March",
+          "quantity": 1,
+          "unit_price": 1143.5,
+          "line_total": 1143.5
+        },
+        {
+          "description": "Laptop battery replacement - Phase 2",
+          "quantity": 12,
+          "unit_price": 85.79,
+          "line_total": 1029.48
+        },
+        {
+          "description": "Managed service desk (monthly) - Phase 1",
+          "quantity": 1,
+          "unit_price": 3719.84,
+          "line_total": 3719.84
+        },
+        {
+          "description": "Managed service desk (monthly) - January",
+          "quantity": 1,
+          "unit_price": 3528.64,
+          "line_total": 3528.64
+        },
+        {
+          "description": "Laptop imaging and deployment (per device) - Floor 4",
+          "quantity": 6,
+          "unit_price": 37.43,
+          "line_total": 224.58
+        },
+        {
+          "description": "Docking station - Batch A",
+          "quantity": 4,
+          "unit_price": 205.05,
+          "line_total": 820.2
+        },
+        {
+          "description": "Backup monitoring (monthly) - January",
+          "quantity": 2,
+          "unit_price": 623.68,
+          "line_total": 1247.36
+        },
+        {
+          "description": "Microsoft 365 migration workshop - June",
+          "quantity": 2,
+          "unit_price": 1510.9,
+          "line_total": 3021.8
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -1603.61,
+          "line_total": -1603.61
         }
       ],
       "supplier_id": "SUP-005"
@@ -1643,10 +2999,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 19779.74,
+      "superseded_total": 37034.41,
       "reverse_charge_vat": false,
-      "line_item_count": 7
-    }
+      "line_item_count": 23,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-H04",
@@ -1654,142 +3019,298 @@
     "layout": "A",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "S012-96601",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-06-07",
-      "po_number": "PO-496143",
-      "supplier_name": "Orbis Telecom Hardware",
+      "invoice_number": "62143",
+      "invoice_date": "2026-01-14",
+      "due_date": "2026-02-13",
+      "po_number": "PO-418364",
+      "supplier_name": "Orbis Telecom Hardware Ltd.",
       "supplier_vat_number": "GB 349 7023 02",
       "currency": "GBP",
-      "subtotal": 7171.67,
-      "vat_amount": 1434.33,
-      "total_amount": 8606.0,
-      "payment_terms_days": 60,
+      "subtotal": 7426.99,
+      "vat_amount": 1485.4,
+      "total_amount": 8912.39,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "SFP+ transceiver",
-          "quantity": 6,
-          "unit_price": 88.79,
-          "line_total": 532.74
-        },
-        {
-          "description": "Rack-mount UPS",
+          "description": "Cat6 cable (305 m box) - Batch A",
           "quantity": 1,
-          "unit_price": 1160.66,
-          "line_total": 1160.66
+          "unit_price": 179.74,
+          "line_total": 179.74
         },
         {
-          "description": "24-port PoE switch",
+          "description": "Wireless access point - Batch A",
           "quantity": 1,
-          "unit_price": 745.63,
-          "line_total": 745.63
+          "unit_price": 206.19,
+          "line_total": 206.19
         },
         {
-          "description": "Wireless access point",
+          "description": "Rack-mount UPS - Wakefield site",
           "quantity": 1,
-          "unit_price": 213.14,
-          "line_total": 213.14
+          "unit_price": 856.22,
+          "line_total": 856.22
         },
         {
-          "description": "Headset, noise-cancelling",
-          "quantity": 25,
-          "unit_price": 70.48,
-          "line_total": 1762.0
-        },
-        {
-          "description": "IP desk phone",
-          "quantity": 5,
-          "unit_price": 109.44,
-          "line_total": 547.2
-        },
-        {
-          "description": "Fibre patch leads (pack of 10)",
-          "quantity": 12,
-          "unit_price": 61.97,
-          "line_total": 743.64
-        },
-        {
-          "description": "Cat6 cable (305 m box)",
+          "description": "Headset, noise-cancelling - January",
           "quantity": 1,
-          "unit_price": 133.14,
-          "line_total": 133.14
+          "unit_price": 74.08,
+          "line_total": 74.08
         },
         {
-          "description": "Conference speakerphone",
+          "description": "SFP+ transceiver - Wakefield site",
+          "quantity": 3,
+          "unit_price": 48.43,
+          "line_total": 145.29
+        },
+        {
+          "description": "Cat6 cable (305 m box) - Wakefield site",
+          "quantity": 1,
+          "unit_price": 150.08,
+          "line_total": 150.08
+        },
+        {
+          "description": "SFP+ transceiver - Floor 4",
+          "quantity": 1,
+          "unit_price": 79.8,
+          "line_total": 79.8
+        },
+        {
+          "description": "Rack-mount UPS - April",
+          "quantity": 1,
+          "unit_price": 1343.71,
+          "line_total": 1343.71
+        },
+        {
+          "description": "Fibre patch leads (pack of 10) - Phase 2",
+          "quantity": 1,
+          "unit_price": 49.64,
+          "line_total": 49.64
+        },
+        {
+          "description": "IP desk phone - Reception",
+          "quantity": 1,
+          "unit_price": 92.55,
+          "line_total": 92.55
+        },
+        {
+          "description": "Cat6 cable (305 m box) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 126.24,
+          "line_total": 126.24
+        },
+        {
+          "description": "IP desk phone - Floor 2",
+          "quantity": 1,
+          "unit_price": 135.35,
+          "line_total": 135.35
+        },
+        {
+          "description": "Headset, noise-cancelling - Wakefield site",
           "quantity": 4,
-          "unit_price": 333.38,
-          "line_total": 1333.52
+          "unit_price": 70.46,
+          "line_total": 281.84
+        },
+        {
+          "description": "Wireless access point - May",
+          "quantity": 1,
+          "unit_price": 325.28,
+          "line_total": 325.28
+        },
+        {
+          "description": "SFP+ transceiver - February",
+          "quantity": 6,
+          "unit_price": 48.91,
+          "line_total": 293.46
+        },
+        {
+          "description": "IP desk phone - Phase 2",
+          "quantity": 1,
+          "unit_price": 129.43,
+          "line_total": 129.43
+        },
+        {
+          "description": "Wireless access point - Phase 2",
+          "quantity": 1,
+          "unit_price": 211.34,
+          "line_total": 211.34
+        },
+        {
+          "description": "SFP+ transceiver - Floor 2",
+          "quantity": 1,
+          "unit_price": 85.48,
+          "line_total": 85.48
+        },
+        {
+          "description": "Rack-mount UPS - Server room",
+          "quantity": 1,
+          "unit_price": 901.6,
+          "line_total": 901.6
+        },
+        {
+          "description": "Rack-mount UPS - March",
+          "quantity": 1,
+          "unit_price": 1391.73,
+          "line_total": 1391.73
+        },
+        {
+          "description": "Headset, noise-cancelling - Floor 4",
+          "quantity": 1,
+          "unit_price": 133.34,
+          "line_total": 133.34
+        },
+        {
+          "description": "Wireless access point - Floor 2",
+          "quantity": 1,
+          "unit_price": 234.6,
+          "line_total": 234.6
         }
       ]
     },
     "final": {
-      "invoice_number": "S012-96601",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-06-07",
-      "po_number": "PO-496143",
+      "invoice_number": "62143",
+      "invoice_date": "2026-01-14",
+      "due_date": "2026-02-13",
+      "po_number": "PO-418364",
       "supplier_name": "Orbis Telecom Hardware Ltd",
       "supplier_vat_number": "GB 349 7023 02",
       "currency": "GBP",
-      "subtotal": 7171.67,
-      "vat_amount": 1434.33,
-      "total_amount": 8606.0,
-      "payment_terms_days": 60,
+      "subtotal": 7426.99,
+      "vat_amount": 1485.4,
+      "total_amount": 8912.39,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "SFP+ transceiver",
-          "quantity": 6,
-          "unit_price": 88.79,
-          "line_total": 532.74
-        },
-        {
-          "description": "Rack-mount UPS",
+          "description": "Cat6 cable (305 m box) - Batch A",
           "quantity": 1,
-          "unit_price": 1160.66,
-          "line_total": 1160.66
+          "unit_price": 179.74,
+          "line_total": 179.74
         },
         {
-          "description": "24-port PoE switch",
+          "description": "Wireless access point - Batch A",
           "quantity": 1,
-          "unit_price": 745.63,
-          "line_total": 745.63
+          "unit_price": 206.19,
+          "line_total": 206.19
         },
         {
-          "description": "Wireless access point",
+          "description": "Rack-mount UPS - Wakefield site",
           "quantity": 1,
-          "unit_price": 213.14,
-          "line_total": 213.14
+          "unit_price": 856.22,
+          "line_total": 856.22
         },
         {
-          "description": "Headset, noise-cancelling",
-          "quantity": 25,
-          "unit_price": 70.48,
-          "line_total": 1762.0
-        },
-        {
-          "description": "IP desk phone",
-          "quantity": 5,
-          "unit_price": 109.44,
-          "line_total": 547.2
-        },
-        {
-          "description": "Fibre patch leads (pack of 10)",
-          "quantity": 12,
-          "unit_price": 61.97,
-          "line_total": 743.64
-        },
-        {
-          "description": "Cat6 cable (305 m box)",
+          "description": "Headset, noise-cancelling - January",
           "quantity": 1,
-          "unit_price": 133.14,
-          "line_total": 133.14
+          "unit_price": 74.08,
+          "line_total": 74.08
         },
         {
-          "description": "Conference speakerphone",
+          "description": "SFP+ transceiver - Wakefield site",
+          "quantity": 3,
+          "unit_price": 48.43,
+          "line_total": 145.29
+        },
+        {
+          "description": "Cat6 cable (305 m box) - Wakefield site",
+          "quantity": 1,
+          "unit_price": 150.08,
+          "line_total": 150.08
+        },
+        {
+          "description": "SFP+ transceiver - Floor 4",
+          "quantity": 1,
+          "unit_price": 79.8,
+          "line_total": 79.8
+        },
+        {
+          "description": "Rack-mount UPS - April",
+          "quantity": 1,
+          "unit_price": 1343.71,
+          "line_total": 1343.71
+        },
+        {
+          "description": "Fibre patch leads (pack of 10) - Phase 2",
+          "quantity": 1,
+          "unit_price": 49.64,
+          "line_total": 49.64
+        },
+        {
+          "description": "IP desk phone - Reception",
+          "quantity": 1,
+          "unit_price": 92.55,
+          "line_total": 92.55
+        },
+        {
+          "description": "Cat6 cable (305 m box) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 126.24,
+          "line_total": 126.24
+        },
+        {
+          "description": "IP desk phone - Floor 2",
+          "quantity": 1,
+          "unit_price": 135.35,
+          "line_total": 135.35
+        },
+        {
+          "description": "Headset, noise-cancelling - Wakefield site",
           "quantity": 4,
-          "unit_price": 333.38,
-          "line_total": 1333.52
+          "unit_price": 70.46,
+          "line_total": 281.84
+        },
+        {
+          "description": "Wireless access point - May",
+          "quantity": 1,
+          "unit_price": 325.28,
+          "line_total": 325.28
+        },
+        {
+          "description": "SFP+ transceiver - February",
+          "quantity": 6,
+          "unit_price": 48.91,
+          "line_total": 293.46
+        },
+        {
+          "description": "IP desk phone - Phase 2",
+          "quantity": 1,
+          "unit_price": 129.43,
+          "line_total": 129.43
+        },
+        {
+          "description": "Wireless access point - Phase 2",
+          "quantity": 1,
+          "unit_price": 211.34,
+          "line_total": 211.34
+        },
+        {
+          "description": "SFP+ transceiver - Floor 2",
+          "quantity": 1,
+          "unit_price": 85.48,
+          "line_total": 85.48
+        },
+        {
+          "description": "Rack-mount UPS - Server room",
+          "quantity": 1,
+          "unit_price": 901.6,
+          "line_total": 901.6
+        },
+        {
+          "description": "Rack-mount UPS - March",
+          "quantity": 1,
+          "unit_price": 1391.73,
+          "line_total": 1391.73
+        },
+        {
+          "description": "Headset, noise-cancelling - Floor 4",
+          "quantity": 1,
+          "unit_price": 133.34,
+          "line_total": 133.34
+        },
+        {
+          "description": "Wireless access point - Floor 2",
+          "quantity": 1,
+          "unit_price": 234.6,
+          "line_total": 234.6
         }
       ],
       "supplier_id": "SUP-012"
@@ -1800,10 +3321,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 9006.52,
+      "superseded_total": 9628.97,
       "reverse_charge_vat": false,
-      "line_item_count": 9
-    }
+      "line_item_count": 22,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": true,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": true
+    },
+    "pages": 2
   },
   {
     "doc_id": "DOC-H05",
@@ -1811,118 +3341,310 @@
     "layout": "B",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "SI/2026/83706",
-      "invoice_date": "2026-01-28",
-      "due_date": "2026-03-29",
-      "po_number": "PO-482585",
+      "invoice_number": "S014-19025",
+      "invoice_date": "2026-07-02",
+      "due_date": "2026-08-01",
+      "po_number": "PO-435060",
       "supplier_name": "LINDQVIST SOFTWARE AB",
       "supplier_vat_number": "SE99891778001",
       "currency": "EUR",
-      "subtotal": 27695.83,
+      "subtotal": 48710.7,
       "vat_amount": 0.0,
-      "total_amount": 27695.83,
-      "payment_terms_days": 60,
+      "total_amount": 48710.7,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Premium support add-on (annual)",
-          "quantity": 3,
-          "unit_price": 2036.54,
-          "line_total": 6109.62
+          "description": "Additional user licences (pack of 10) - Phase 2",
+          "quantity": 2,
+          "unit_price": 780.98,
+          "line_total": 1561.96
         },
         {
-          "description": "Single sign-on connector (annual)",
+          "description": "Sandbox environment (annual) - York office",
           "quantity": 1,
-          "unit_price": 756.09,
-          "line_total": 756.09
+          "unit_price": 1068.76,
+          "line_total": 1068.76
         },
         {
-          "description": "Additional user licences (pack of 10)",
+          "description": "Implementation consultancy (per day) - Batch A",
           "quantity": 2,
-          "unit_price": 799.05,
-          "line_total": 1598.1
+          "unit_price": 1115.79,
+          "line_total": 2231.58
         },
         {
-          "description": "Workflow platform subscription (annual)",
-          "quantity": 2,
-          "unit_price": 6478.72,
-          "line_total": 12957.44
-        },
-        {
-          "description": "Training session (half day)",
-          "quantity": 2,
-          "unit_price": 595.43,
-          "line_total": 1190.86
-        },
-        {
-          "description": "API integration module (annual)",
-          "quantity": 3,
-          "unit_price": 1144.24,
-          "line_total": 3432.72
-        },
-        {
-          "description": "Data migration service",
+          "description": "Single sign-on connector (annual) - Wakefield site",
           "quantity": 1,
-          "unit_price": 1651.0,
-          "line_total": 1651.0
+          "unit_price": 607.48,
+          "line_total": 607.48
+        },
+        {
+          "description": "Implementation consultancy (per day) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 1153.46,
+          "line_total": 1153.46
+        },
+        {
+          "description": "Additional user licences (pack of 10) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 645.04,
+          "line_total": 645.04
+        },
+        {
+          "description": "Workflow platform subscription (annual) - May",
+          "quantity": 1,
+          "unit_price": 4260.81,
+          "line_total": 4260.81
+        },
+        {
+          "description": "Sandbox environment (annual) - Server room",
+          "quantity": 2,
+          "unit_price": 1281.26,
+          "line_total": 2562.52
+        },
+        {
+          "description": "Data migration service - Reception",
+          "quantity": 2,
+          "unit_price": 2671.99,
+          "line_total": 5343.98
+        },
+        {
+          "description": "Sandbox environment (annual) - June",
+          "quantity": 2,
+          "unit_price": 1075.14,
+          "line_total": 2150.28
+        },
+        {
+          "description": "Single sign-on connector (annual) - February",
+          "quantity": 2,
+          "unit_price": 682.24,
+          "line_total": 1364.48
+        },
+        {
+          "description": "Data migration service - York office",
+          "quantity": 1,
+          "unit_price": 2112.34,
+          "line_total": 2112.34
+        },
+        {
+          "description": "Single sign-on connector (annual) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 685.65,
+          "line_total": 685.65
+        },
+        {
+          "description": "Training session (half day) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 490.75,
+          "line_total": 490.75
+        },
+        {
+          "description": "Premium support add-on (annual) - Floor 2",
+          "quantity": 2,
+          "unit_price": 1455.31,
+          "line_total": 2910.62
+        },
+        {
+          "description": "API integration module (annual) - June",
+          "quantity": 1,
+          "unit_price": 1206.15,
+          "line_total": 1206.15
+        },
+        {
+          "description": "Sandbox environment (annual) - Phase 1",
+          "quantity": 1,
+          "unit_price": 888.41,
+          "line_total": 888.41
+        },
+        {
+          "description": "Additional user licences (pack of 10) - March",
+          "quantity": 1,
+          "unit_price": 1195.81,
+          "line_total": 1195.81
+        },
+        {
+          "description": "Premium support add-on (annual) - June",
+          "quantity": 1,
+          "unit_price": 1474.23,
+          "line_total": 1474.23
+        },
+        {
+          "description": "Workflow platform subscription (annual) - January",
+          "quantity": 2,
+          "unit_price": 7409.85,
+          "line_total": 14819.7
+        },
+        {
+          "description": "Single sign-on connector (annual) - January",
+          "quantity": 1,
+          "unit_price": 948.39,
+          "line_total": 948.39
+        },
+        {
+          "description": "API integration module (annual) - April",
+          "quantity": 1,
+          "unit_price": 1592.02,
+          "line_total": 1592.02
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -2563.72,
+          "line_total": -2563.72
         }
       ]
     },
     "final": {
-      "invoice_number": "SI/2026/83706",
-      "invoice_date": "2026-01-28",
-      "due_date": "2026-03-29",
-      "po_number": "PO-482585",
+      "invoice_number": "S014-19025",
+      "invoice_date": "2026-07-02",
+      "due_date": "2026-08-01",
+      "po_number": "PO-435060",
       "supplier_name": "Lindqvist Software AB",
       "supplier_vat_number": "SE99891778001",
       "currency": "EUR",
-      "subtotal": 27695.83,
+      "subtotal": 48710.7,
       "vat_amount": 0.0,
-      "total_amount": 27695.83,
-      "payment_terms_days": 60,
+      "total_amount": 48710.7,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Premium support add-on (annual)",
-          "quantity": 3,
-          "unit_price": 2036.54,
-          "line_total": 6109.62
+          "description": "Additional user licences (pack of 10) - Phase 2",
+          "quantity": 2,
+          "unit_price": 780.98,
+          "line_total": 1561.96
         },
         {
-          "description": "Single sign-on connector (annual)",
+          "description": "Sandbox environment (annual) - York office",
           "quantity": 1,
-          "unit_price": 756.09,
-          "line_total": 756.09
+          "unit_price": 1068.76,
+          "line_total": 1068.76
         },
         {
-          "description": "Additional user licences (pack of 10)",
+          "description": "Implementation consultancy (per day) - Batch A",
           "quantity": 2,
-          "unit_price": 799.05,
-          "line_total": 1598.1
+          "unit_price": 1115.79,
+          "line_total": 2231.58
         },
         {
-          "description": "Workflow platform subscription (annual)",
-          "quantity": 2,
-          "unit_price": 6478.72,
-          "line_total": 12957.44
-        },
-        {
-          "description": "Training session (half day)",
-          "quantity": 2,
-          "unit_price": 595.43,
-          "line_total": 1190.86
-        },
-        {
-          "description": "API integration module (annual)",
-          "quantity": 3,
-          "unit_price": 1144.24,
-          "line_total": 3432.72
-        },
-        {
-          "description": "Data migration service",
+          "description": "Single sign-on connector (annual) - Wakefield site",
           "quantity": 1,
-          "unit_price": 1651.0,
-          "line_total": 1651.0
+          "unit_price": 607.48,
+          "line_total": 607.48
+        },
+        {
+          "description": "Implementation consultancy (per day) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 1153.46,
+          "line_total": 1153.46
+        },
+        {
+          "description": "Additional user licences (pack of 10) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 645.04,
+          "line_total": 645.04
+        },
+        {
+          "description": "Workflow platform subscription (annual) - May",
+          "quantity": 1,
+          "unit_price": 4260.81,
+          "line_total": 4260.81
+        },
+        {
+          "description": "Sandbox environment (annual) - Server room",
+          "quantity": 2,
+          "unit_price": 1281.26,
+          "line_total": 2562.52
+        },
+        {
+          "description": "Data migration service - Reception",
+          "quantity": 2,
+          "unit_price": 2671.99,
+          "line_total": 5343.98
+        },
+        {
+          "description": "Sandbox environment (annual) - June",
+          "quantity": 2,
+          "unit_price": 1075.14,
+          "line_total": 2150.28
+        },
+        {
+          "description": "Single sign-on connector (annual) - February",
+          "quantity": 2,
+          "unit_price": 682.24,
+          "line_total": 1364.48
+        },
+        {
+          "description": "Data migration service - York office",
+          "quantity": 1,
+          "unit_price": 2112.34,
+          "line_total": 2112.34
+        },
+        {
+          "description": "Single sign-on connector (annual) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 685.65,
+          "line_total": 685.65
+        },
+        {
+          "description": "Training session (half day) - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 490.75,
+          "line_total": 490.75
+        },
+        {
+          "description": "Premium support add-on (annual) - Floor 2",
+          "quantity": 2,
+          "unit_price": 1455.31,
+          "line_total": 2910.62
+        },
+        {
+          "description": "API integration module (annual) - June",
+          "quantity": 1,
+          "unit_price": 1206.15,
+          "line_total": 1206.15
+        },
+        {
+          "description": "Sandbox environment (annual) - Phase 1",
+          "quantity": 1,
+          "unit_price": 888.41,
+          "line_total": 888.41
+        },
+        {
+          "description": "Additional user licences (pack of 10) - March",
+          "quantity": 1,
+          "unit_price": 1195.81,
+          "line_total": 1195.81
+        },
+        {
+          "description": "Premium support add-on (annual) - June",
+          "quantity": 1,
+          "unit_price": 1474.23,
+          "line_total": 1474.23
+        },
+        {
+          "description": "Workflow platform subscription (annual) - January",
+          "quantity": 2,
+          "unit_price": 7409.85,
+          "line_total": 14819.7
+        },
+        {
+          "description": "Single sign-on connector (annual) - January",
+          "quantity": 1,
+          "unit_price": 948.39,
+          "line_total": 948.39
+        },
+        {
+          "description": "API integration module (annual) - April",
+          "quantity": 1,
+          "unit_price": 1592.02,
+          "line_total": 1592.02
+        },
+        {
+          "description": "Less: loyalty discount 5%",
+          "quantity": 1,
+          "unit_price": -2563.72,
+          "line_total": -2563.72
         }
       ],
       "supplier_id": "SUP-014"
@@ -1933,10 +3655,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 28536.33,
+      "superseded_total": 48919.75,
       "reverse_charge_vat": true,
-      "line_item_count": 7
-    }
+      "line_item_count": 23,
+      "discount_line": true,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": true,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": false
+    },
+    "pages": 2
   },
   {
     "doc_id": "DOC-H06",
@@ -1944,130 +3675,250 @@
     "layout": "C",
     "hitl_subset": true,
     "extraction": {
-      "invoice_number": "INV-55970",
-      "invoice_date": "2026-03-14",
-      "due_date": "2026-04-13",
-      "po_number": "PO-426546",
-      "supplier_name": "Severn Electrical Contractors Ltd.",
+      "invoice_number": "S010-35043",
+      "invoice_date": "2026-07-28",
+      "due_date": "2026-09-26",
+      "po_number": "PO-477356",
+      "supplier_name": "Severn Electrical Contractors",
       "supplier_vat_number": "GB 777 8221 00",
       "currency": "GBP",
-      "subtotal": 3935.69,
-      "vat_amount": 787.14,
-      "total_amount": 4722.83,
-      "payment_terms_days": 30,
+      "subtotal": 7466.48,
+      "vat_amount": 1493.3,
+      "total_amount": 8959.78,
+      "payment_terms_days": 60,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Electrician (per day)",
-          "quantity": 2,
-          "unit_price": 285.08,
-          "line_total": 570.16
-        },
-        {
-          "description": "LED panel replacement",
-          "quantity": 1,
-          "unit_price": 70.04,
-          "line_total": 70.04
-        },
-        {
-          "description": "Electrical safety certificate",
-          "quantity": 2,
-          "unit_price": 162.75,
-          "line_total": 325.5
-        },
-        {
-          "description": "PAT testing (per item)",
-          "quantity": 3,
-          "unit_price": 4.72,
-          "line_total": 14.16
-        },
-        {
-          "description": "Fixed wire testing (per circuit)",
+          "description": "LED panel replacement - Reception",
           "quantity": 5,
-          "unit_price": 13.73,
-          "line_total": 68.65
+          "unit_price": 64.68,
+          "line_total": 323.4
         },
         {
-          "description": "EV charger installation",
+          "description": "Socket and data-point installation - Reception",
           "quantity": 1,
-          "unit_price": 1670.63,
-          "line_total": 1670.63
+          "unit_price": 128.25,
+          "line_total": 128.25
         },
         {
-          "description": "Socket and data-point installation",
+          "description": "Electrician (per day) - May",
+          "quantity": 1,
+          "unit_price": 284.96,
+          "line_total": 284.96
+        },
+        {
+          "description": "EV charger installation - Batch A",
+          "quantity": 1,
+          "unit_price": 1065.84,
+          "line_total": 1065.84
+        },
+        {
+          "description": "Socket and data-point installation - June",
+          "quantity": 1,
+          "unit_price": 129.94,
+          "line_total": 129.94
+        },
+        {
+          "description": "Electrician (per day) - Phase 2",
+          "quantity": 1,
+          "unit_price": 324.13,
+          "line_total": 324.13
+        },
+        {
+          "description": "LED panel replacement - March",
+          "quantity": 10,
+          "unit_price": 44.48,
+          "line_total": 444.8
+        },
+        {
+          "description": "Socket and data-point installation - Wakefield site",
+          "quantity": 12,
+          "unit_price": 95.72,
+          "line_total": 1148.64
+        },
+        {
+          "description": "PAT testing (per item) - May",
           "quantity": 2,
-          "unit_price": 140.26,
-          "line_total": 280.52
+          "unit_price": 2.22,
+          "line_total": 4.44
         },
         {
-          "description": "Emergency lighting test",
-          "quantity": 3,
-          "unit_price": 312.01,
-          "line_total": 936.03
+          "description": "LED panel replacement - June",
+          "quantity": 4,
+          "unit_price": 59.12,
+          "line_total": 236.48
+        },
+        {
+          "description": "LED panel replacement - May",
+          "quantity": 6,
+          "unit_price": 74.52,
+          "line_total": 447.12
+        },
+        {
+          "description": "Socket and data-point installation - January",
+          "quantity": 1,
+          "unit_price": 132.69,
+          "line_total": 132.69
+        },
+        {
+          "description": "Socket and data-point installation - Server room",
+          "quantity": 1,
+          "unit_price": 116.83,
+          "line_total": 116.83
+        },
+        {
+          "description": "Emergency lighting test - January",
+          "quantity": 1,
+          "unit_price": 350.45,
+          "line_total": 350.45
+        },
+        {
+          "description": "LED panel replacement - April",
+          "quantity": 12,
+          "unit_price": 38.29,
+          "line_total": 459.48
+        },
+        {
+          "description": "EV charger installation - June",
+          "quantity": 1,
+          "unit_price": 911.38,
+          "line_total": 911.38
+        },
+        {
+          "description": "PAT testing (per item) - Leeds HQ",
+          "quantity": 5,
+          "unit_price": 4.4,
+          "line_total": 22.0
+        },
+        {
+          "description": "EV charger installation - April",
+          "quantity": 1,
+          "unit_price": 935.65,
+          "line_total": 935.65
         }
       ]
     },
     "final": {
-      "invoice_number": "INV-55970",
-      "invoice_date": "2026-03-14",
-      "due_date": "2026-04-13",
-      "po_number": "PO-426546",
+      "invoice_number": "S010-35043",
+      "invoice_date": "2026-07-28",
+      "due_date": "2026-09-26",
+      "po_number": "PO-477356",
       "supplier_name": "Severn Electrical Contractors Ltd",
       "supplier_vat_number": "GB 777 8221 00",
       "currency": "GBP",
-      "subtotal": 3935.69,
-      "vat_amount": 787.14,
-      "total_amount": 4722.83,
-      "payment_terms_days": 30,
+      "subtotal": 7466.48,
+      "vat_amount": 1493.3,
+      "total_amount": 8959.78,
+      "payment_terms_days": 60,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Electrician (per day)",
-          "quantity": 2,
-          "unit_price": 285.08,
-          "line_total": 570.16
-        },
-        {
-          "description": "LED panel replacement",
-          "quantity": 1,
-          "unit_price": 70.04,
-          "line_total": 70.04
-        },
-        {
-          "description": "Electrical safety certificate",
-          "quantity": 2,
-          "unit_price": 162.75,
-          "line_total": 325.5
-        },
-        {
-          "description": "PAT testing (per item)",
-          "quantity": 3,
-          "unit_price": 4.72,
-          "line_total": 14.16
-        },
-        {
-          "description": "Fixed wire testing (per circuit)",
+          "description": "LED panel replacement - Reception",
           "quantity": 5,
-          "unit_price": 13.73,
-          "line_total": 68.65
+          "unit_price": 64.68,
+          "line_total": 323.4
         },
         {
-          "description": "EV charger installation",
+          "description": "Socket and data-point installation - Reception",
           "quantity": 1,
-          "unit_price": 1670.63,
-          "line_total": 1670.63
+          "unit_price": 128.25,
+          "line_total": 128.25
         },
         {
-          "description": "Socket and data-point installation",
+          "description": "Electrician (per day) - May",
+          "quantity": 1,
+          "unit_price": 284.96,
+          "line_total": 284.96
+        },
+        {
+          "description": "EV charger installation - Batch A",
+          "quantity": 1,
+          "unit_price": 1065.84,
+          "line_total": 1065.84
+        },
+        {
+          "description": "Socket and data-point installation - June",
+          "quantity": 1,
+          "unit_price": 129.94,
+          "line_total": 129.94
+        },
+        {
+          "description": "Electrician (per day) - Phase 2",
+          "quantity": 1,
+          "unit_price": 324.13,
+          "line_total": 324.13
+        },
+        {
+          "description": "LED panel replacement - March",
+          "quantity": 10,
+          "unit_price": 44.48,
+          "line_total": 444.8
+        },
+        {
+          "description": "Socket and data-point installation - Wakefield site",
+          "quantity": 12,
+          "unit_price": 95.72,
+          "line_total": 1148.64
+        },
+        {
+          "description": "PAT testing (per item) - May",
           "quantity": 2,
-          "unit_price": 140.26,
-          "line_total": 280.52
+          "unit_price": 2.22,
+          "line_total": 4.44
         },
         {
-          "description": "Emergency lighting test",
-          "quantity": 3,
-          "unit_price": 312.01,
-          "line_total": 936.03
+          "description": "LED panel replacement - June",
+          "quantity": 4,
+          "unit_price": 59.12,
+          "line_total": 236.48
+        },
+        {
+          "description": "LED panel replacement - May",
+          "quantity": 6,
+          "unit_price": 74.52,
+          "line_total": 447.12
+        },
+        {
+          "description": "Socket and data-point installation - January",
+          "quantity": 1,
+          "unit_price": 132.69,
+          "line_total": 132.69
+        },
+        {
+          "description": "Socket and data-point installation - Server room",
+          "quantity": 1,
+          "unit_price": 116.83,
+          "line_total": 116.83
+        },
+        {
+          "description": "Emergency lighting test - January",
+          "quantity": 1,
+          "unit_price": 350.45,
+          "line_total": 350.45
+        },
+        {
+          "description": "LED panel replacement - April",
+          "quantity": 12,
+          "unit_price": 38.29,
+          "line_total": 459.48
+        },
+        {
+          "description": "EV charger installation - June",
+          "quantity": 1,
+          "unit_price": 911.38,
+          "line_total": 911.38
+        },
+        {
+          "description": "PAT testing (per item) - Leeds HQ",
+          "quantity": 5,
+          "unit_price": 4.4,
+          "line_total": 22.0
+        },
+        {
+          "description": "EV charger installation - April",
+          "quantity": 1,
+          "unit_price": 935.65,
+          "line_total": 935.65
         }
       ],
       "supplier_id": "SUP-010"
@@ -2078,10 +3929,19 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 5086.33,
+      "superseded_total": 9209.56,
       "reverse_charge_vat": false,
-      "line_item_count": 8
-    }
+      "line_item_count": 18,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": false,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": false
+    },
+    "pages": 1
   },
   {
     "doc_id": "DOC-H07",
@@ -2089,118 +3949,238 @@
     "layout": "A",
     "hitl_subset": false,
     "extraction": {
-      "invoice_number": "S013-45363",
-      "invoice_date": "2026-08-04",
-      "due_date": "2026-09-18",
-      "po_number": "PO-403652",
+      "invoice_number": "SI/2026/79116",
+      "invoice_date": "2026-07-17",
+      "due_date": "2026-08-16",
+      "po_number": "PO-487781",
       "supplier_name": "Kestrel Security Systems",
       "supplier_vat_number": "GB 746 6048 08",
       "currency": "GBP",
-      "subtotal": 6906.01,
-      "vat_amount": 1381.2,
-      "total_amount": 8287.21,
-      "payment_terms_days": 45,
+      "subtotal": 7406.6,
+      "vat_amount": 1481.32,
+      "total_amount": 8887.92,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Security patrol (per night)",
-          "quantity": 5,
-          "unit_price": 204.0,
-          "line_total": 1020.0
+          "description": "Access cards (pack of 50) - Wakefield site",
+          "quantity": 12,
+          "unit_price": 127.55,
+          "line_total": 1530.6
         },
         {
-          "description": "Alarm system service",
-          "quantity": 2,
-          "unit_price": 228.01,
-          "line_total": 456.02
-        },
-        {
-          "description": "Security risk assessment",
-          "quantity": 2,
-          "unit_price": 942.92,
-          "line_total": 1885.84
-        },
-        {
-          "description": "Video door entry unit",
-          "quantity": 3,
-          "unit_price": 505.96,
-          "line_total": 1517.88
-        },
-        {
-          "description": "Access cards (pack of 50)",
-          "quantity": 4,
-          "unit_price": 120.54,
-          "line_total": 482.16
-        },
-        {
-          "description": "Access-control card readers",
+          "description": "Intruder alarm keypad - March",
           "quantity": 1,
-          "unit_price": 339.61,
-          "line_total": 339.61
+          "unit_price": 135.17,
+          "line_total": 135.17
         },
         {
-          "description": "Intruder alarm keypad",
-          "quantity": 5,
-          "unit_price": 240.9,
-          "line_total": 1204.5
+          "description": "Security patrol (per night) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 237.34,
+          "line_total": 237.34
+        },
+        {
+          "description": "Key-holding service (monthly) - February",
+          "quantity": 1,
+          "unit_price": 139.38,
+          "line_total": 139.38
+        },
+        {
+          "description": "Video door entry unit - May",
+          "quantity": 1,
+          "unit_price": 477.74,
+          "line_total": 477.74
+        },
+        {
+          "description": "Security risk assessment - February",
+          "quantity": 1,
+          "unit_price": 845.7,
+          "line_total": 845.7
+        },
+        {
+          "description": "CCTV camera, dome - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 177.23,
+          "line_total": 177.23
+        },
+        {
+          "description": "Intruder alarm keypad - February",
+          "quantity": 1,
+          "unit_price": 228.2,
+          "line_total": 228.2
+        },
+        {
+          "description": "Security risk assessment - Reception",
+          "quantity": 1,
+          "unit_price": 708.44,
+          "line_total": 708.44
+        },
+        {
+          "description": "CCTV camera, dome - Batch A",
+          "quantity": 1,
+          "unit_price": 164.59,
+          "line_total": 164.59
+        },
+        {
+          "description": "Key-holding service (monthly) - April",
+          "quantity": 6,
+          "unit_price": 84.5,
+          "line_total": 507.0
+        },
+        {
+          "description": "Video door entry unit - Wakefield site",
+          "quantity": 1,
+          "unit_price": 533.93,
+          "line_total": 533.93
+        },
+        {
+          "description": "Video door entry unit - January",
+          "quantity": 1,
+          "unit_price": 625.26,
+          "line_total": 625.26
+        },
+        {
+          "description": "Access-control card readers - Phase 2",
+          "quantity": 1,
+          "unit_price": 276.14,
+          "line_total": 276.14
+        },
+        {
+          "description": "Alarm system service - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 200.85,
+          "line_total": 200.85
+        },
+        {
+          "description": "Access-control card readers - Batch A",
+          "quantity": 1,
+          "unit_price": 371.37,
+          "line_total": 371.37
+        },
+        {
+          "description": "Security patrol (per night) - Phase 2",
+          "quantity": 1,
+          "unit_price": 247.66,
+          "line_total": 247.66
         }
       ]
     },
     "final": {
-      "invoice_number": "S013-45363",
-      "invoice_date": "2026-08-04",
-      "due_date": "2026-09-18",
-      "po_number": "PO-403652",
+      "invoice_number": "SI/2026/79116",
+      "invoice_date": "2026-07-17",
+      "due_date": "2026-08-16",
+      "po_number": "PO-487781",
       "supplier_name": "Kestrel Security Systems Ltd",
       "supplier_vat_number": "GB 746 6048 08",
       "currency": "GBP",
-      "subtotal": 6906.01,
-      "vat_amount": 1381.2,
-      "total_amount": 8287.21,
-      "payment_terms_days": 45,
+      "subtotal": 7406.6,
+      "vat_amount": 1481.32,
+      "total_amount": 8887.92,
+      "payment_terms_days": 30,
       "customer_reference": null,
       "line_items": [
         {
-          "description": "Security patrol (per night)",
-          "quantity": 5,
-          "unit_price": 204.0,
-          "line_total": 1020.0
+          "description": "Access cards (pack of 50) - Wakefield site",
+          "quantity": 12,
+          "unit_price": 127.55,
+          "line_total": 1530.6
         },
         {
-          "description": "Alarm system service",
-          "quantity": 2,
-          "unit_price": 228.01,
-          "line_total": 456.02
-        },
-        {
-          "description": "Security risk assessment",
-          "quantity": 2,
-          "unit_price": 942.92,
-          "line_total": 1885.84
-        },
-        {
-          "description": "Video door entry unit",
-          "quantity": 3,
-          "unit_price": 505.96,
-          "line_total": 1517.88
-        },
-        {
-          "description": "Access cards (pack of 50)",
-          "quantity": 4,
-          "unit_price": 120.54,
-          "line_total": 482.16
-        },
-        {
-          "description": "Access-control card readers",
+          "description": "Intruder alarm keypad - March",
           "quantity": 1,
-          "unit_price": 339.61,
-          "line_total": 339.61
+          "unit_price": 135.17,
+          "line_total": 135.17
         },
         {
-          "description": "Intruder alarm keypad",
-          "quantity": 5,
-          "unit_price": 240.9,
-          "line_total": 1204.5
+          "description": "Security patrol (per night) - Bradford depot",
+          "quantity": 1,
+          "unit_price": 237.34,
+          "line_total": 237.34
+        },
+        {
+          "description": "Key-holding service (monthly) - February",
+          "quantity": 1,
+          "unit_price": 139.38,
+          "line_total": 139.38
+        },
+        {
+          "description": "Video door entry unit - May",
+          "quantity": 1,
+          "unit_price": 477.74,
+          "line_total": 477.74
+        },
+        {
+          "description": "Security risk assessment - February",
+          "quantity": 1,
+          "unit_price": 845.7,
+          "line_total": 845.7
+        },
+        {
+          "description": "CCTV camera, dome - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 177.23,
+          "line_total": 177.23
+        },
+        {
+          "description": "Intruder alarm keypad - February",
+          "quantity": 1,
+          "unit_price": 228.2,
+          "line_total": 228.2
+        },
+        {
+          "description": "Security risk assessment - Reception",
+          "quantity": 1,
+          "unit_price": 708.44,
+          "line_total": 708.44
+        },
+        {
+          "description": "CCTV camera, dome - Batch A",
+          "quantity": 1,
+          "unit_price": 164.59,
+          "line_total": 164.59
+        },
+        {
+          "description": "Key-holding service (monthly) - April",
+          "quantity": 6,
+          "unit_price": 84.5,
+          "line_total": 507.0
+        },
+        {
+          "description": "Video door entry unit - Wakefield site",
+          "quantity": 1,
+          "unit_price": 533.93,
+          "line_total": 533.93
+        },
+        {
+          "description": "Video door entry unit - January",
+          "quantity": 1,
+          "unit_price": 625.26,
+          "line_total": 625.26
+        },
+        {
+          "description": "Access-control card readers - Phase 2",
+          "quantity": 1,
+          "unit_price": 276.14,
+          "line_total": 276.14
+        },
+        {
+          "description": "Alarm system service - Leeds HQ",
+          "quantity": 1,
+          "unit_price": 200.85,
+          "line_total": 200.85
+        },
+        {
+          "description": "Access-control card readers - Batch A",
+          "quantity": 1,
+          "unit_price": 371.37,
+          "line_total": 371.37
+        },
+        {
+          "description": "Security patrol (per night) - Phase 2",
+          "quantity": 1,
+          "unit_price": 247.66,
+          "line_total": 247.66
         }
       ],
       "supplier_id": "SUP-013"
@@ -2211,9 +4191,18 @@
       "due_date_must_be_derived": false,
       "customer_reference_blank": true,
       "distractor_dates": true,
-      "superseded_total": 8519.76,
+      "superseded_total": 9410.19,
       "reverse_charge_vat": false,
-      "line_item_count": 7
-    }
+      "line_item_count": 17,
+      "discount_line": false,
+      "supplier_reference_distractor": true,
+      "delivery_note_distractor": true,
+      "buyer_vat_distractor": true,
+      "balance_brought_forward": null,
+      "two_page_layout": true,
+      "previous_invoice_distractor": true,
+      "wrapped_descriptions": true
+    },
+    "pages": 2
   }
 ]

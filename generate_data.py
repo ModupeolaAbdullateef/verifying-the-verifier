@@ -13,8 +13,11 @@ The script produces the following files under ./data:
   reference/purchase_orders.json    Purchase-order register: the approved
                                     amount for each purchase order, used by
                                     the decision agent.
-  documents/DOC-L01.txt ...         21 invoices rendered as plain text
-                                    (7 low, 7 medium, 7 high complexity).
+  documents/DOC-L01.txt ...         21 invoices as plain text (7 low, 7 medium,
+                                    7 high complexity): the exact printed content.
+  images/DOC-L01_p1.jpg ...         The same invoices as scanned page images, the
+                                    input to the workflow. Scan quality degrades
+                                    with complexity (see SCAN_PROFILES).
   tickets/TKT-L01.txt ...           10 IT service tickets for the replication
                                     study (3 low, 4 medium, 3 high complexity).
   ground_truth/documents.json       Correct values for every invoice, both at
@@ -36,7 +39,9 @@ Usage:
 from __future__ import annotations
 
 import json
+import os
 import random
+import textwrap
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 from decimal import ROUND_HALF_UP, Decimal
@@ -47,7 +52,7 @@ from pathlib import Path
 # --------------------------------------------------------------------------
 
 SEED = 20261101
-GENERATOR_VERSION = "1.1.0"
+GENERATOR_VERSION = "3.0.0"
 
 OUT = Path("data")
 VAT_RATE = Decimal("0.20")
@@ -57,6 +62,26 @@ PO_TOLERANCE = Decimal("0.50")        # allowed difference between invoice and P
 BUYER_NAME = "Arden Valley Communications plc"
 BUYER_ADDRESS = "Accounts Payable, 1 Riverside Way, Leeds LS1 4AP"
 CUSTOMER_REF_PREFIX = "CC"            # buyer's internal cost-centre reference
+BUYER_VAT = "GB 914 2275 08"          # buyer's own VAT number (printed on some invoices)
+
+# Simulated scan quality by complexity level: font size (px), skew (degrees),
+# blur radius, JPEG quality, share of speckled pixels, ink grey level (0 = black)
+# and paper grey level (255 = white).
+SCAN_PROFILES = {
+    "low":    {"font_px": 24, "skew": 0.0, "blur": 0.0, "jpeg": 90, "speckle": 0.000, "ink": 20, "paper": 255},
+    "medium": {"font_px": 21, "skew": 0.5, "blur": 0.6, "jpeg": 50, "speckle": 0.004, "ink": 55, "paper": 246},
+    "high":   {"font_px": 19, "skew": 1.1, "blur": 0.9, "jpeg": 35, "speckle": 0.010, "ink": 85, "paper": 236},
+}
+SCAN_WRAP_CHARS = 96        # characters per printed line on the page image
+
+# Line items per invoice, by complexity level.
+ITEM_COUNTS = {"low": (2, 4), "medium": (8, 14), "high": (15, 24)}
+
+# Qualifiers that make repeated catalogue items distinct (site, period or phase),
+# as on real invoices for recurring services delivered to several locations.
+QUALIFIERS = ["Leeds HQ", "Bradford depot", "York office", "Wakefield site", "Floor 2",
+              "Floor 4", "Server room", "Reception", "January", "February", "March",
+              "April", "May", "June", "Phase 1", "Phase 2", "Batch A", "Batch B"]
 
 # Human-in-the-loop subsets, stratified by complexity (3 low, 4 medium, 3 high
 # documents; 2 low, 2 medium, 1 high tickets).
@@ -254,7 +279,13 @@ class Invoice:
     delivery_date: date | None = None       # distractor date (high only)
     credit_note: str | None = None
     po_amount: Decimal = Decimal("0")
-    extra: dict = field(default_factory=dict)
+    supplier_ref: str | None = None          # supplier's own reference (distractor)
+    delivery_note: str | None = None         # delivery-note number (distractor)
+    show_buyer_vat: bool = False             # buyer's VAT number printed (distractor)
+    balance_bf: Decimal | None = None        # balance brought forward from earlier invoices
+    page_break_after: int | None = None      # line items on page 1 of a two-page invoice
+    previous_invoice: dict | None = None     # earlier, settled invoice mentioned (distractor)
+    has_discount: bool = False
 
     @property
     def subtotal(self) -> Decimal:
@@ -400,30 +431,55 @@ class Generator:
 
     # -- line items -----------------------------------------------------------
 
-    def _items(self, supplier_id: str, count: int, want_over_limit: bool) -> list[LineItem]:
-        """Draw distinct line items until the total lands on the required side of the limit."""
+    def _items(self, supplier_id: str, complexity: str, want_over_limit: bool,
+               with_discount: bool) -> list[LineItem]:
+        """
+        Draw distinct line items until the gross total lands on the required side
+        of the approval limit. Medium and high invoices qualify each description
+        with a site, period or phase, so catalogue items can recur as distinct lines.
+        """
         catalogue = CATALOGUE[supplier_id]
-        count = min(count, len(catalogue))
-        for _ in range(1000):
-            picks = self.rng.sample(catalogue, k=count)    # every description appears once
+        low, high = ITEM_COUNTS[complexity]
+        for _ in range(2000):
+            count = self.rng.randint(low, high)
+            if complexity == "low":
+                picks = [(d, lo, hi) for d, lo, hi in
+                         self.rng.sample(catalogue, k=min(count, len(catalogue)))]
+            else:
+                combos = [(d, q) for d, _, _ in catalogue for q in QUALIFIERS]
+                chosen = self.rng.sample(combos, k=count)
+                bounds = {d: (lo, hi) for d, lo, hi in catalogue}
+                picks = [(f"{d} - {q}", *bounds[d]) for d, q in chosen]
             items = []
-            for desc, low, high in picks:
-                price = money(Decimal(self.rng.randint(low * 100, high * 100)) / 100)
-                qty = self.rng.choice([1, 1, 1, 2, 3, 4, 5, 6, 10, 12, 20, 25])
+            for desc, lo, hi in picks:
+                price = money(Decimal(self.rng.randint(lo * 100, hi * 100)) / 100)
+                qty = self.rng.choice([1, 1, 1, 2, 3, 4, 5, 6, 10, 12])
                 if price > 400:
-                    qty = self.rng.choice([1, 1, 2, 3])
+                    qty = self.rng.choice([1, 1, 2])
                 items.append(LineItem(desc, qty, price))
+
+            def gross(lines):
+                net = sum(i.line_total for i in lines)
+                if with_discount:
+                    net -= money(net * Decimal("0.05"))
+                return money(net * (1 + VAT_RATE))
+
             if want_over_limit:
-                # Raise the quantity of the most expensive item until the gross total is
-                # comfortably over the limit (or give up and redraw if that needs >40 units).
                 top = max(items, key=lambda i: i.unit_price)
-                while (money(sum(i.line_total for i in items) * (1 + VAT_RATE))
-                       <= APPROVAL_LIMIT * Decimal("1.05")) and top.quantity < 40:
+                while gross(items) <= APPROVAL_LIMIT * Decimal("1.05") and top.quantity < 40:
                     top.quantity += 1
-            gross = money(sum(i.line_total for i in items) * (1 + VAT_RATE))
-            if want_over_limit and gross > APPROVAL_LIMIT * Decimal("1.05"):
-                return items
-            if not want_over_limit and gross < APPROVAL_LIMIT * Decimal("0.90"):
+            else:
+                # Reduce quantities of the most expensive lines until under the limit.
+                for item in sorted(items, key=lambda i: i.unit_price, reverse=True):
+                    while gross(items) >= APPROVAL_LIMIT * Decimal("0.90") and item.quantity > 1:
+                        item.quantity -= 1
+            total = gross(items)
+            if (want_over_limit and total > APPROVAL_LIMIT * Decimal("1.05")) or \
+               (not want_over_limit and total < APPROVAL_LIMIT * Decimal("0.90")):
+                if with_discount:
+                    net = sum(i.line_total for i in items)
+                    items.append(LineItem("Less: loyalty discount 5%", 1,
+                                          -money(net * Decimal("0.05"))))
                 return items
         raise RuntimeError(f"Could not build items for {supplier_id}")
 
@@ -432,9 +488,8 @@ class Generator:
     def invoice(self, doc_id: str, complexity: str, supplier_id: str,
                 layout: str, over_limit: bool) -> Invoice:
         s = self.suppliers[supplier_id]
-        item_counts = {"low": (1, 3), "medium": (4, 7), "high": (6, 9)}
-        count = self.rng.randint(*item_counts[complexity])
-        items = self._items(supplier_id, count, over_limit)
+        with_discount = complexity != "low" and self.rng.random() < 0.5
+        items = self._items(supplier_id, complexity, over_limit, with_discount)
 
         inv_date = date(2026, 1, 5) + timedelta(days=self.rng.randint(0, 250))
         terms = self.rng.choice([14, 30, 30, 30, 45, 60])
@@ -457,7 +512,16 @@ class Generator:
             customer_reference=None if complexity == "high" else self._customer_reference(),
             items=items,
             reverse_charge=(s["currency"] != "GBP"),
+            has_discount=with_discount,
         )
+
+        # Distractor references printed near the true ones.
+        invoice.supplier_ref = f"SR-{self.rng.randint(10000, 99999)}"
+        if complexity != "low":
+            invoice.delivery_note = f"DN-{self.rng.randint(100000, 999999)}"
+            invoice.show_buyer_vat = True
+            if self.rng.random() < 0.5:
+                invoice.balance_bf = money(Decimal(self.rng.randint(25000, 900000)) / 100)
 
         if complexity == "high":
             # Distractor dates close to the invoice date.
@@ -468,6 +532,16 @@ class Generator:
             invoice.original_total = money(invoice.total + uplift)
             invoice.credit_note = f"CN-{self.rng.randint(1000, 9999)}"
             invoice.po_amount = invoice.original_total
+            # A two-page layout with a carried-forward subtotal.
+            invoice.page_break_after = len(items) // 2 if layout in ("A", "B") else None
+            # An earlier, already settled invoice from the same supplier.
+            prev_date = inv_date - timedelta(days=self.rng.randint(25, 40))
+            invoice.previous_invoice = {
+                "number": self._invoice_number(supplier_id),
+                "date": prev_date,
+                "po_number": self._po_number(),
+                "total": money(Decimal(self.rng.randint(30000, 900000)) / 100),
+            }
         else:
             invoice.po_amount = invoice.total
         return invoice
@@ -533,53 +607,85 @@ def terms_line(inv: Invoice, rng: random.Random, dstyle: str) -> str:
 
 def high_notes(inv: Invoice, astyle: str) -> list[str]:
     """Distractor lines for high-complexity invoices."""
+    prev = inv.previous_invoice
     return [
         f"Order date: {fmt_date(inv.order_date, 'long')}",
         f"Goods delivered: {fmt_date(inv.delivery_date, 'uk')}",
         (f"Note: the original invoice total of {fmt_amount(inv.original_total, inv.currency, astyle)} "
          f"has been superseded following credit note {inv.credit_note}. "
          f"The amended amount below is now payable."),
+        (f"Our previous invoice {prev['number']} dated {fmt_date(prev['date'], 'uk')} for "
+         f"{fmt_amount(prev['total'], inv.currency, astyle)} (your PO {prev['po_number']}) "
+         f"has been settled in full - thank you."),
     ]
+
+
+def balance_lines(inv: Invoice, astyle: str, label_width: int) -> list[str]:
+    """Balance brought forward and account total, printed after the invoice total."""
+    if inv.balance_bf is None:
+        return []
+    account = money(inv.total + inv.balance_bf)
+    return [f"{'Balance brought forward:':>{label_width}} {fmt_amount(inv.balance_bf, inv.currency, astyle)}",
+            f"{'TOTAL ACCOUNT BALANCE:':>{label_width}} {fmt_amount(account, inv.currency, astyle)}"]
+
+
+def running_total(items: list[LineItem]) -> Decimal:
+    return money(sum((i.line_total for i in items), Decimal("0")))
 
 
 def render_layout_a(inv: Invoice, rng: random.Random) -> str:
     """Classic tax-invoice layout with a line-item table."""
     d, a = date_style(inv, rng), amount_style(inv, rng)
     ref = inv.customer_reference or ""
-    lines = [
-        "TAX INVOICE".center(66),
-        "",
-        inv.printed_supplier_name,
-        inv.supplier_address,
-    ]
+    desc_width = 44 if inv.complexity == "low" else 30   # narrow column: descriptions wrap
+    width = desc_width + 28
+    lines = ["TAX INVOICE".center(width), "", inv.printed_supplier_name, inv.supplier_address]
     if inv.supplier_vat:
         lines.append(f"VAT Reg No: {inv.supplier_vat}")
+    second = f"Our ref: {inv.supplier_ref:<25}"
+    if inv.delivery_note:
+        second += f"Delivery note: {inv.delivery_note}"
     lines += [
         "",
         f"Invoice No: {inv.invoice_number:<22}Invoice Date: {fmt_date(inv.invoice_date, d)}",
+        second,
         f"Your PO: {inv.po_number:<25}Your Ref: {ref}",
         f"Bill to: {BUYER_NAME}, {BUYER_ADDRESS}",
-        "",
     ]
+    if inv.show_buyer_vat:
+        lines.append(f"Customer VAT No: {BUYER_VAT}")
+    lines.append("")
     if inv.complexity == "high":
         lines += high_notes(inv, a) + [""]
-    lines += [f"{'Description':<44}{'Qty':>4}{'Unit':>12}{'Amount':>12}",
-              "-" * 72]
-    for it in inv.items:
-        lines.append(f"{it.description[:43]:<44}{it.quantity:>4}"
+
+    header = f"{'Description':<{desc_width}}{'Qty':>4}{'Unit':>12}{'Amount':>12}"
+    lines += [header, "-" * width]
+    for n, it in enumerate(inv.items):
+        if inv.page_break_after is not None and n == inv.page_break_after:
+            carried = running_total(inv.items[:n])
+            lines += ["-" * width,
+                      f"{'Carried forward':>{width - 13}} {fmt_amount(carried, inv.currency, 'bare'):>12}",
+                      "", f"Page 1 of 2".rjust(width), "",
+                      f"TAX INVOICE (continued) - Invoice No: {inv.invoice_number}", "",
+                      header, "-" * width,
+                      f"{'Brought forward':>{width - 13}} {fmt_amount(carried, inv.currency, 'bare'):>12}"]
+        wrapped = textwrap.wrap(it.description, desc_width - 1) or [""]
+        lines.append(f"{wrapped[0]:<{desc_width}}{it.quantity:>4}"
                      f"{fmt_amount(it.unit_price, inv.currency, 'bare'):>12}"
                      f"{fmt_amount(it.line_total, inv.currency, 'bare'):>12}")
-    lines.append("-" * 72)
+        lines += [f"  {part}" for part in wrapped[1:]]
+    lines.append("-" * width)
     vat_label = "VAT (reverse charge)" if inv.reverse_charge else "VAT @ 20%"
+    lw = width - 14
     lines += [
-        f"{'Subtotal:':>58} {fmt_amount(inv.subtotal, inv.currency, a)}",
-        f"{vat_label + ':':>58} {fmt_amount(inv.vat_amount, inv.currency, a)}",
-        f"{'TOTAL DUE:':>58} {fmt_amount(inv.total, inv.currency, a)}",
-        "",
-        terms_line(inv, rng, d),
-    ]
+        f"{'Subtotal:':>{lw}} {fmt_amount(inv.subtotal, inv.currency, a)}",
+        f"{vat_label + ':':>{lw}} {fmt_amount(inv.vat_amount, inv.currency, a)}",
+        f"{'TOTAL DUE:':>{lw}} {fmt_amount(inv.total, inv.currency, a)}",
+    ] + balance_lines(inv, a, lw) + ["", terms_line(inv, rng, d)]
     if inv.reverse_charge:
         lines.append("Reverse charge: customer to account for VAT to HMRC.")
+    if inv.page_break_after is not None:
+        lines += ["", "Page 2 of 2".rjust(width)]
     return "\n".join(lines) + "\n"
 
 
@@ -596,15 +702,26 @@ def render_layout_b(inv: Invoice, rng: random.Random) -> str:
     if inv.supplier_vat:
         lines.append(kv("VAT number", inv.supplier_vat))
     lines += [kv("Invoice reference", inv.invoice_number),
-              kv("Date of issue", fmt_date(inv.invoice_date, d)),
+              kv("Supplier reference", inv.supplier_ref)]
+    if inv.delivery_note:
+        lines.append(kv("Delivery note", inv.delivery_note))
+    lines += [kv("Date of issue", fmt_date(inv.invoice_date, d)),
               kv("Purchase order", inv.po_number),
               kv("Your reference", inv.customer_reference or ""),
-              kv("Customer", BUYER_NAME),
-              ""]
+              kv("Customer", BUYER_NAME)]
+    if inv.show_buyer_vat:
+        lines.append(kv("Customer VAT number", BUYER_VAT))
+    lines.append("")
     if inv.complexity == "high":
         lines += high_notes(inv, a) + [""]
     lines.append("Items")
     for n, it in enumerate(inv.items, start=1):
+        if inv.page_break_after is not None and n - 1 == inv.page_break_after:
+            carried = running_total(inv.items[:n - 1])
+            lines += [f"  Subtotal carried forward: {fmt_amount(carried, inv.currency, a)}",
+                      "", "Page 1 of 2 - continued overleaf", "=" * 40,
+                      f"INVOICE {inv.invoice_number} (continued) - Page 2 of 2",
+                      f"  Subtotal brought forward: {fmt_amount(carried, inv.currency, a)}"]
         lines.append(f"  {n}. {it.description} | {it.quantity} x "
                      f"{fmt_amount(it.unit_price, inv.currency, a)} = "
                      f"{fmt_amount(it.line_total, inv.currency, a)}")
@@ -612,9 +729,12 @@ def render_layout_b(inv: Invoice, rng: random.Random) -> str:
     lines += ["",
               kv("Net", fmt_amount(inv.subtotal, inv.currency, a)),
               kv(vat_label, fmt_amount(inv.vat_amount, inv.currency, a)),
-              kv("Gross amount payable", fmt_amount(inv.total, inv.currency, a)),
-              "",
-              terms_line(inv, rng, d)]
+              kv("Gross amount payable", fmt_amount(inv.total, inv.currency, a))]
+    if inv.balance_bf is not None:
+        lines += [kv("Balance brought forward", fmt_amount(inv.balance_bf, inv.currency, a)),
+                  kv("Account balance", fmt_amount(money(inv.total + inv.balance_bf),
+                                                   inv.currency, a))]
+    lines += ["", terms_line(inv, rng, d)]
     return "\n".join(lines) + "\n"
 
 
@@ -633,8 +753,14 @@ def render_layout_c(inv: Invoice, rng: random.Random) -> str:
          f"{fmt_date(inv.invoice_date, d)}, for the goods and services supplied "
          f"against your purchase order {inv.po_number}."),
     ]
+    refs = f"Our reference is {inv.supplier_ref}"
+    if inv.delivery_note:
+        refs += f" and the goods were delivered under delivery note {inv.delivery_note}"
+    lines.append(refs + ".")
     if inv.customer_reference:
         lines.append(f"Your internal reference for this order was {inv.customer_reference}.")
+    if inv.show_buyer_vat:
+        lines.append(f"For your records, your VAT number on file with us is {BUYER_VAT}.")
     if inv.complexity == "high":
         lines += [""] + high_notes(inv, a)
     lines += ["", "Items supplied:"]
@@ -648,13 +774,94 @@ def render_layout_c(inv: Invoice, rng: random.Random) -> str:
         vat_text = f"plus VAT of {fmt_amount(inv.vat_amount, inv.currency, a)}"
     lines += ["",
               (f"That comes to {fmt_amount(inv.subtotal, inv.currency, a)} net, {vat_text}, "
-               f"making {fmt_amount(inv.total, inv.currency, a)} payable."),
-              terms_line(inv, rng, d)]
+               f"making {fmt_amount(inv.total, inv.currency, a)} payable on this invoice.")]
+    if inv.balance_bf is not None:
+        lines.append(f"Together with the balance of {fmt_amount(inv.balance_bf, inv.currency, a)} "
+                     f"brought forward, your account balance with us is now "
+                     f"{fmt_amount(money(inv.total + inv.balance_bf), inv.currency, a)}.")
+    lines.append(terms_line(inv, rng, d))
     if inv.supplier_vat:
         lines.append(f"Our VAT registration number is {inv.supplier_vat}.")
     lines += ["", "Kind regards,", sender, "Accounts Team",
               inv.printed_supplier_name, inv.supplier_address]
+    if inv.previous_invoice:
+        prev = inv.previous_invoice
+        lines += ["", "-----Original Message-----",
+                  f"From: {inv.supplier_email}",
+                  f"Sent: {fmt_date(prev['date'], 'long')}",
+                  f"Subject: Invoice {prev['number']} - PO {prev['po_number']}",
+                  "",
+                  (f"Please find attached our invoice {prev['number']} dated "
+                   f"{fmt_date(prev['date'], 'uk')} for {fmt_amount(prev['total'], inv.currency, a)}, "
+                   f"payable within {inv.payment_terms_days} days.")]
     return "\n".join(lines) + "\n"
+
+
+def _scan_font(size: int):
+    """DejaVu Sans Mono, bundled with matplotlib, so rendering is identical on every machine."""
+    import matplotlib
+    from PIL import ImageFont
+    path = os.path.join(matplotlib.get_data_path(), "fonts", "ttf", "DejaVuSansMono.ttf")
+    return ImageFont.truetype(path, size)
+
+
+def _split_pages(text: str) -> list[str]:
+    """Split a two-page invoice after the line that ends page 1."""
+    lines = text.splitlines()
+    for n, line in enumerate(lines):
+        if "Page 1 of 2" in line:
+            return ["\n".join(lines[:n + 1]), "\n".join(lines[n + 1:])]
+    return [text]
+
+
+def _wrap_for_page(text: str) -> list[str]:
+    out = []
+    for line in text.splitlines():
+        if len(line) <= SCAN_WRAP_CHARS:
+            out.append(line)
+        else:
+            indent = len(line) - len(line.lstrip())
+            out += textwrap.wrap(line, SCAN_WRAP_CHARS, subsequent_indent=" " * (indent + 2))
+    return out
+
+
+def render_scan(text: str, complexity: str, seed: int) -> list:
+    """Render invoice text as one or two simulated scanned pages (PIL images)."""
+    import numpy as np
+    from PIL import Image, ImageDraw, ImageFilter
+
+    profile = SCAN_PROFILES[complexity]
+    rng = random.Random(seed)
+    noise = np.random.default_rng(seed)
+    font = _scan_font(profile["font_px"])
+    char_w = font.getbbox("M")[2]
+    line_h = int(profile["font_px"] * 1.35)
+    pages = []
+    for page_text in _split_pages(text):
+        lines = _wrap_for_page(page_text)
+        width = 2 * 60 + char_w * SCAN_WRAP_CHARS
+        height = max(2 * 70 + line_h * len(lines), int(width * 1.2))
+        page = Image.new("L", (width, height), color=profile["paper"])
+        draw = ImageDraw.Draw(page)
+        for n, line in enumerate(lines):
+            draw.text((60, 70 + n * line_h), line, font=font, fill=profile["ink"])
+        if profile["paper"] < 255:          # uneven illumination across the page
+            gradient = np.linspace(0, 10, width, dtype=np.float32)[None, :]
+            arr = np.asarray(page, dtype=np.float32) - gradient
+            page = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8))
+        if profile["speckle"]:
+            arr = np.asarray(page).copy()
+            mask = noise.random(arr.shape) < profile["speckle"]
+            arr[mask] = noise.integers(40, 160, mask.sum())
+            page = Image.fromarray(arr)
+        if profile["skew"]:
+            angle = profile["skew"] * rng.choice([-1, 1])
+            page = page.rotate(angle, resample=Image.BICUBIC, expand=True,
+                               fillcolor=profile["paper"])
+        if profile["blur"]:
+            page = page.filter(ImageFilter.GaussianBlur(profile["blur"]))
+        pages.append(page)
+    return pages
 
 
 RENDERERS = {"A": render_layout_a, "B": render_layout_b, "C": render_layout_c}
@@ -847,6 +1054,15 @@ def invoice_ground_truth(inv: Invoice) -> dict:
                                  if inv.original_total is not None else None),
             "reverse_charge_vat": inv.reverse_charge,
             "line_item_count": len(inv.items),
+            "discount_line": inv.has_discount,
+            "supplier_reference_distractor": inv.supplier_ref is not None,
+            "delivery_note_distractor": inv.delivery_note is not None,
+            "buyer_vat_distractor": inv.show_buyer_vat,
+            "balance_brought_forward": (as_number(inv.balance_bf)
+                                        if inv.balance_bf is not None else None),
+            "two_page_layout": inv.page_break_after is not None,
+            "previous_invoice_distractor": inv.previous_invoice is not None,
+            "wrapped_descriptions": inv.layout == "A" and inv.complexity != "low",
         },
     }
 
@@ -870,9 +1086,17 @@ def main() -> None:
                 for doc_id, cx, sup, layout, over in DOCUMENT_PLAN]
     doc_dir = OUT / "documents"
     doc_dir.mkdir(parents=True, exist_ok=True)
-    for inv in invoices:
+    img_dir = OUT / "images"
+    img_dir.mkdir(parents=True, exist_ok=True)
+    page_counts = {}
+    for n, inv in enumerate(invoices):
         text = RENDERERS[inv.layout](inv, render_rng)
         (doc_dir / f"{inv.doc_id}.txt").write_text(text, encoding="utf-8")
+        pages = render_scan(text, inv.complexity, seed=SEED + 100 + n)
+        for p, page in enumerate(pages, start=1):
+            page.save(img_dir / f"{inv.doc_id}_p{p}.jpg", "JPEG",
+                      quality=SCAN_PROFILES[inv.complexity]["jpeg"])
+        page_counts[inv.doc_id] = len(pages)
 
     # Reference data
     write_json(OUT / "reference" / "suppliers.json", list(gen.suppliers.values()))
@@ -881,8 +1105,10 @@ def main() -> None:
          "currency": inv.currency, "approved_amount": as_number(inv.po_amount)}
         for inv in sorted(invoices, key=lambda i: i.po_number)
     ])
-    write_json(OUT / "ground_truth" / "documents.json",
-               [invoice_ground_truth(inv) for inv in invoices])
+    truth_rows = [invoice_ground_truth(inv) for inv in invoices]
+    for row in truth_rows:
+        row["pages"] = page_counts[row["doc_id"]]
+    write_json(OUT / "ground_truth" / "documents.json", truth_rows)
 
     # Tickets
     tkt_dir = OUT / "tickets"
@@ -907,7 +1133,7 @@ def main() -> None:
     write_json(OUT / "manifest.json", {
         "generator_version": GENERATOR_VERSION,
         "seed": SEED,
-        "buyer": {"name": BUYER_NAME, "address": BUYER_ADDRESS},
+        "buyer": {"name": BUYER_NAME, "address": BUYER_ADDRESS, "vat_number": BUYER_VAT},
         "counts": {
             "documents": {cx: sum(1 for i in invoices if i.complexity == cx)
                           for cx in ("low", "medium", "high")},
@@ -916,13 +1142,16 @@ def main() -> None:
             "decisions": {code: decisions.count(code) for code in sorted(set(decisions))},
         },
         "hitl_subsets": {"documents": HITL_DOCUMENTS, "tickets": HITL_TICKETS},
+        "scan_profiles": SCAN_PROFILES,
+        "scan_font": "DejaVu Sans Mono (bundled with matplotlib)",
         "invoice_fields": [
             "invoice_number", "invoice_date", "due_date", "po_number", "supplier_name",
             "supplier_vat_number", "currency", "subtotal", "vat_amount", "total_amount",
             "payment_terms_days", "customer_reference", "line_items"],
         "field_conventions": {
             "dates": "ISO 8601 (YYYY-MM-DD)",
-            "amounts": "numbers with two decimal places, no currency symbol",
+            "amounts": "JSON numbers (not strings), no currency symbols or thousands separators; discounts are negative",
+            "total_amount": "gross total of this invoice; excludes balances brought forward and superseded amounts",
             "currency": "ISO 4217 code (GBP, EUR)",
             "missing_values": "null when the document does not contain the value",
             "due_date": "if not stated, invoice_date plus payment_terms_days",

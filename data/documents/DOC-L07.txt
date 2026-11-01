@@ -1,19 +1,21 @@
-                           TAX INVOICE                            
+                              TAX INVOICE                               
 
 Kestrel Security Systems Ltd
 Unit 83, Bridge Street, Bradford BD1 3GQ
 VAT Reg No: GB 746 6048 08
 
-Invoice No: S013-29818            Invoice Date: 27 February 2026
-Your PO: PO-470372                Your Ref: CC-1580
+Invoice No: INV-99524             Invoice Date: 1 July 2026
+Our ref: SR-74694                 
+Your PO: PO-467903                Your Ref: CC-5605
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
 
 Description                                  Qty        Unit      Amount
 ------------------------------------------------------------------------
-Access cards (pack of 50)                      6      104.22      625.32
+Video door entry unit                          1      672.81      672.81
+CCTV camera, dome                              3      215.78      647.34
 ------------------------------------------------------------------------
-                                                 Subtotal: £625.32
-                                                VAT @ 20%: £125.06
-                                                TOTAL DUE: £750.38
+                                                 Subtotal: £1,320.15
+                                                VAT @ 20%: £264.03
+                                                TOTAL DUE: £1,584.18
 
-Payment terms: 45 days. Due date: 13 April 2026.
+Payment terms: 60 days. Due date: 30 August 2026.

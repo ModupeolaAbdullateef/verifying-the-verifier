@@ -3,27 +3,53 @@ INVOICE
 Supplier ................ LINDQVIST SOFTWARE AB
 Address ................. Sveavägen 155, 111 34 Stockholm, Sweden
 VAT number .............. SE99891778001
-Invoice reference ....... SI/2026/83706
-Date of issue ........... 28/01/2026
-Purchase order .......... PO-482585
+Invoice reference ....... S014-19025
+Supplier reference ...... SR-23294
+Delivery note ........... DN-759308
+Date of issue ........... 02/07/2026
+Purchase order .......... PO-435060
 Your reference .......... 
 Customer ................ Arden Valley Communications plc
+Customer VAT number ..... GB 914 2275 08
 
-Order date: 22 January 2026
-Goods delivered: 28/01/2026
-Note: the original invoice total of 28 536,33 EUR has been superseded following credit note CN-1482. The amended amount below is now payable.
+Order date: 28 June 2026
+Goods delivered: 01/07/2026
+Note: the original invoice total of 48 919,75 EUR has been superseded following credit note CN-1511. The amended amount below is now payable.
+Our previous invoice INV-26759 dated 26/05/2026 for 7 038,35 EUR (your PO PO-420061) has been settled in full - thank you.
 
 Items
-  1. Premium support add-on (annual) | 3 x 2 036,54 EUR = 6 109,62 EUR
-  2. Single sign-on connector (annual) | 1 x 756,09 EUR = 756,09 EUR
-  3. Additional user licences (pack of 10) | 2 x 799,05 EUR = 1 598,10 EUR
-  4. Workflow platform subscription (annual) | 2 x 6 478,72 EUR = 12 957,44 EUR
-  5. Training session (half day) | 2 x 595,43 EUR = 1 190,86 EUR
-  6. API integration module (annual) | 3 x 1 144,24 EUR = 3 432,72 EUR
-  7. Data migration service | 1 x 1 651,00 EUR = 1 651,00 EUR
+  1. Additional user licences (pack of 10) - Phase 2 | 2 x 780,98 EUR = 1 561,96 EUR
+  2. Sandbox environment (annual) - York office | 1 x 1 068,76 EUR = 1 068,76 EUR
+  3. Implementation consultancy (per day) - Batch A | 2 x 1 115,79 EUR = 2 231,58 EUR
+  4. Single sign-on connector (annual) - Wakefield site | 1 x 607,48 EUR = 607,48 EUR
+  5. Implementation consultancy (per day) - Leeds HQ | 1 x 1 153,46 EUR = 1 153,46 EUR
+  6. Additional user licences (pack of 10) - Leeds HQ | 1 x 645,04 EUR = 645,04 EUR
+  7. Workflow platform subscription (annual) - May | 1 x 4 260,81 EUR = 4 260,81 EUR
+  8. Sandbox environment (annual) - Server room | 2 x 1 281,26 EUR = 2 562,52 EUR
+  9. Data migration service - Reception | 2 x 2 671,99 EUR = 5 343,98 EUR
+  10. Sandbox environment (annual) - June | 2 x 1 075,14 EUR = 2 150,28 EUR
+  11. Single sign-on connector (annual) - February | 2 x 682,24 EUR = 1 364,48 EUR
+  Subtotal carried forward: 22 950,35 EUR
 
-Net ..................... 27 695,83 EUR
+Page 1 of 2 - continued overleaf
+========================================
+INVOICE S014-19025 (continued) - Page 2 of 2
+  Subtotal brought forward: 22 950,35 EUR
+  12. Data migration service - York office | 1 x 2 112,34 EUR = 2 112,34 EUR
+  13. Single sign-on connector (annual) - Bradford depot | 1 x 685,65 EUR = 685,65 EUR
+  14. Training session (half day) - Leeds HQ | 1 x 490,75 EUR = 490,75 EUR
+  15. Premium support add-on (annual) - Floor 2 | 2 x 1 455,31 EUR = 2 910,62 EUR
+  16. API integration module (annual) - June | 1 x 1 206,15 EUR = 1 206,15 EUR
+  17. Sandbox environment (annual) - Phase 1 | 1 x 888,41 EUR = 888,41 EUR
+  18. Additional user licences (pack of 10) - March | 1 x 1 195,81 EUR = 1 195,81 EUR
+  19. Premium support add-on (annual) - June | 1 x 1 474,23 EUR = 1 474,23 EUR
+  20. Workflow platform subscription (annual) - January | 2 x 7 409,85 EUR = 14 819,70 EUR
+  21. Single sign-on connector (annual) - January | 1 x 948,39 EUR = 948,39 EUR
+  22. API integration module (annual) - April | 1 x 1 592,02 EUR = 1 592,02 EUR
+  23. Less: loyalty discount 5% | 1 x -2 563,72 EUR = -2 563,72 EUR
+
+Net ..................... 48 710,70 EUR
 VAT (reverse charge) .... 0,00 EUR
-Gross amount payable .... 27 695,83 EUR
+Gross amount payable .... 48 710,70 EUR
 
-Terms: 60 days. Payment due by 2026-03-29.
+Terms: 30 days. Payment due by 2026-08-01.

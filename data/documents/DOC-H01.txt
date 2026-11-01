@@ -1,28 +1,81 @@
-                           TAX INVOICE                            
+                       TAX INVOICE                        
 
-NORTHGATE OFFICE SUPPLIES LTD
+Northgate Office Supplies
 Unit 34, Canal Street, Harrogate HG1 9UD
 VAT Reg No: GB 116 0003 45
 
-Invoice No: INV-70349             Invoice Date: 08/08/2026
-Your PO: PO-421351                Your Ref: 
+Invoice No: SI/2026/88331         Invoice Date: 19/01/2026
+Our ref: SR-45056                 Delivery note: DN-152572
+Your PO: PO-411734                Your Ref: 
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+Customer VAT No: GB 914 2275 08
 
-Order date: 1 August 2026
-Goods delivered: 08/08/2026
-Note: the original invoice total of GBP 6,042.45 has been superseded following credit note CN-8034. The amended amount below is now payable.
+Order date: 13 January 2026
+Goods delivered: 17/01/2026
+Note: the original invoice total of GBP 7,323.86 has been superseded following credit note CN-7940. The amended amount below is now payable.
+Our previous invoice 16890 dated 20/12/2025 for GBP 6,943.65 (your PO PO-446413) has been settled in full - thank you.
 
-Description                                  Qty        Unit      Amount
-------------------------------------------------------------------------
-Desk organiser set                             1       18.69       18.69
-A4 copier paper, 80gsm (box of 5 reams)        4       24.48       97.92
-Black toner cartridge, high yield              1       62.10       62.10
-Shredder, cross-cut                           10      174.11     1741.10
-Lever-arch files (pack of 10)                  6       13.58       81.48
-Ergonomic office chair                        10      234.48     2344.80
-------------------------------------------------------------------------
-                                                 Subtotal: GBP 4,346.09
-                                                VAT @ 20%: GBP 869.22
-                                                TOTAL DUE: GBP 5,215.31
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+Desk organiser set - February    6       34.88      209.28
+Black toner cartridge, high     10       87.49      874.90
+  yield - Bradford depot
+Monitor riser - Batch A          4       49.53      198.12
+Black toner cartridge, high      5       94.69      473.45
+  yield - Batch B
+Monitor riser - York office      1       34.87       34.87
+Black toner cartridge, high      2       57.28      114.56
+  yield - Batch A
+Desk organiser set - Server     12       18.85      226.20
+  room
+Whiteboard markers (pack of      3        7.39       22.17
+  12) - January
+Desk organiser set - May        12       16.42      197.04
+Whiteboard markers (pack of      5        8.13       40.65
+  12) - April
+Sticky notes (pack of 24) -      1       14.63       14.63
+  Floor 4
+Whiteboard markers (pack of      6        8.78       52.68
+  12) - York office
+----------------------------------------------------------
+                              Carried forward      2458.55
 
-Terms: 45 days. Payment due by 2026-09-22.
+                                               Page 1 of 2
+
+TAX INVOICE (continued) - Invoice No: SI/2026/88331
+
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+                              Brought forward      2458.55
+Sticky notes (pack of 24) -      3       13.69       41.07
+  June
+Lever-arch files (pack of 10)    5       13.21       66.05
+  - Reception
+Sticky notes (pack of 24) -      4       15.89       63.56
+  January
+Ergonomic office chair -         1      234.41      234.41
+  March
+Monitor riser - February         1       31.73       31.73
+Ergonomic office chair -         5      274.96     1374.80
+  Wakefield site
+Black toner cartridge, high      6       72.88      437.28
+  yield - Floor 4
+Black toner cartridge, high     10       82.74      827.40
+  yield - Leeds HQ
+Whiteboard markers (pack of      1       13.96       13.96
+  12) - Reception
+Sticky notes (pack of 24) -      5        8.23       41.15
+  Reception
+A4 copier paper, 80gsm (box      3       18.52       55.56
+  of 5 reams) - February
+Less: loyalty discount 5%        1     -282.28     -282.28
+----------------------------------------------------------
+                                   Subtotal: GBP 5,363.24
+                                  VAT @ 20%: GBP 1,072.65
+                                  TOTAL DUE: GBP 6,435.89
+                    Balance brought forward: GBP 5,748.09
+                      TOTAL ACCOUNT BALANCE: GBP 12,183.98
+
+Terms: 60 days. Payment due by 2026-03-20.
+
+                                               Page 2 of 2

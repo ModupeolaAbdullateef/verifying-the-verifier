@@ -1,24 +1,34 @@
 From: accounts@pennine-fm.example
 To: ap@ardenvalley.example
-Subject: Invoice S003-41844 - PO PO-425090
+Subject: Invoice S003-44715 - PO PO-423452
 
 Hi team,
 
-Please find below our invoice S003-41844, dated 18-Feb-26, for the goods and services supplied against your purchase order PO-425090.
-Your internal reference for this order was CC-6744.
+Please find below our invoice S003-44715, dated 07-Aug-26, for the goods and services supplied against your purchase order PO-423452.
+Our reference is SR-26158 and the goods were delivered under delivery note DN-832460.
+Your internal reference for this order was CC-7147.
+For your records, your VAT number on file with us is GB 914 2275 08.
 
 Items supplied:
-- 5 x Boiler annual service at £347.22 each = £1,736.10
-- 1 x Lift service contract (monthly) at £920.04 each = £920.04
-- 4 x Water hygiene testing at £142.93 each = £571.72
-- 6 x Fire-door inspection at £224.29 each = £1,345.74
+- 1 x Car park line marking - Floor 4 at £450.30 each = £450.30
+- 12 x Water hygiene testing - February at £208.12 each = £2,497.44
+- 3 x Boiler annual service - Wakefield site at £274.53 each = £823.59
+- 1 x Car park line marking - April at £395.28 each = £395.28
+- 3 x Roof gutter clearance - Floor 2 at £223.88 each = £671.64
+- 1 x Fire-door inspection - May at £232.23 each = £232.23
+- 1 x Car park line marking - February at £732.40 each = £732.40
+- 1 x Fire-door inspection - Server room at £225.26 each = £225.26
+- 1 x Car park line marking - Phase 1 at £393.00 each = £393.00
+- 1 x Emergency call-out (out of hours) - Bradford depot at £289.17 each = £289.17
+- 1 x Lift service contract (monthly) - January at £957.62 each = £957.62
+- 1 x Less: loyalty discount 5% at £-383.40 each = £-383.40
 
-That comes to £4,573.60 net, plus VAT of £914.72, making £5,488.32 payable.
-Payment terms: 30 days from date of invoice.
+That comes to £7,284.53 net, plus VAT of £1,456.91, making £8,741.44 payable on this invoice.
+Payment terms: 45 days from date of invoice.
 Our VAT registration number is GB 450 2364 53.
 
 Kind regards,
 Niamh Walsh
 Accounts Team
-Pennine Facilities Management
+Pennine Facilities Management Limited
 Unit 119, Victoria Terrace, Bradford BD1 1TT

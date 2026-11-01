@@ -1,27 +1,35 @@
 From: accounts@brightwater-it.example
 To: ap@ardenvalley.example
-Subject: Invoice INV-91615 - PO PO-494747
+Subject: Invoice INV-87660 - PO PO-424647
 
 Hi team,
 
-Please find below our invoice INV-91615, dated 19-May-26, for the goods and services supplied against your purchase order PO-494747.
-Your internal reference for this order was CC-6710.
+Please find below our invoice INV-87660, dated 16-Jul-26, for the goods and services supplied against your purchase order PO-424647.
+Our reference is SR-54947 and the goods were delivered under delivery note DN-881095.
+Your internal reference for this order was CC-1213.
+For your records, your VAT number on file with us is GB 914 2275 08.
 
 Items supplied:
-- 1 x Laptop battery replacement at GBP 90.82 each = GBP 90.82
-- 3 x Firewall configuration review at GBP 1,433.85 each = GBP 4,301.55
-- 2 x Laptop imaging and deployment (per device) at GBP 54.62 each = GBP 109.24
-- 1 x On-site engineer (per day) at GBP 565.42 each = GBP 565.42
-- 20 x Endpoint security licence (annual, per seat) at GBP 36.22 each = GBP 724.40
-- 3 x Microsoft 365 migration workshop at GBP 1,072.39 each = GBP 3,217.17
-- 3 x Docking station at GBP 131.48 each = GBP 394.44
+- 6 x Laptop imaging and deployment (per device) - Server room at GBP 55.40 each = GBP 332.40
+- 1 x On-site engineer (per day) - May at GBP 552.25 each = GBP 552.25
+- 1 x Microsoft 365 migration workshop - Floor 4 at GBP 1,243.86 each = GBP 1,243.86
+- 1 x Microsoft 365 migration workshop - Phase 2 at GBP 1,208.77 each = GBP 1,208.77
+- 12 x Laptop imaging and deployment (per device) - January at GBP 44.05 each = GBP 528.60
+- 1 x Firewall configuration review - April at GBP 943.73 each = GBP 943.73
+- 1 x Managed service desk (monthly) - Floor 2 at GBP 4,259.68 each = GBP 4,259.68
+- 1 x Endpoint security licence (annual, per seat) - March at GBP 41.27 each = GBP 41.27
+- 6 x Docking station - June at GBP 205.98 each = GBP 1,235.88
+- 1 x Backup monitoring (monthly) - Floor 2 at GBP 475.07 each = GBP 475.07
+- 6 x Laptop imaging and deployment (per device) - Bradford depot at GBP 43.49 each = GBP 260.94
+- 1 x Laptop battery replacement - Floor 4 at GBP 88.43 each = GBP 88.43
+- 1 x Less: loyalty discount 5% at GBP -558.54 each = GBP -558.54
 
-That comes to GBP 9,403.04 net, plus VAT of GBP 1,880.61, making GBP 11,283.65 payable.
+That comes to GBP 10,612.34 net, plus VAT of GBP 2,122.47, making GBP 12,734.81 payable on this invoice.
 Payment terms: 30 days from date of invoice.
 Our VAT registration number is GB 128 2973 77.
 
 Kind regards,
 Efe Morgan
 Accounts Team
-Brightwater IT Services Limited
+Brightwater IT Services
 Unit 47, Park View, Bradford BD1 3NR

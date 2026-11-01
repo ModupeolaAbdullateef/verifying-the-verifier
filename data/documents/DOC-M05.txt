@@ -1,23 +1,49 @@
-                           TAX INVOICE                            
+                       TAX INVOICE                        
 
 Calder Valley Catering Ltd.
 Unit 34, Kingsway, Huddersfield HD1 9WW
 VAT Reg No: GB 620 6538 86
 
-Invoice No: INV-63246             Invoice Date: 10-Jul-26
-Your PO: PO-463464                Your Ref: CC-2221
+Invoice No: SI/2026/91964         Invoice Date: 30-Apr-26
+Our ref: SR-48864                 Delivery note: DN-533237
+Your PO: PO-426064                Your Ref: CC-4451
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+Customer VAT No: GB 914 2275 08
 
-Description                                  Qty        Unit      Amount
-------------------------------------------------------------------------
-Afternoon tea for 20 people                    1      243.42      243.42
-Tea and coffee service (weekly)               20       96.59     1931.80
-Breakfast platter                             12       53.52      642.24
-Working lunch for 12 people                   10      152.74     1527.40
-Event staffing (per hour)                      2       29.55       59.10
-------------------------------------------------------------------------
-                                                 Subtotal: £4,403.96
-                                                VAT @ 20%: £880.79
-                                                TOTAL DUE: £5,284.75
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+Event staffing (per hour) -      1       20.70       20.70
+  Phase 2
+Fruit bowl delivery (weekly)     1       32.37       32.37
+  - Reception
+Bottled water (case of 24) -    12       13.43      161.16
+  Phase 2
+Conference catering (per         2       33.94       67.88
+  head) - Reception
+Sandwich platter - February      5      106.52      532.60
+Tea and coffee service           2      100.53      201.06
+  (weekly) - Floor 4
+Event staffing (per hour) -      2       23.69       47.38
+  Floor 4
+Fruit bowl delivery (weekly)     4       20.27       81.08
+  - Phase 1
+Bottled water (case of 24) -     1       10.35       10.35
+  May
+Sandwich platter - Bradford      2       56.74      113.48
+  depot
+Conference catering (per         3       21.64       64.92
+  head) - Floor 2
+Working lunch for 12 people -    1      206.67      206.67
+  Bradford depot
+Afternoon tea for 20 people -    1      222.25      222.25
+  Leeds HQ
+Fruit bowl delivery (weekly)     4       28.57      114.28
+  - Leeds HQ
+----------------------------------------------------------
+                                   Subtotal: £1,876.18
+                                  VAT @ 20%: £375.24
+                                  TOTAL DUE: £2,251.42
+                    Balance brought forward: £3,342.81
+                      TOTAL ACCOUNT BALANCE: £5,594.23
 
-Terms: net 60 days.
+Terms: net 14 days.

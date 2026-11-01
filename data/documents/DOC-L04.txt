@@ -1,19 +1,23 @@
-                           TAX INVOICE                            
+                              TAX INVOICE                               
 
 Highfield Cleaning Co Ltd
 Unit 33, Market Place, Huddersfield HD1 7JD
 VAT Reg No: GB 871 2785 84
 
-Invoice No: 53898                 Invoice Date: 17 August 2026
-Your PO: PO-421947                Your Ref: CC-1919
+Invoice No: INV-58756             Invoice Date: 19 April 2026
+Our ref: SR-26864                 
+Your PO: PO-450973                Your Ref: CC-2360
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
 
 Description                                  Qty        Unit      Amount
 ------------------------------------------------------------------------
-Carpet shampoo (per floor)                     1      459.24      459.24
+Carpet shampoo (per floor)                    12      389.91     4678.92
+Window cleaning, external                      1      290.38      290.38
+Office cleaning (weekly)                       1      454.82      454.82
+Washroom consumables restock                   5       85.54      427.70
 ------------------------------------------------------------------------
-                                                 Subtotal: £459.24
-                                                VAT @ 20%: £91.85
-                                                TOTAL DUE: £551.09
+                                                 Subtotal: £5,851.82
+                                                VAT @ 20%: £1,170.36
+                                                TOTAL DUE: £7,022.18
 
-Payment terms: 60 days. Due date: 16 October 2026.
+Payment terms: 45 days. Due date: 3 June 2026.

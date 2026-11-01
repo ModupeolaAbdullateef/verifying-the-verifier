@@ -1,9 +1,10 @@
 {
-  "generator_version": "1.1.0",
+  "generator_version": "3.0.0",
   "seed": 20261101,
   "buyer": {
     "name": "Arden Valley Communications plc",
-    "address": "Accounts Payable, 1 Riverside Way, Leeds LS1 4AP"
+    "address": "Accounts Payable, 1 Riverside Way, Leeds LS1 4AP",
+    "vat_number": "GB 914 2275 08"
   },
   "counts": {
     "documents": {
@@ -43,6 +44,36 @@
       "TKT-H01"
     ]
   },
+  "scan_profiles": {
+    "low": {
+      "font_px": 24,
+      "skew": 0.0,
+      "blur": 0.0,
+      "jpeg": 90,
+      "speckle": 0.0,
+      "ink": 20,
+      "paper": 255
+    },
+    "medium": {
+      "font_px": 21,
+      "skew": 0.5,
+      "blur": 0.6,
+      "jpeg": 50,
+      "speckle": 0.004,
+      "ink": 55,
+      "paper": 246
+    },
+    "high": {
+      "font_px": 19,
+      "skew": 1.1,
+      "blur": 0.9,
+      "jpeg": 35,
+      "speckle": 0.01,
+      "ink": 85,
+      "paper": 236
+    }
+  },
+  "scan_font": "DejaVu Sans Mono (bundled with matplotlib)",
   "invoice_fields": [
     "invoice_number",
     "invoice_date",
@@ -60,7 +91,8 @@
   ],
   "field_conventions": {
     "dates": "ISO 8601 (YYYY-MM-DD)",
-    "amounts": "numbers with two decimal places, no currency symbol",
+    "amounts": "JSON numbers (not strings), no currency symbols or thousands separators; discounts are negative",
+    "total_amount": "gross total of this invoice; excludes balances brought forward and superseded amounts",
     "currency": "ISO 4217 code (GBP, EUR)",
     "missing_values": "null when the document does not contain the value",
     "due_date": "if not stated, invoice_date plus payment_terms_days"

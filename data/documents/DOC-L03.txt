@@ -1,17 +1,19 @@
 From: accounts@ashdown-print.example
 To: ap@ardenvalley.example
-Subject: Invoice SI/2026/51051 - PO PO-408429
+Subject: Invoice SI/2026/14919 - PO PO-432321
 
 Hi team,
 
-Please find below our invoice SI/2026/51051, dated 2 July 2026, for the goods and services supplied against your purchase order PO-408429.
-Your internal reference for this order was CC-3710.
+Please find below our invoice SI/2026/14919, dated 25 March 2026, for the goods and services supplied against your purchase order PO-432321.
+Our reference is SR-98281.
+Your internal reference for this order was CC-3451.
 
 Items supplied:
-- 6 x Letterheads (box of 1,000) at £85.64 each = £513.84
+- 12 x Branded notepads (pack of 50) at £147.85 each = £1,774.20
+- 4 x Letterheads (box of 1,000) at £88.31 each = £353.24
 
-That comes to £513.84 net, plus VAT of £102.77, making £616.61 payable.
-Payment terms: 30 days. Due date: 1 August 2026.
+That comes to £2,127.44 net, plus VAT of £425.49, making £2,552.93 payable on this invoice.
+Payment terms: 14 days. Due date: 8 April 2026.
 Our VAT registration number is GB 802 8178 21.
 
 Kind regards,

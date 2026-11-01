@@ -47,6 +47,11 @@ def _get_client():
     return _client
 
 
+def _read_bytes(path: str) -> bytes:
+    with open(path, "rb") as handle:
+        return handle.read()
+
+
 def call_cost(input_tokens: int, output_tokens: int, thinking_tokens: int) -> float:
     """Token cost in USD at the configured list prices (thinking billed as output)."""
     return (input_tokens * config.PRICE_INPUT_PER_M
@@ -75,13 +80,15 @@ def parse_json(text: str) -> dict | None:
 
 
 def call_llm(node: str, system: str, prompt: str, seed: int,
-             mock_answer: dict | None = None) -> tuple[dict | None, CallRecord]:
+             mock_answer: dict | None = None,
+             images: list[str] | None = None) -> tuple[dict | None, CallRecord]:
     """
     Send one request and return (parsed_json_or_None, CallRecord).
 
     All agents request JSON output (response_mime_type) without a response
     schema, so that structural validity remains an observable outcome rather
-    than being enforced by the provider.
+    than being enforced by the provider. Page images, if given, are sent before
+    the text prompt, in page order.
     """
     if config.MOCK_MODE:
         return _mock_call(node, mock_answer)
@@ -96,12 +103,16 @@ def call_llm(node: str, system: str, prompt: str, seed: int,
         response_mime_type="application/json",
     )
 
+    contents: list = [types.Part.from_bytes(data=_read_bytes(path), mime_type="image/jpeg")
+                      for path in images or []]
+    contents.append(prompt)
+
     retries, last_error = 0, None
     for attempt in range(config.MAX_API_ATTEMPTS):
         start = time.perf_counter()
         try:
             response = _get_client().models.generate_content(
-                model=config.MODEL_ID, contents=prompt, config=gen_config)
+                model=config.MODEL_ID, contents=contents, config=gen_config)
         except Exception as error:  # rate limits and transient server errors
             last_error = str(error).splitlines()[0][:300]
             retries += 1

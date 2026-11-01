@@ -1,30 +1,56 @@
 From: accounts@brightwater-it.example
 To: ap@ardenvalley.example
-Subject: Invoice 83420 - PO PO-416910
+Subject: Invoice 41812 - PO PO-418908
 
 Hi team,
 
-Please find below our invoice 83420, dated 06/01/2026, for the goods and services supplied against your purchase order PO-416910.
+Please find below our invoice 41812, dated 07/05/2026, for the goods and services supplied against your purchase order PO-418908.
+Our reference is SR-69048 and the goods were delivered under delivery note DN-612958.
+For your records, your VAT number on file with us is GB 914 2275 08.
 
-Order date: 29 December 2025
-Goods delivered: 06/01/2026
-Note: the original invoice total of £19,779.74 has been superseded following credit note CN-1190. The amended amount below is now payable.
+Order date: 3 May 2026
+Goods delivered: 06/05/2026
+Note: the original invoice total of £37,034.41 has been superseded following credit note CN-8147. The amended amount below is now payable.
+Our previous invoice 60712 dated 08/04/2026 for £2,795.47 (your PO PO-439998) has been settled in full - thank you.
 
 Items supplied:
-- 1 x On-site engineer (per day) at £496.34 each = £496.34
-- 3 x Firewall configuration review at £1,179.25 each = £3,537.75
-- 1 x Laptop imaging and deployment (per device) at £55.93 each = £55.93
-- 6 x Laptop battery replacement at £106.35 each = £638.10
-- 2 x Backup monitoring (monthly) at £612.71 each = £1,225.42
-- 3 x Managed service desk (monthly) at £2,844.02 each = £8,532.06
-- 1 x Microsoft 365 migration workshop at £1,463.55 each = £1,463.55
+- 1 x Managed service desk (monthly) - Reception at £3,974.12 each = £3,974.12
+- 1 x Firewall configuration review - Leeds HQ at £1,470.50 each = £1,470.50
+- 4 x Docking station - April at £158.12 each = £632.48
+- 1 x Docking station - March at £193.71 each = £193.71
+- 1 x Endpoint security licence (annual, per seat) - April at £29.02 each = £29.02
+- 1 x Microsoft 365 migration workshop - Leeds HQ at £1,541.52 each = £1,541.52
+- 1 x Firewall configuration review - Floor 4 at £929.81 each = £929.81
+- 2 x Firewall configuration review - January at £1,448.27 each = £2,896.54
+- 12 x Laptop battery replacement - Wakefield site at £102.05 each = £1,224.60
+- 1 x Firewall configuration review - Floor 2 at £1,038.41 each = £1,038.41
+- 1 x Firewall configuration review - Phase 2 at £1,135.59 each = £1,135.59
+- 1 x Microsoft 365 migration workshop - York office at £1,600.24 each = £1,600.24
+- 2 x Endpoint security licence (annual, per seat) - June at £39.36 each = £78.72
+- 1 x On-site engineer (per day) - April at £591.60 each = £591.60
+- 1 x Microsoft 365 migration workshop - March at £1,143.50 each = £1,143.50
+- 12 x Laptop battery replacement - Phase 2 at £85.79 each = £1,029.48
+- 1 x Managed service desk (monthly) - Phase 1 at £3,719.84 each = £3,719.84
+- 1 x Managed service desk (monthly) - January at £3,528.64 each = £3,528.64
+- 6 x Laptop imaging and deployment (per device) - Floor 4 at £37.43 each = £224.58
+- 4 x Docking station - Batch A at £205.05 each = £820.20
+- 2 x Backup monitoring (monthly) - January at £623.68 each = £1,247.36
+- 2 x Microsoft 365 migration workshop - June at £1,510.90 each = £3,021.80
+- 1 x Less: loyalty discount 5% at £-1,603.61 each = £-1,603.61
 
-That comes to £15,949.15 net, plus VAT of £3,189.83, making £19,138.98 payable.
-Terms: 30 days. Payment due by 2026-02-05.
+That comes to £30,468.65 net, plus VAT of £6,093.73, making £36,562.38 payable on this invoice.
+Terms: 14 days. Payment due by 2026-05-21.
 Our VAT registration number is GB 128 2973 77.
 
 Kind regards,
 Fatima Iqbal
 Accounts Team
-Brightwater IT Services Limited
+BRIGHTWATER IT SERVICES LTD
 Unit 47, Park View, Bradford BD1 3NR
+
+-----Original Message-----
+From: accounts@brightwater-it.example
+Sent: 8 April 2026
+Subject: Invoice 60712 - PO PO-439998
+
+Please find attached our invoice 60712 dated 08/04/2026 for £2,795.47, payable within 14 days.

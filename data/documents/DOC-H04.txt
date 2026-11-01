@@ -1,31 +1,71 @@
-                           TAX INVOICE                            
+                       TAX INVOICE                        
 
-Orbis Telecom Hardware
+Orbis Telecom Hardware Ltd.
 Unit 15, Kingsway, Manchester M1 6GB
 VAT Reg No: GB 349 7023 02
 
-Invoice No: S012-96601            Invoice Date: 08/04/2026
-Your PO: PO-496143                Your Ref: 
+Invoice No: 62143                 Invoice Date: 14/01/2026
+Our ref: SR-91698                 Delivery note: DN-981060
+Your PO: PO-418364                Your Ref: 
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+Customer VAT No: GB 914 2275 08
 
-Order date: 6 April 2026
-Goods delivered: 08/04/2026
-Note: the original invoice total of GBP 9,006.52 has been superseded following credit note CN-8851. The amended amount below is now payable.
+Order date: 10 January 2026
+Goods delivered: 14/01/2026
+Note: the original invoice total of GBP 9,628.97 has been superseded following credit note CN-5905. The amended amount below is now payable.
+Our previous invoice 56147 dated 15/12/2025 for GBP 8,552.60 (your PO PO-476549) has been settled in full - thank you.
 
-Description                                  Qty        Unit      Amount
-------------------------------------------------------------------------
-SFP+ transceiver                               6       88.79      532.74
-Rack-mount UPS                                 1     1160.66     1160.66
-24-port PoE switch                             1      745.63      745.63
-Wireless access point                          1      213.14      213.14
-Headset, noise-cancelling                     25       70.48     1762.00
-IP desk phone                                  5      109.44      547.20
-Fibre patch leads (pack of 10)                12       61.97      743.64
-Cat6 cable (305 m box)                         1      133.14      133.14
-Conference speakerphone                        4      333.38     1333.52
-------------------------------------------------------------------------
-                                                 Subtotal: GBP 7,171.67
-                                                VAT @ 20%: GBP 1,434.33
-                                                TOTAL DUE: GBP 8,606.00
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+Cat6 cable (305 m box) -         1      179.74      179.74
+  Batch A
+Wireless access point - Batch    1      206.19      206.19
+  A
+Rack-mount UPS - Wakefield       1      856.22      856.22
+  site
+Headset, noise-cancelling -      1       74.08       74.08
+  January
+SFP+ transceiver - Wakefield     3       48.43      145.29
+  site
+Cat6 cable (305 m box) -         1      150.08      150.08
+  Wakefield site
+SFP+ transceiver - Floor 4       1       79.80       79.80
+Rack-mount UPS - April           1     1343.71     1343.71
+Fibre patch leads (pack of       1       49.64       49.64
+  10) - Phase 2
+IP desk phone - Reception        1       92.55       92.55
+Cat6 cable (305 m box) -         1      126.24      126.24
+  Leeds HQ
+----------------------------------------------------------
+                              Carried forward      3303.54
 
-Terms: 60 days. Payment due by 2026-06-07.
+                                               Page 1 of 2
+
+TAX INVOICE (continued) - Invoice No: 62143
+
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+                              Brought forward      3303.54
+IP desk phone - Floor 2          1      135.35      135.35
+Headset, noise-cancelling -      4       70.46      281.84
+  Wakefield site
+Wireless access point - May      1      325.28      325.28
+SFP+ transceiver - February      6       48.91      293.46
+IP desk phone - Phase 2          1      129.43      129.43
+Wireless access point - Phase    1      211.34      211.34
+  2
+SFP+ transceiver - Floor 2       1       85.48       85.48
+Rack-mount UPS - Server room     1      901.60      901.60
+Rack-mount UPS - March           1     1391.73     1391.73
+Headset, noise-cancelling -      1      133.34      133.34
+  Floor 4
+Wireless access point - Floor    1      234.60      234.60
+  2
+----------------------------------------------------------
+                                   Subtotal: GBP 7,426.99
+                                  VAT @ 20%: GBP 1,485.40
+                                  TOTAL DUE: GBP 8,912.39
+
+Terms: 30 days. Payment due by 2026-02-13.
+
+                                               Page 2 of 2

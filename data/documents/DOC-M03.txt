@@ -1,25 +1,45 @@
-                           TAX INVOICE                            
+                       TAX INVOICE                        
 
 LINDQVIST SOFTWARE AB
 Sveavägen 155, 111 34 Stockholm, Sweden
 VAT Reg No: SE99891778001
 
-Invoice No: S014-24336            Invoice Date: 08/02/2026
-Your PO: PO-460211                Your Ref: CC-1818
+Invoice No: SI/2026/86012         Invoice Date: 26/07/2026
+Our ref: SR-58221                 Delivery note: DN-218218
+Your PO: PO-440861                Your Ref: CC-1074
 Bill to: Arden Valley Communications plc, Accounts Payable, 1 Riverside Way, Leeds LS1 4AP
+Customer VAT No: GB 914 2275 08
 
-Description                                  Qty        Unit      Amount
-------------------------------------------------------------------------
-Premium support add-on (annual)                3     1864.81     5594.43
-Sandbox environment (annual)                   1     1042.82     1042.82
-Additional user licences (pack of 10)          2     1006.29     2012.58
-Implementation consultancy (per day)           1     1000.30     1000.30
-API integration module (annual)                1     1445.00     1445.00
-Data migration service                         2     3014.64     6029.28
-------------------------------------------------------------------------
-                                                 Subtotal: EUR 17,124.41
-                                     VAT (reverse charge): EUR 0.00
-                                                TOTAL DUE: EUR 17,124.41
+Description                    Qty        Unit      Amount
+----------------------------------------------------------
+Single sign-on connector         2      630.99     1261.98
+  (annual) - York office
+Premium support add-on           2     2154.19     4308.38
+  (annual) - April
+API integration module           2     1813.06     3626.12
+  (annual) - Leeds HQ
+Workflow platform                1     4316.46     4316.46
+  subscription (annual) - Floor
+  2
+Implementation consultancy       1      948.85      948.85
+  (per day) - York office
+Single sign-on connector         1      936.90      936.90
+  (annual) - Bradford depot
+Workflow platform                1     4639.69     4639.69
+  subscription (annual) - March
+API integration module           2     1611.49     3222.98
+  (annual) - Server room
+Implementation consultancy       1     1081.51     1081.51
+  (per day) - January
+Single sign-on connector         2      766.88     1533.76
+  (annual) - May
+Less: loyalty discount 5%        1    -1293.83    -1293.83
+----------------------------------------------------------
+                                   Subtotal: EUR 24,582.80
+                       VAT (reverse charge): EUR 0.00
+                                  TOTAL DUE: EUR 24,582.80
+                    Balance brought forward: EUR 4,437.26
+                      TOTAL ACCOUNT BALANCE: EUR 29,020.06
 
-Please pay within 30 days of the invoice date.
+Please pay within 45 days of the invoice date.
 Reverse charge: customer to account for VAT to HMRC.

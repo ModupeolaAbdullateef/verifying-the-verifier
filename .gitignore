@@ -1,2 +1,10 @@
+# Credentials and local environment
 .env
 .venv/
+venv/
+__pycache__/
+*.pyc
+
+# Experiment outputs (archived separately from the code)
+results/
+results_pilot/

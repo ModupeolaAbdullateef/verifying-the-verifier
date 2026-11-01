@@ -6,29 +6,36 @@ workflow.py - The invoice-processing multi-agent workflow, built with LangGraph.
 
 The extractor, normaliser and decision agents are identical in every
 experimental condition. The only component that changes is the verification
-gate, selected from GATES by the run's condition code:
+mechanism applied at the gate (see mechanisms.py):
 
-    C0  unverified baseline (gate always passes, no cost)
-    C1  schema and constraint validation
-    C2  checker agent
-    C3  human-in-the-loop checkpoint
+    C0  unverified baseline          C2  checker agent
+    C1  schema and constraints       C3  human-in-the-loop checkpoint
 
-A gate that finds issues may send the extraction back once for revision
-(config.MAX_REVISIONS). If issues remain after the revision, the record
-proceeds and the run is flagged.
+In Experiment 2 (controlled fault injection, trials 201-224) the first
+extraction is replaced by a pre-generated record containing one seeded fault
+(see faults.py), so that every condition verifies an identical input.
+
+An automated mechanism that finds issues may send the extraction back once
+for revision (config.MAX_REVISIONS); if issues remain, the record proceeds
+and the run is flagged. In C3 the workflow is suspended at the gate with a
+LangGraph interrupt, its state is persisted by a SQLite checkpointer, and it
+is resumed once the human review has been recorded.
 """
 
 from __future__ import annotations
 
 import operator
+import sqlite3
 import time
-from dataclasses import dataclass, field
-from typing import Annotated, Callable, TypedDict
+from typing import Annotated, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from vtv import config, prompts, tools
-from vtv.llm import CallRecord, call_llm
+from vtv import config, faults, prompts, tools
+from vtv.llm import call_llm
+from vtv.mechanisms import MECHANISMS, GateResult
+
+GATES = dict(MECHANISMS)
 
 
 class RunState(TypedDict, total=False):
@@ -38,7 +45,12 @@ class RunState(TypedDict, total=False):
     trial: int
     seed: int
     document_text: str
+    image_paths: list[str]            # scanned page images (input mode "image")
     mock: dict | None                 # ground truth, used only in offline test mode
+    experiment: str                   # "natural" (Experiment 1) or "fault" (Experiment 2)
+    fault: dict | None                # seeded fault description (Experiment 2 only)
+    seeded_extraction: dict | None    # record presented to the gate in place of the first extraction
+    initial_extraction: dict | None   # extractor output before any verification
     extraction: dict | None
     revisions: int
     feedback: str | None
@@ -54,32 +66,8 @@ class RunState(TypedDict, total=False):
     gate_history: Annotated[list, operator.add]   # one entry per gate evaluation
 
 
-@dataclass
-class GateResult:
-    """Outcome of one evaluation by a verification mechanism."""
-    passed: bool
-    issues: list[str] = field(default_factory=list)
-    calls: list[CallRecord] = field(default_factory=list)
-    corrected: dict | None = None      # record corrected directly (human reviewer)
-    human_seconds: float = 0.0
-
-
-# --------------------------------------------------------------------------
-# Verification mechanisms
-# --------------------------------------------------------------------------
-
-def gate_unverified(state: RunState) -> GateResult:
-    """C0: no verification."""
-    return GateResult(passed=True)
-
-
-GATES: dict[str, Callable[[RunState], GateResult]] = {
-    "C0": gate_unverified,
-}
-
-
-def register_gate(condition: str, mechanism: Callable[[RunState], GateResult]) -> None:
-    """Add a verification mechanism under a condition code."""
+def register_gate(condition: str, mechanism) -> None:
+    """Add a verification mechanism under a condition code (used in testing)."""
     GATES[condition] = mechanism
 
 
@@ -89,21 +77,29 @@ def register_gate(condition: str, mechanism: Callable[[RunState], GateResult]) -
 
 def extract_node(state: RunState) -> dict:
     is_revision = state.get("feedback") is not None
+    if not is_revision and state.get("seeded_extraction") is not None:
+        # Experiment 2: the gate receives the seeded record; no extraction call is made.
+        seeded = state["seeded_extraction"]
+        return {"extraction": seeded, "initial_extraction": seeded, "feedback": None, "calls": []}
+    image_mode = config.INPUT_MODE == "image"
     prompt = prompts.extractor_prompt(
-        state["document_text"],
+        None if image_mode else state["document_text"],
         feedback=state.get("feedback"),
         previous=state.get("extraction") if is_revision else None,
     )
     mock = state["mock"]["extraction"] if state.get("mock") else None
     parsed, record = call_llm("extract_revision" if is_revision else "extract",
-                              prompts.EXTRACTOR_SYSTEM, prompt, state["seed"], mock)
-    return {"extraction": parsed, "feedback": None, "calls": [record.to_dict()]}
+                              prompts.EXTRACTOR_SYSTEM, prompt, state["seed"], mock,
+                              images=state.get("image_paths") if image_mode else None)
+    update = {"extraction": parsed, "feedback": None, "calls": [record.to_dict()]}
+    if not is_revision:
+        update["initial_extraction"] = parsed
+    return update
 
 
 def gate_node(state: RunState) -> dict:
-    mechanism = GATES[state["condition"]]
     started = time.perf_counter()
-    result = mechanism(state)
+    result: GateResult = GATES[state["condition"]](state)
     gate_seconds = time.perf_counter() - started
 
     update: dict = {
@@ -113,7 +109,9 @@ def gate_node(state: RunState) -> dict:
             "revision": state.get("revisions", 0),
             "passed": result.passed,
             "issues": result.issues,
-            "gate_seconds": round(gate_seconds, 3),
+            "action": result.action,
+            "gate_seconds": round(gate_seconds, 4),
+            "human_seconds": round(result.human_seconds, 3),
         }],
     }
     if result.corrected is not None:
@@ -122,11 +120,11 @@ def gate_node(state: RunState) -> dict:
         update["human_seconds"] = state.get("human_seconds", 0.0) + result.human_seconds
 
     revisions = state.get("revisions", 0)
-    if not result.passed and result.corrected is None and revisions < config.MAX_REVISIONS:
+    if not result.passed and revisions < config.MAX_REVISIONS:
         update["feedback"] = "\n".join(f"- {issue}" for issue in result.issues)
         update["revisions"] = revisions + 1
     else:
-        update["flagged"] = not result.passed and result.corrected is None
+        update["flagged"] = not result.passed
     return update
 
 
@@ -160,10 +158,10 @@ def decide_node(state: RunState) -> dict:
 
 
 # --------------------------------------------------------------------------
-# Graph
+# Graph construction
 # --------------------------------------------------------------------------
 
-def build_graph():
+def build_graph(checkpointer=None):
     graph = StateGraph(RunState)
     graph.add_node("extract", extract_node)
     graph.add_node("gate", gate_node)
@@ -176,34 +174,54 @@ def build_graph():
                                 {"extract": "extract", "normalise": "normalise"})
     graph.add_edge("normalise", "decide")
     graph.add_edge("decide", END)
-    return graph.compile()
+    return graph.compile(checkpointer=checkpointer)
 
 
-_GRAPH = None
+_GRAPH = None          # automated conditions: no persistence needed
+_HUMAN_GRAPH = None    # C3: state persisted between pause and resume
 
 
-def run_workflow(task_id: str, condition: str, trial: int, document_text: str,
-                 mock: dict | None = None) -> dict:
-    """Execute one run and return the final state with summary measurements."""
+def _automated_graph():
     global _GRAPH
     if _GRAPH is None:
         _GRAPH = build_graph()
-    if condition not in GATES:
-        raise ValueError(f"No verification mechanism registered for condition {condition}")
+    return _GRAPH
 
-    initial: RunState = {
-        "task_id": task_id, "condition": condition, "trial": trial,
-        "seed": config.SEED_BASE + trial, "document_text": document_text,
-        "mock": mock, "revisions": 0, "flagged": False, "human_seconds": 0.0,
-        "calls": [], "gate_history": [],
-    }
-    started = time.perf_counter()
-    final = _GRAPH.invoke(initial)
-    wall = time.perf_counter() - started
 
+def _human_graph():
+    global _HUMAN_GRAPH
+    if _HUMAN_GRAPH is None:
+        from langgraph.checkpoint.sqlite import SqliteSaver
+        config.RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+        connection = sqlite3.connect(config.RESULTS_DIR / "checkpoints.sqlite",
+                                     check_same_thread=False)
+        _HUMAN_GRAPH = build_graph(checkpointer=SqliteSaver(connection))
+    return _HUMAN_GRAPH
+
+
+def _initial_state(task_id: str, condition: str, trial: int, document_text: str,
+                   mock: dict | None, image_paths: list[str] | None = None) -> RunState:
+    seeded = faults.fault_for(task_id, trial)
+    return {"task_id": task_id, "condition": condition, "trial": trial,
+            "seed": config.SEED_BASE + trial, "document_text": document_text,
+            "image_paths": image_paths or [],
+            "experiment": faults.experiment_for(trial),
+            "fault": ({k: seeded[k] for k in ("fault_type", "variant", "description",
+                                              "c1_visible", "scored_errors")}
+                      if seeded else None),
+            "seeded_extraction": seeded["record"] if seeded else None,
+            "mock": mock, "revisions": 0, "flagged": False, "human_seconds": 0.0,
+            "calls": [], "gate_history": []}
+
+
+def summarise(final: dict, machine_seconds: float) -> dict:
+    """Aggregate per-call measurements into the run-level summary."""
     calls = final.get("calls", [])
-    final["summary"] = {
-        "wall_clock_s": round(wall, 3),
+    human = final.get("human_seconds", 0.0)
+    return {
+        "machine_seconds": round(machine_seconds, 3),
+        "human_seconds": round(human, 3),
+        "wall_clock_s": round(machine_seconds + human, 3),
         "model_calls": len(calls),
         "input_tokens": sum(c["input_tokens"] for c in calls),
         "output_tokens": sum(c["output_tokens"] for c in calls),
@@ -213,6 +231,61 @@ def run_workflow(task_id: str, condition: str, trial: int, document_text: str,
         "parse_failures": sum(1 for c in calls if not c["parse_ok"]),
         "revisions": final.get("revisions", 0),
         "flagged": final.get("flagged", False),
-        "human_seconds": round(final.get("human_seconds", 0.0), 3),
     }
+
+
+# --------------------------------------------------------------------------
+# Public entry points
+# --------------------------------------------------------------------------
+
+def run_workflow(task_id: str, condition: str, trial: int, document_text: str,
+                 mock: dict | None = None, image_paths: list[str] | None = None) -> dict:
+    """Execute one complete run in an automated condition (C0, C1 or C2)."""
+    if condition not in GATES:
+        raise ValueError(f"No verification mechanism registered for condition {condition}")
+    if condition == "C3":
+        raise ValueError("C3 runs pause for review: use start_human_run and resume_human_run")
+    started = time.perf_counter()
+    final = _automated_graph().invoke(_initial_state(task_id, condition, trial,
+                                                     document_text, mock, image_paths))
+    final["summary"] = summarise(final, time.perf_counter() - started)
+    return final
+
+
+def thread_id(task_id: str, trial: int) -> str:
+    return f"{task_id}_C3_t{trial}"
+
+
+def start_human_run(task_id: str, trial: int, document_text: str,
+                    mock: dict | None = None,
+                    image_paths: list[str] | None = None) -> tuple[dict, float]:
+    """
+    Run a C3 workflow up to the human checkpoint.
+
+    Returns (interrupt_payload, machine_seconds_so_far). The suspended state is
+    stored in results/checkpoints.sqlite under thread_id(task_id, trial).
+    """
+    graph = _human_graph()
+    run_config = {"configurable": {"thread_id": thread_id(task_id, trial)}}
+    started = time.perf_counter()
+    result = graph.invoke(_initial_state(task_id, "C3", trial, document_text, mock, image_paths),
+                          run_config)
+    seconds = time.perf_counter() - started
+    interrupts = result.get("__interrupt__") or []
+    if not interrupts:
+        raise RuntimeError("C3 run finished without pausing for review")
+    return interrupts[0].value, seconds
+
+
+def resume_human_run(task_id: str, trial: int, review: dict,
+                     machine_seconds_before: float) -> dict:
+    """Resume a suspended C3 run with the reviewer's response and finish it."""
+    from langgraph.types import Command
+
+    graph = _human_graph()
+    run_config = {"configurable": {"thread_id": thread_id(task_id, trial)}}
+    started = time.perf_counter()
+    final = graph.invoke(Command(resume=review), run_config)
+    machine = machine_seconds_before + (time.perf_counter() - started)
+    final["summary"] = summarise(final, machine)
     return final

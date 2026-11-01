@@ -3,18 +3,20 @@ INVOICE
 Supplier ................ Meridian Logistics UK Ltd
 Address ................. Unit 13, Albion Road, Harrogate HG1 8LS
 VAT number .............. GB 929 2906 52
-Invoice reference ....... 29613
-Date of issue ........... 2 April 2026
-Purchase order .......... PO-488281
-Your reference .......... CC-5826
+Invoice reference ....... INV-65050
+Supplier reference ...... SR-34519
+Date of issue ........... 11 July 2026
+Purchase order .......... PO-440228
+Your reference .......... CC-6657
 Customer ................ Arden Valley Communications plc
 
 Items
-  1. Warehouse storage (per pallet, monthly) | 3 x £18.69 = £56.07
-  2. Pallet wrapping and labelling | 12 x £16.47 = £197.64
+  1. Courier collection, same day | 2 x £67.12 = £134.24
+  2. Warehouse storage (per pallet, monthly) | 6 x £24.08 = £144.48
+  3. Pallet wrapping and labelling | 10 x £18.09 = £180.90
 
-Net ..................... £253.71
-VAT ..................... £50.74
-Gross amount payable .... £304.45
+Net ..................... £459.62
+VAT ..................... £91.92
+Gross amount payable .... £551.54
 
-Payment terms: 14 days. Due date: 16 April 2026.
+Payment terms: 60 days. Due date: 9 September 2026.
