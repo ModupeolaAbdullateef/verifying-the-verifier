@@ -11,9 +11,8 @@ Usage:
 
 from __future__ import annotations
 
-from vtv import review_queue
+from vtv import review_queue, runner
 from vtv.traces import trace_path, write_trace
-from vtv.workflow import resume_human_run
 
 
 def main() -> None:
@@ -27,7 +26,7 @@ def main() -> None:
         if review is None:
             waiting += 1
             continue
-        final = resume_human_run(
+        final = runner.resume_human(
             item["task_id"], item["trial"],
             {"action": review["action"], "corrected": review["corrected"],
              "seconds": review["seconds"]},

@@ -18,6 +18,9 @@ The script produces the following files under ./data:
   images/DOC-L01_p1.jpg ...         The same invoices as scanned page images, the
                                     input to the workflow. Scan quality degrades
                                     with complexity (see SCAN_PROFILES).
+  reference/services.json           IT service catalogue: the reference table
+                                    against which the routing agent matches
+                                    the affected service of a ticket.
   tickets/TKT-L01.txt ...           10 IT service tickets for the replication
                                     study (3 low, 4 medium, 3 high complexity).
   ground_truth/documents.json       Correct values for every invoice, both at
@@ -52,7 +55,7 @@ from pathlib import Path
 # --------------------------------------------------------------------------
 
 SEED = 20261101
-GENERATOR_VERSION = "3.0.0"
+GENERATOR_VERSION = "3.1.0"
 
 OUT = Path("data")
 VAT_RATE = Decimal("0.20")
@@ -929,6 +932,39 @@ PRIORITY_RULES = {
 }
 
 
+# IT service catalogue: (service_id, name, description). It contains every
+# service named in the ticket ground truth plus related services that act as
+# distractors (for example, Monitor beside Laptop, Mouse and keyboard beside
+# Phishing / credential compromise).
+SERVICE_CATALOGUE = [
+    ("SVC-001", "VPN", "Remote access to internal systems over the virtual private network"),
+    ("SVC-002", "Wi-Fi", "Office wireless network coverage and connectivity"),
+    ("SVC-003", "Office network", "Wired office network, switches and site connectivity"),
+    ("SVC-004", "Account lockout", "Unlocking user accounts locked after failed sign-in attempts"),
+    ("SVC-005", "Password reset", "Resetting forgotten or expired passwords"),
+    ("SVC-006", "Shared drive access", "Permissions for shared network drives and folders"),
+    ("SVC-007", "Multi-factor authentication", "Authenticator app and sign-in verification"),
+    ("SVC-008", "Microsoft Teams", "Teams chat, calls and online meetings"),
+    ("SVC-009", "Outlook email", "Mailboxes, sending and receiving email"),
+    ("SVC-010", "Laptop", "Company laptops, including screens, batteries and built-in components"),
+    ("SVC-011", "Desktop PC", "Company desktop computers"),
+    ("SVC-012", "Monitor", "External monitors and docking displays"),
+    ("SVC-013", "Mouse and keyboard", "Mice, keyboards and other desk peripherals"),
+    ("SVC-014", "Floor 2 printer", "Shared multifunction printer on floor 2"),
+    ("SVC-015", "Floor 3 printer", "Shared multifunction printer on floor 3"),
+    ("SVC-016", "Finance system (invoice posting)", "Posting supplier invoices in the finance system"),
+    ("SVC-017", "Finance system (reporting)", "Financial reports and month-end reporting"),
+    ("SVC-018", "HR system", "Employee records, absence and payroll self-service"),
+    ("SVC-019", "CRM", "Customer relationship management system"),
+    ("SVC-020", "Contact-centre telephony", "Inbound customer support lines and agent call routing"),
+    ("SVC-021", "Desk phones", "Office desk telephones and extensions"),
+    ("SVC-022", "Mobile phones", "Company mobile phones and contracts"),
+    ("SVC-023", "Phishing / credential compromise", "Suspicious emails, phishing links and exposed credentials"),
+    ("SVC-024", "Malware", "Viruses, malware and suspicious software"),
+    ("SVC-025", "Lost or stolen device", "Reporting lost or stolen company equipment"),
+]
+
+
 def priority(impact: int, urgency: int) -> str:
     total = impact + urgency
     return {2: "P1", 3: "P2", 4: "P3"}.get(total, "P4")
@@ -1127,6 +1163,9 @@ def main() -> None:
             "reasoning": {"impact": impact, "urgency": urgency},
         })
     write_json(OUT / "ground_truth" / "tickets.json", ticket_truth)
+    write_json(OUT / "reference" / "services.json",
+               [{"service_id": sid, "name": name, "description": desc}
+                for sid, name, desc in SERVICE_CATALOGUE])
 
     # Manifest
     decisions = [decide(i) for i in invoices]

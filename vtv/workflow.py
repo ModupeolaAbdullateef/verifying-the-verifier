@@ -97,35 +97,43 @@ def extract_node(state: RunState) -> dict:
     return update
 
 
-def gate_node(state: RunState) -> dict:
-    started = time.perf_counter()
-    result: GateResult = GATES[state["condition"]](state)
-    gate_seconds = time.perf_counter() - started
+def make_gate_node(gates: dict):
+    """Build the gate node for a set of verification mechanisms keyed by condition."""
 
-    update: dict = {
-        "gate_passed": result.passed,
-        "calls": [c.to_dict() for c in result.calls],
-        "gate_history": [{
-            "revision": state.get("revisions", 0),
-            "passed": result.passed,
-            "issues": result.issues,
-            "action": result.action,
-            "gate_seconds": round(gate_seconds, 4),
-            "human_seconds": round(result.human_seconds, 3),
-        }],
-    }
-    if result.corrected is not None:
-        update["extraction"] = result.corrected
-    if result.human_seconds:
-        update["human_seconds"] = state.get("human_seconds", 0.0) + result.human_seconds
+    def gate_node(state: RunState) -> dict:
+        started = time.perf_counter()
+        result: GateResult = gates[state["condition"]](state)
+        gate_seconds = time.perf_counter() - started
 
-    revisions = state.get("revisions", 0)
-    if not result.passed and revisions < config.MAX_REVISIONS:
-        update["feedback"] = "\n".join(f"- {issue}" for issue in result.issues)
-        update["revisions"] = revisions + 1
-    else:
-        update["flagged"] = not result.passed
-    return update
+        update: dict = {
+            "gate_passed": result.passed,
+            "calls": [c.to_dict() for c in result.calls],
+            "gate_history": [{
+                "revision": state.get("revisions", 0),
+                "passed": result.passed,
+                "issues": result.issues,
+                "action": result.action,
+                "gate_seconds": round(gate_seconds, 4),
+                "human_seconds": round(result.human_seconds, 3),
+            }],
+        }
+        if result.corrected is not None:
+            update["extraction"] = result.corrected
+        if result.human_seconds:
+            update["human_seconds"] = state.get("human_seconds", 0.0) + result.human_seconds
+
+        revisions = state.get("revisions", 0)
+        if not result.passed and revisions < config.MAX_REVISIONS:
+            update["feedback"] = "\n".join(f"- {issue}" for issue in result.issues)
+            update["revisions"] = revisions + 1
+        else:
+            update["flagged"] = not result.passed
+        return update
+
+    return gate_node
+
+
+gate_node = make_gate_node(GATES)
 
 
 def route_after_gate(state: RunState) -> str:
@@ -188,14 +196,25 @@ def _automated_graph():
     return _GRAPH
 
 
-def _human_graph():
-    global _HUMAN_GRAPH
-    if _HUMAN_GRAPH is None:
+_CHECKPOINTER = None
+
+
+def checkpointer():
+    """The SQLite checkpointer shared by every workflow that pauses for human review."""
+    global _CHECKPOINTER
+    if _CHECKPOINTER is None:
         from langgraph.checkpoint.sqlite import SqliteSaver
         config.RESULTS_DIR.mkdir(parents=True, exist_ok=True)
         connection = sqlite3.connect(config.RESULTS_DIR / "checkpoints.sqlite",
                                      check_same_thread=False)
-        _HUMAN_GRAPH = build_graph(checkpointer=SqliteSaver(connection))
+        _CHECKPOINTER = SqliteSaver(connection)
+    return _CHECKPOINTER
+
+
+def _human_graph():
+    global _HUMAN_GRAPH
+    if _HUMAN_GRAPH is None:
+        _HUMAN_GRAPH = build_graph(checkpointer=checkpointer())
     return _HUMAN_GRAPH
 
 

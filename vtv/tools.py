@@ -71,3 +71,47 @@ def get_purchase_order(po_number: str | None) -> dict | None:
     if not po_number:
         return None
     return _purchase_orders().get(po_number.strip().upper())
+
+
+# --------------------------------------------------------------------------
+# Ticket-triage replication
+# --------------------------------------------------------------------------
+
+_WORD = re.compile(r"[a-z0-9]+")
+_STOPWORDS = {"the", "a", "an", "and", "or", "of", "for", "to", "in", "on", "my", "our",
+              "is", "it", "with", "by", "at", "after", "including"}
+
+
+@lru_cache(maxsize=1)
+def _services() -> list[dict]:
+    return json.loads((config.DATA_DIR / "reference" / "services.json").read_text(encoding="utf-8"))
+
+
+def _tokens(text: str) -> set[str]:
+    return {w for w in _WORD.findall((text or "").lower()) if w not in _STOPWORDS}
+
+
+def search_services(description: str | None, limit: int = 5) -> list[dict]:
+    """
+    Return the service-catalogue entries closest to a free-text service description.
+
+    Entries are ranked by the share of the description's words found in the
+    entry's name and description, with string similarity of the names as a
+    tie-breaker. The routing agent receives the ranked candidates and must
+    choose one (or none), so the final match remains a model decision.
+    """
+    query = _tokens(description or "")
+    scored = []
+    for s in _services():
+        words = _tokens(s["name"] + " " + s["description"])
+        overlap = len(query & words) / len(query) if query else 0.0
+        similarity = SequenceMatcher(None, (description or "").lower(), s["name"].lower()).ratio()
+        scored.append((overlap + 0.5 * similarity, s))
+    scored.sort(key=lambda pair: pair[0], reverse=True)
+    return [{"service_id": s["service_id"], "name": s["name"], "description": s["description"],
+             "score": round(score, 3)} for score, s in scored[:limit]]
+
+
+def assignment_group(category: str | None) -> str | None:
+    """Return the resolver group for a ticket category, or None if the category is unknown."""
+    return manifest()["ticket_categories"].get(category or "")

@@ -19,9 +19,18 @@ Experiment 2 runs (seeded faults) additionally record the seeded fault type
 and variant, whether the fault was visible to the C1 rules, whether the gate
 detected it, and whether it was removed before reaching the normaliser.
 
+Ticket-triage runs (TKT-...) are scored separately on their labels. Each label
+is classified as correct, omission (missing), format (the right value in the
+wrong form, such as "2" for 2), substitution (a different valid value) or
+hallucination (a value outside the permitted set). The triage record is scored
+on category, impact and urgency at the initial and gated stages; the final
+output on category, affected service, assignment group and priority.
+
 Outputs (in the results folder):
-    runs.csv     one row per run: outcomes, error counts, gate behaviour, cost and time
-    fields.csv   one row per field per run and stage: truth, prediction, error type
+    runs.csv            one row per invoice run: outcomes, error counts, gate behaviour, cost and time
+    fields.csv          one row per field per invoice run and stage: truth, prediction, error type
+    tickets_runs.csv    one row per ticket run
+    tickets_fields.csv  one row per label per ticket run and stage
 
 Usage:
     python score.py                  # scores results/
@@ -303,6 +312,94 @@ def score_trace(trace: dict, truth: dict, document: str) -> tuple[dict, list[dic
     return run, field_rows
 
 
+# --------------------------------------------------------------------------
+# Ticket-triage replication
+# --------------------------------------------------------------------------
+
+TRIAGE_FIELDS = ["category", "impact", "urgency"]
+LABEL_FIELDS = ["category", "affected_service", "assignment_group", "priority"]
+
+
+def label_sets() -> dict[str, set]:
+    manifest = json.loads((DATA / "manifest.json").read_text(encoding="utf-8"))
+    services = json.loads((DATA / "reference" / "services.json").read_text(encoding="utf-8"))
+    return {"category": set(manifest["ticket_categories"]),
+            "assignment_group": set(manifest["ticket_categories"].values()),
+            "affected_service": {s["name"] for s in services},
+            "priority": {"P1", "P2", "P3", "P4"}, "impact": {1, 2, 3}, "urgency": {1, 2, 3}}
+
+
+def compare_label(truth, pred, allowed: set) -> str:
+    if pred is None or pred == "":
+        return "omission"
+    if pred == truth:
+        return "correct"
+    if " ".join(str(pred).split()).lower() == str(truth).lower():
+        return "format"
+    return "substitution" if pred in allowed else "hallucination"
+
+
+def score_ticket_trace(trace: dict, truth: dict, allowed: dict) -> tuple[dict, list[dict]]:
+    expected = {**truth["labels"], **truth["reasoning"]}
+    initial = trace.get("initial_extraction", trace.get("extraction"))
+    final = {**(trace.get("final_record") or {}), "priority": trace.get("decision")}
+    stage_records = {"initial": (initial, TRIAGE_FIELDS), "gated": (trace.get("extraction"), TRIAGE_FIELDS),
+                     "final": (final, LABEL_FIELDS)}
+    stages = {}
+    for stage, (record, keys) in stage_records.items():
+        record = record if isinstance(record, dict) else {}
+        stages[stage] = [{"field": k, "truth": expected[k], "pred": record.get(k),
+                          "outcome": compare_label(expected[k], record.get(k), allowed[k])}
+                         for k in keys]
+    history = trace.get("gate_history") or []
+    first = history[0] if history else {}
+    gate_flagged = bool(first) and (not first.get("passed", True) or first.get("action") == "correct")
+    s = trace["summary"]
+    run = {"run_id": f"{trace['task_id']}_{trace['condition']}_t{trace['trial']}",
+           "task_id": trace["task_id"], "complexity": truth["complexity"],
+           "hitl_subset": truth["hitl_subset"], "condition": trace["condition"],
+           "trial": trace["trial"], "seed": trace["seed"], "model_id": trace.get("model_id")}
+    for stage, rows in stages.items():
+        run[f"{stage}_errors"] = sum(r["outcome"] != "correct" for r in rows)
+        for e in ERROR_TYPES:
+            run[f"{stage}_{e}"] = sum(r["outcome"] == e for r in rows)
+    run.update({
+        "initial_has_error": run["initial_errors"] > 0,
+        **{f"{k}_correct": next(r["outcome"] == "correct" for r in stages["final"] if r["field"] == k)
+           for k in LABEL_FIELDS},
+        "task_success": run["final_errors"] == 0,
+        "gate_flagged": gate_flagged, "gate_issue_count": len(first.get("issues") or []),
+        "human_action": first.get("action"),
+        "revisions": s["revisions"], "flagged_unresolved": s["flagged"],
+        "model_calls": s["model_calls"], "input_tokens": s["input_tokens"],
+        "output_tokens": s["output_tokens"], "thinking_tokens": s["thinking_tokens"],
+        "token_cost_usd": s["token_cost_usd"],
+        "machine_seconds": s.get("machine_seconds", s["wall_clock_s"]),
+        "human_seconds": s.get("human_seconds", 0.0), "wall_clock_s": s["wall_clock_s"],
+        "api_retries": s["api_retries"], "parse_failures": s["parse_failures"],
+        "timestamp_utc": trace.get("timestamp_utc"),
+    })
+    field_rows = [{"run_id": run["run_id"], "task_id": run["task_id"],
+                   "complexity": run["complexity"], "condition": run["condition"],
+                   "trial": run["trial"], "stage": stage, **row}
+                  for stage, rows in stages.items() for row in rows]
+    return run, field_rows
+
+
+def print_tickets(runs: list[dict]) -> None:
+    print("\nReplication - ticket triage")
+    print(f"{'Condition':<10}{'Runs':>6}{'Initial errors':>16}{'Flagged':>9}{'Task success':>14}"
+          f"{'Category':>10}{'Service':>9}{'Priority':>10}{'Mean cost $':>13}{'Mean time s':>13}")
+    for cond in sorted({r["condition"] for r in runs}):
+        rs = [r for r in runs if r["condition"] == cond]
+        n = len(rs)
+        share = lambda key: sum(r[key] for r in rs) / n
+        print(f"{cond:<10}{n:>6}{share('initial_has_error'):>15.1%} {share('gate_flagged'):>8.1%} "
+              f"{share('task_success'):>13.1%} {share('category_correct'):>9.1%} "
+              f"{share('affected_service_correct'):>8.1%} {share('priority_correct'):>9.1%} "
+              f"{share('token_cost_usd'):>12.5f} {share('wall_clock_s'):>12.2f}")
+
+
 def write_csv(path: Path, rows: list[dict]) -> None:
     if not rows:
         return
@@ -322,9 +419,19 @@ def main() -> None:
 
     truth = {row["doc_id"]: row for row in
              json.loads((DATA / "ground_truth" / "documents.json").read_text(encoding="utf-8"))}
-    runs, fields = [], []
+    tickets_path = DATA / "ground_truth" / "tickets.json"
+    ticket_truth = ({row["ticket_id"]: row for row in json.loads(tickets_path.read_text(encoding="utf-8"))}
+                    if tickets_path.exists() else {})
+    allowed = None
+    runs, fields, ticket_runs, ticket_fields = [], [], [], []
     for path in sorted((results / "traces").glob("*.json")):
         trace = json.loads(path.read_text(encoding="utf-8"))
+        if trace["task_id"].startswith("TKT-"):
+            allowed = allowed or label_sets()
+            run, field_rows = score_ticket_trace(trace, ticket_truth[trace["task_id"]], allowed)
+            ticket_runs.append(run)
+            ticket_fields.extend(field_rows)
+            continue
         document = (DATA / "documents" / f"{trace['task_id']}.txt").read_text(encoding="utf-8")
         run, field_rows = score_trace(trace, truth[trace["task_id"]], document)
         runs.append(run)
@@ -333,6 +440,12 @@ def main() -> None:
     write_csv(results / "runs.csv", runs)
     write_csv(results / "fields.csv", fields)
     print(f"Scored {len(runs)} runs -> {args.results}/runs.csv and {args.results}/fields.csv")
+    if ticket_runs:
+        write_csv(results / "tickets_runs.csv", ticket_runs)
+        write_csv(results / "tickets_fields.csv", ticket_fields)
+        print(f"Scored {len(ticket_runs)} ticket runs -> {args.results}/tickets_runs.csv "
+              f"and {args.results}/tickets_fields.csv")
+        print_tickets(ticket_runs)
     if not runs:
         return
 

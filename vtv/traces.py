@@ -52,3 +52,30 @@ def write_trace(final: dict) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(trace, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
+
+
+# --------------------------------------------------------------------------
+# Ticket-triage replication
+# --------------------------------------------------------------------------
+
+def is_ticket(task_id: str) -> bool:
+    return task_id.startswith("TKT-")
+
+
+@lru_cache(maxsize=1)
+def _ticket_truth() -> dict[str, dict]:
+    rows = json.loads((config.DATA_DIR / "ground_truth" / "tickets.json").read_text(encoding="utf-8"))
+    return {row["ticket_id"]: row for row in rows}
+
+
+def ticket_truth(ticket_id: str) -> dict:
+    return _ticket_truth()[ticket_id]
+
+
+def ticket_text(ticket_id: str) -> str:
+    return (config.DATA_DIR / "tickets" / f"{ticket_id}.txt").read_text(encoding="utf-8")
+
+
+def source_text(task_id: str) -> str:
+    """The source text of an invoice or a ticket."""
+    return ticket_text(task_id) if is_ticket(task_id) else document_text(task_id)

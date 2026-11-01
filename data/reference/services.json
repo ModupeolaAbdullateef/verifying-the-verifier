@@ -1,0 +1,127 @@
+[
+  {
+    "service_id": "SVC-001",
+    "name": "VPN",
+    "description": "Remote access to internal systems over the virtual private network"
+  },
+  {
+    "service_id": "SVC-002",
+    "name": "Wi-Fi",
+    "description": "Office wireless network coverage and connectivity"
+  },
+  {
+    "service_id": "SVC-003",
+    "name": "Office network",
+    "description": "Wired office network, switches and site connectivity"
+  },
+  {
+    "service_id": "SVC-004",
+    "name": "Account lockout",
+    "description": "Unlocking user accounts locked after failed sign-in attempts"
+  },
+  {
+    "service_id": "SVC-005",
+    "name": "Password reset",
+    "description": "Resetting forgotten or expired passwords"
+  },
+  {
+    "service_id": "SVC-006",
+    "name": "Shared drive access",
+    "description": "Permissions for shared network drives and folders"
+  },
+  {
+    "service_id": "SVC-007",
+    "name": "Multi-factor authentication",
+    "description": "Authenticator app and sign-in verification"
+  },
+  {
+    "service_id": "SVC-008",
+    "name": "Microsoft Teams",
+    "description": "Teams chat, calls and online meetings"
+  },
+  {
+    "service_id": "SVC-009",
+    "name": "Outlook email",
+    "description": "Mailboxes, sending and receiving email"
+  },
+  {
+    "service_id": "SVC-010",
+    "name": "Laptop",
+    "description": "Company laptops, including screens, batteries and built-in components"
+  },
+  {
+    "service_id": "SVC-011",
+    "name": "Desktop PC",
+    "description": "Company desktop computers"
+  },
+  {
+    "service_id": "SVC-012",
+    "name": "Monitor",
+    "description": "External monitors and docking displays"
+  },
+  {
+    "service_id": "SVC-013",
+    "name": "Mouse and keyboard",
+    "description": "Mice, keyboards and other desk peripherals"
+  },
+  {
+    "service_id": "SVC-014",
+    "name": "Floor 2 printer",
+    "description": "Shared multifunction printer on floor 2"
+  },
+  {
+    "service_id": "SVC-015",
+    "name": "Floor 3 printer",
+    "description": "Shared multifunction printer on floor 3"
+  },
+  {
+    "service_id": "SVC-016",
+    "name": "Finance system (invoice posting)",
+    "description": "Posting supplier invoices in the finance system"
+  },
+  {
+    "service_id": "SVC-017",
+    "name": "Finance system (reporting)",
+    "description": "Financial reports and month-end reporting"
+  },
+  {
+    "service_id": "SVC-018",
+    "name": "HR system",
+    "description": "Employee records, absence and payroll self-service"
+  },
+  {
+    "service_id": "SVC-019",
+    "name": "CRM",
+    "description": "Customer relationship management system"
+  },
+  {
+    "service_id": "SVC-020",
+    "name": "Contact-centre telephony",
+    "description": "Inbound customer support lines and agent call routing"
+  },
+  {
+    "service_id": "SVC-021",
+    "name": "Desk phones",
+    "description": "Office desk telephones and extensions"
+  },
+  {
+    "service_id": "SVC-022",
+    "name": "Mobile phones",
+    "description": "Company mobile phones and contracts"
+  },
+  {
+    "service_id": "SVC-023",
+    "name": "Phishing / credential compromise",
+    "description": "Suspicious emails, phishing links and exposed credentials"
+  },
+  {
+    "service_id": "SVC-024",
+    "name": "Malware",
+    "description": "Viruses, malware and suspicious software"
+  },
+  {
+    "service_id": "SVC-025",
+    "name": "Lost or stolen device",
+    "description": "Reporting lost or stolen company equipment"
+  }
+]

@@ -21,14 +21,13 @@ import argparse
 import json
 import sqlite3
 
-from vtv import config, review_queue
-from vtv.traces import document_text, trace_path
-from vtv.workflow import _human_graph, thread_id
+from vtv import config, review_queue, runner
+from vtv.traces import source_text, trace_path
+from vtv.workflow import thread_id
 
 
 def stored_text(task_id: str, trial: int) -> str | None:
-    state = _human_graph().get_state({"configurable": {"thread_id": thread_id(task_id, trial)}})
-    return (state.values or {}).get("document_text")
+    return runner.human_state(task_id, trial).get("document_text")
 
 
 def rewrite_without(path, review_ids: set[str]) -> None:
@@ -46,7 +45,7 @@ def main() -> None:
 
     items = review_queue.queue_items()
     stale = [i for i in items
-             if stored_text(i["task_id"], i["trial"]) != document_text(i["task_id"])]
+             if stored_text(i["task_id"], i["trial"]) != source_text(i["task_id"])]
     print(f"{len(items)} queued item(s); {len(stale)} stale.")
     for item in stale:
         print(f"  stale: {item['task_id']} trial {item['trial']} "

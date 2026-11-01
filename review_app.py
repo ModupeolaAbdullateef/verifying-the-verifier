@@ -2,7 +2,8 @@
 review_app.py - Blinded review interface for the human-in-the-loop condition (C3).
 
 The reviewer sees only the source document (the same scanned page images
-the extractor received) and the extracted record. The
+the extractor received, or the ticket text for the ticket-triage
+replication) and the record to be checked. The
 ground truth, the trial number and the run identifier are never displayed.
 Items are presented in a fixed random order across documents and complexity
 levels. Review time is measured from the moment an item is displayed until
@@ -22,8 +23,8 @@ import time
 import pandas as pd
 import streamlit as st
 
-from vtv import config, review_queue
-from vtv.traces import document_images, document_text
+from vtv import config, review_queue, tools
+from vtv.traces import document_images, document_text, is_ticket, ticket_text
 
 SESSION_ITEM_LIMIT = 40
 SESSION_MINUTES_LIMIT = 45
@@ -88,6 +89,66 @@ def from_form(header: dict, rows: list[dict]) -> dict:
 
 
 # --------------------------------------------------------------------------
+# Ticket-triage records
+# --------------------------------------------------------------------------
+
+TICKET_FIELDS = ["category", "impact", "urgency", "affected_service"]
+
+
+def ticket_form(record: dict | None) -> dict:
+    record = record if isinstance(record, dict) else {}
+    return {key: _as_text(record.get(key)) for key in TICKET_FIELDS}
+
+
+def ticket_record(values: dict, original: dict | None) -> dict:
+    """Rebuild a triage record from the form; the summary is carried over unchanged."""
+    record = {"category": _parse(values["category"], "str"),
+              "impact": _parse(values["impact"], "int"),
+              "urgency": _parse(values["urgency"], "int"),
+              "affected_service": _parse(values["affected_service"], "str")}
+    record["summary"] = (original or {}).get("summary") if isinstance(original, dict) else None
+    return record
+
+
+def _options(values: list[str], current: str) -> list[str]:
+    return [""] + values + ([current] if current and current not in values else [])
+
+
+def review_ticket(item: dict) -> dict | None:
+    """Render the ticket review form; return the submitted values, or None if not submitted."""
+    rid, form = item["review_id"], ticket_form(item["extraction"])
+    left, right = st.columns([1, 1])
+    with left:
+        st.subheader("Ticket")
+        st.code(ticket_text(item["task_id"]), language=None, wrap_lines=True)
+    with right:
+        st.subheader("Triage record")
+        st.write("Check the record against the ticket and the triage rules. Correct any field "
+                 "that is wrong.")
+        with st.expander("Triage rules"):
+            m = tools.manifest()
+            st.markdown("**Impact:** " + "; ".join(f"{k} = {v}" for k, v in m["ticket_impact_levels"].items()))
+            st.markdown("**Urgency:** " + "; ".join(f"{k} = {v}" for k, v in m["ticket_urgency_levels"].items()))
+            for rule in m["ticket_priority_rules"]["special_cases"]:
+                st.markdown(f"- {rule}")
+        if item["extraction"] is None:
+            st.error("The triage agent did not return a usable record. Enter the values manually.")
+        with st.form(key=f"form-{rid}"):
+            categories = list(tools.manifest()["ticket_categories"])
+            values = {}
+            for key, choices in (("category", categories), ("impact", ["1", "2", "3"]),
+                                 ("urgency", ["1", "2", "3"])):
+                options = _options(choices, form[key])
+                values[key] = st.selectbox(key, options, index=options.index(form[key]),
+                                           key=f"{rid}-{key}")
+            values["affected_service"] = st.text_input("affected_service",
+                                                       value=form["affected_service"],
+                                                       key=f"{rid}-affected_service")
+            submitted = st.form_submit_button("Submit review", type="primary")
+    return values if submitted else None
+
+
+# --------------------------------------------------------------------------
 # Session handling
 # --------------------------------------------------------------------------
 
@@ -109,12 +170,12 @@ def init_session() -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="Invoice review", layout="wide")
+    st.set_page_config(page_title="Review", layout="wide")
     init_session()
 
     elapsed_min = (time.time() - st.session_state.session_start) / 60
     pending = ordered_pending()
-    st.title("Invoice extraction review")
+    st.title("Record review")
     st.caption(f"Session {st.session_state.session} · reviewed this session: "
                f"{st.session_state.session_count}/{SESSION_ITEM_LIMIT} · "
                f"{elapsed_min:.0f}/{SESSION_MINUTES_LIMIT} min · items remaining: {len(pending)}")
@@ -130,6 +191,21 @@ def main() -> None:
     item = pending[0]
     rid = item["review_id"]
     st.session_state.item_start.setdefault(rid, time.time())
+
+    if is_ticket(item["task_id"]):
+        values = review_ticket(item)
+        if values is not None:
+            seconds = time.time() - st.session_state.item_start[rid]
+            original = ticket_record(ticket_form(item["extraction"]), item["extraction"])
+            reviewed = ticket_record(values, item["extraction"])
+            if json.dumps(original, sort_keys=True) == json.dumps(reviewed, sort_keys=True):
+                review_queue.record_review(rid, "approve", None, seconds, st.session_state.session)
+            else:
+                review_queue.record_review(rid, "correct", reviewed, seconds, st.session_state.session)
+            st.session_state.session_count += 1
+            st.rerun()
+        return
+
     header, rows = to_form(item["extraction"])
 
     left, right = st.columns([1, 1])

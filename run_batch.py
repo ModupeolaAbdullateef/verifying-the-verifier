@@ -12,6 +12,9 @@ Plans:
     faults        Experiment 2 (seeded faults): 21 documents x C0, C1, C2 x 24 trials
                   (201-224) = 1,512 automated runs, plus the machine phase of C3 for the
                   10 human-review documents x 24 trials = 240 runs. Results in results/.
+    tickets       Replication (ticket triage): 10 tickets x C0, C1, C2 x 10 trials (1-10)
+                  = 300 automated runs, plus the machine phase of C3 for the 5 human-review
+                  tickets x 10 trials = 50 runs. Results in results/.
 
 Experiment 1 and Experiment 2 share the results folder and are distinguished by
 trial number, so that all C3 items enter a single blinded review queue.
@@ -28,6 +31,7 @@ Usage:
     python run_batch.py --plan pilot_faults
     python run_batch.py --plan main --workers 4 --cost-cap 25
     python run_batch.py --plan faults --workers 4 --cost-cap 25
+    python run_batch.py --plan tickets
 """
 
 from __future__ import annotations
@@ -52,6 +56,11 @@ PLANS = {
         "results": "results", "documents": "all",
         "conditions": ["C0", "C1", "C2"], "trials": list(range(1, 31)),
         "human_documents": "hitl_subset", "human_trials": list(range(1, 7)),
+    },
+    "tickets": {
+        "results": "results", "documents": "tickets",
+        "conditions": ["C0", "C1", "C2"], "trials": list(range(1, 11)),
+        "human_documents": "hitl_subset", "human_trials": list(range(1, 11)),
     },
     "faults": {
         "results": "results", "documents": "all",
@@ -85,18 +94,20 @@ import time                                                    # noqa: E402
 from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: E402
 from datetime import datetime, timezone                        # noqa: E402
 
-from vtv import config, review_queue                           # noqa: E402
-from vtv.traces import (document_images, document_text, ground_truth,  # noqa: E402
-                        trace_path, write_trace)
-from vtv.workflow import run_workflow, start_human_run        # noqa: E402
+from vtv import config, review_queue, runner                   # noqa: E402
+from vtv.traces import trace_path, write_trace                 # noqa: E402
 
 _human_lock = threading.Lock()     # C3 checkpoint database and queue file: one writer at a time
 _cost_lock = threading.Lock()
 
 
 def build_jobs() -> list[tuple[str, str, int]]:
-    truth = json.loads((config.DATA_DIR / "ground_truth" / "documents.json").read_text(encoding="utf-8"))
-    documents = ([row["doc_id"] for row in truth] if plan["documents"] == "all"
+    if plan["documents"] == "tickets":
+        truth = json.loads((config.DATA_DIR / "ground_truth" / "tickets.json").read_text(encoding="utf-8"))
+        truth = [{**row, "doc_id": row["ticket_id"]} for row in truth]
+    else:
+        truth = json.loads((config.DATA_DIR / "ground_truth" / "documents.json").read_text(encoding="utf-8"))
+    documents = ([row["doc_id"] for row in truth] if plan["documents"] in ("all", "tickets")
                  else plan["documents"])
     human_docs = ([row["doc_id"] for row in truth if row["hitl_subset"]]
                   if plan["human_documents"] == "hitl_subset" else plan["human_documents"])
@@ -125,14 +136,12 @@ def spent_so_far() -> float:
 def execute(job: tuple[str, str, int]) -> float:
     """Run one job and return its token cost."""
     doc, cond, trial = job
-    text, images = document_text(doc), document_images(doc)
-    mock = ground_truth(doc) if config.MOCK_MODE else None
     if cond == "C3":
         with _human_lock:
-            payload, seconds = start_human_run(doc, trial, text, mock, images)
+            payload, seconds = runner.start_human(doc, trial)
             review_queue.enqueue(doc, trial, payload["extraction"], seconds)
         return 0.0   # counted when the run is completed after review
-    final = run_workflow(doc, cond, trial, text, mock, images)
+    final = runner.run(doc, cond, trial)
     write_trace(final)
     return final["summary"]["token_cost_usd"]
 

@@ -253,3 +253,67 @@ MECHANISMS = {
     "C2": gate_checker,
     "C3": gate_human,
 }
+
+
+# --------------------------------------------------------------------------
+# Ticket-triage replication: C1 and C2 counterparts (C0 and C3 are shared)
+# --------------------------------------------------------------------------
+
+TICKET_SCHEMA = {"category": "str", "impact": "int", "urgency": "int",
+                 "affected_service": "str", "summary": "str"}
+
+
+def validate_ticket(record: dict | None) -> list[str]:
+    """Return the rule violations of a triage record (empty if the record is valid)."""
+    from vtv import tools
+
+    if not isinstance(record, dict):
+        return ["The output is not a valid JSON object."]
+    issues: list[str] = []
+    for key in record:
+        if key not in TICKET_SCHEMA:
+            issues.append(f"Unexpected field '{key}'.")
+    for key, kind in TICKET_SCHEMA.items():
+        if key not in record or record[key] is None:
+            issues.append(f"Missing field '{key}'.")
+        elif not _is_type(record[key], kind):
+            issues.append(f"'{key}' must be of type {kind}; got {record[key]!r}.")
+    categories = list(tools.manifest()["ticket_categories"])
+    if isinstance(record.get("category"), str) and record["category"] not in categories:
+        issues.append(f"'category' {record['category']!r} is not one of: {', '.join(categories)}.")
+    for key in ("impact", "urgency"):
+        if _is_type(record.get(key), "int") and record[key] not in (1, 2, 3):
+            issues.append(f"'{key}' must be 1, 2 or 3; got {record[key]}.")
+    return issues
+
+
+def gate_ticket_schema(state: dict) -> GateResult:
+    """C1 (tickets): deterministic schema and value-set validation."""
+    issues = validate_ticket(state.get("extraction"))
+    return GateResult(passed=not issues, issues=issues)
+
+
+def gate_ticket_checker(state: dict) -> GateResult:
+    """C2 (tickets): an independent LLM agent checks the triage record against the ticket."""
+    from vtv import ticket_prompts
+
+    record = state.get("extraction")
+    if not isinstance(record, dict):
+        return GateResult(passed=False, issues=["The output is not a valid JSON object."])
+    mock = {"passed": True, "issues": []} if state.get("mock") else None
+    verdict, call = call_llm("checker", ticket_prompts.checker_system(),
+                             ticket_prompts.checker_prompt(state["document_text"], record),
+                             state["seed"], mock)
+    if not isinstance(verdict, dict) or not isinstance(verdict.get("passed"), bool):
+        return GateResult(passed=True, issues=["checker returned no usable verdict"],
+                          calls=[call])
+    issues = [str(i) for i in verdict.get("issues") or []]
+    return GateResult(passed=verdict["passed"] and not issues, issues=issues, calls=[call])
+
+
+TICKET_MECHANISMS = {
+    "C0": gate_unverified,
+    "C1": gate_ticket_schema,
+    "C2": gate_ticket_checker,
+    "C3": gate_human,
+}
